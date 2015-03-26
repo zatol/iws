@@ -1,0 +1,259 @@
+	{set:$seo_data=array();$site_config=new Config('site_config');$site_config=$site_config->getInfo();}
+	{set:$seo_data['title']="商品品牌"}
+	{if:isset($site_config['name'])}
+		{set:$seo_data['title'].="_".$site_config['name']}
+	{/if}
+	{set:seo::set($seo_data);}
+	{set:$id = intval(IReq::get('id'));$name = IFilter::act(IReq::get('name'));}
+<script type="text/javascript" src="{theme:javascript/cookie.js}"></script>
+<div class="wrapper">
+
+	<div class="fbListLeft">
+		<!--   S 列表页分类    -->
+		<div class="fbListKind">
+		<div class="sweater-category">
+				<span class="category-left">品牌分类</span><span class="category-right">
+					<!--  a rel=""
+					href="#">重置筛选项</a-->
+				</span>
+			</div>
+			<div class="categorytitle-bg">
+				<h4 class="other-h4">
+					所有分类
+				</h4>
+			</div>
+			<div class="w90 clearfix">
+				<!--class="category-visited" -->
+				{query:name=brand_category}
+				<span ><a class="track"
+					name="ch_miook-01-search-0"
+					href="{url:/site/brand/id/$item[id]/name/$item[name]}">{$item['name']}</a>
+				</span>
+				{/query}
+			</div>
+		</div>
+
+		<span class="blank15"></span>
+		<!--   E 列表页分类   -->
+
+		<!--   S 一周销量排行    -->
+		<div class="fbListOrder">
+			<div class="sport-bg">
+				<h2 class="fbListTitle02">
+					<span>一周销量排行</span>
+				</h2>
+			</div>
+			<div class="Hot_Ranking">
+				<div style="display: block;" id="con_hotorder0_1">
+					<span class="blan5"></span>
+					{set:$imgIndex = 1;}
+					{query:name=commend_goods as commend join=left join goods as go on go.id eq commend.goods_id 
+					where  = commend_id eq 3 and go.is_del eq 0 AND go.id is not null
+					fields = go.id,go.list_img,go.name,go.sell_price
+					order = go.sort ASC,go.id DESC
+					limit  = 5
+					}
+					<span class="blank5"></span>
+					<ul>
+						<li class="topImg1">
+							<a title="{$item['name']}" target="_blank"
+								href="{url:/site/products/id/$item[id]}" class="track"
+								name="ch_miook-list-rank0064404"> <img title=""
+									alt="{$item['name']}"
+									original="{webroot:}{$item['list_img']}"
+									src="{webroot:}{$item['list_img']}"
+									style="display: inline;">
+							</a>
+						</li>
+						<li class="topWord1">
+							<p>
+								<span class="topNum1 {if:$imgIndex<4} {echo:'top123'}{/if}">{echo:$imgIndex}</span>
+							</p>
+							<span class="blank5"></span>
+
+							<p class="FBListPruName">
+								<a title="{$item['name']}" target="_blank"
+									href="{url:/site/products/id/$item[id]}" class="track"
+									name="ch_miook-list-rank0064404">{$item['name']}</a>
+							</p>
+							<span class="blank5"></span>
+							<p class="Sprice">
+								售价：￥{$item['sell_price']}
+							</p>
+							<span class="blank5"></span>
+						</li>
+					</ul>
+					{set:$imgIndex++;}
+					{/query}
+					<span class="blank0"></span>
+					<span class="blank0"></span>
+					<p class="FbOrdermore">
+						<!--  a name="" class="track"
+							href="{url:/site/pro_list}">更多&gt;&gt;</a-->
+					</p>
+					<span class="blank0"></span>
+				</div>
+			</div>
+		</div>
+		<!--   E 一周销量排行   -->
+		<span class="blank15"></span>
+		
+		<!--   S 最近浏览过的商品    -->
+		<span class="blank10"></span>
+		<div class="fbListLately">
+        <div class="sport-bg">
+            <h2 class="fbListTitle02">
+                <span>最近浏览过的商品</span></h2>
+        </div>
+        <div class="fbLatelyArea">
+            <span class="blank5"></span>
+            <p class="Latelyclear">
+                <a href="javascript:clearhistory()">清空</a></p>
+            <div id="history" style="display: block;">
+                    <span class="blank5"></span>
+                     {set:$cook_id ='0'}
+					  {if:isset($_COOKIE['recentlyviewedproducts'])}
+						{set:$cook_id = IFilter::act( substr($_COOKIE['recentlyviewedproducts'],0,-1) ); }
+					  {/if}
+					 {query:name=goods as lg  fields=lg.name,lg.market_price,lg.sell_price,lg.small_img,lg.id where=lg.id in ($cook_id) limit=10}
+                  
+                    <ul style="background:none;">
+                     
+                        <li class="topImg1"><a name="ch_miook-list-history-0" class="track" target="_blank" href="{url:/site/products/id/$item[id]}">
+                            <img alt="{$item['name']}" src="{echo:IUrl::creatUrl().$item['small_img']}" original="{echo:IUrl::creatUrl().$item['small_img']}" style="display: inline;">
+                        </a></li>
+                        <li class="topWord1"><span class="blank15"></span>
+                            <p class="FBListPruName">
+                                <a target="_blank" name="ch_miook-list-history-0" class="track" href="{url:/site/products/id/$item[id]}">{$item['name']}</a></p>
+                            <span class="blank5"></span>
+                            <p class="Sprice">
+                                售价：￥{$item['sell_price']}</p>
+                            <span class="blank5"></span></li>
+                     
+                    </ul>
+                     {/query}
+            </div>
+            <span class="blank0"></span>
+        </div>
+    	</div>
+		<!--   E 最近浏览过的商品   -->
+		<!--  span class="blank15"></span>
+		<div class="fbListRightAD01">
+			<a name="miook-search-ad-1" class="track" target="_blank"
+				href="http://item.vancl.com/0035581.html"> <img
+					style="display: block;"
+					original="http://i1.vanclimg.com/others/2012/9/17/erjiye.jpg"
+					src="http://i1.vanclimg.com/others/2012/9/17/erjiye.jpg" alt=""
+					title=""> </a>
+		</div>
+		<span class="blank10"></span>
+		<div style="" id="vjiaAd">
+			<a target="_blank" rel="vv_ch_miook-0-ad-vjia"
+				name="ch_miook-list-ad-vjia" class="track"
+				href="http://mall.vjia.com/andostore?source=vancl-Channeltwopag-jx"><img
+					original="http://i5.vanclimg.com/users/18/20130104/vancl-channeltwopag-jx_130104.jpg"
+					style="width: 200px; height: 220px; display: inline;"
+					src="http://i5.vanclimg.com/users/18/20130104/vancl-channeltwopag-jx_130104.jpg">
+			</a>
+		</div-->
+		<span class="blank10"></span>
+	</div>
+	<div class="fbListRight">
+		<span class="blank25"></span>
+		<!--面包屑开始-->
+		<div class="fbCurrent">
+			<a href="{url:}" rel="">首页</a>
+			<span>&gt;</span>商品品牌
+			<div id="showfilter">
+			</div>
+		</div>
+		<!--面包屑结束-->
+		<span class="blank10"></span>
+		<!--头图开始-->
+		<!--头图结束-->
+		<span class="blank20"></span>
+		<div class="fbListPruArea">
+			{if:isset($name) && $name != ''}
+			<div id="vanclProductList">
+				<div class="productList">
+					<ul>
+					{query:name=brand order=sort asc where= CONCAT(',',category_ids,',') like('%,$id,%')}
+						<li class="scListArea" style="position: relative">
+							<strong><a name="ch_miook-01-0-0064374" class="track"
+								title="{$item['name']}" target="_blank"
+								href="{url:/site/brand_zone/id/$item[id]}"> <img
+										alt="{$item['name']}"" pop="{$item[id]}"
+										class="productLazyLoad"
+										original="{webroot:$item[logo]}"
+										src="{webroot:$item[logo]}"
+										style="display: inline; width:100px; height:55px;">
+							</a> </strong>
+							<span class="blank0"></span>
+							<p class="Product-Name">
+								<a name="ch_miook-01-0-0064374" class="track" target="_blank"
+									title="{$item['name']}"
+									href="{$item['url']}">
+									{$item['name']}<font class="Product-Name">&#12288;</font>
+								</a>
+							</p>
+						</li>
+					{/query}
+					</ul>
+					<span class="blank10"></span>
+					<div class="pruarea" id="appendvjia">
+						
+					</div>
+					
+				</div>
+			</div>
+			<div class="clear">
+			</div>
+			<span class="blank10"></span>
+
+			
+			{else:}
+			<div id="vanclProductList">
+				<div class="productList">
+					<ul>
+					{query:name=brand order=sort asc limit=20}
+						<li class="scListArea" style="position: relative">
+							<strong><a name="ch_miook-01-0-0064374" class="track"
+								title="{$item['name']}" target="_blank"
+								href="{url:/site/brand_zone/id/$item[id]}"> <img
+										alt="{$item['name']}"" pop="{$item[id]}"
+										class="productLazyLoad"
+										original="{webroot:$item[logo]}"
+										src="{webroot:$item[logo]}"
+										style="display: inline; width:100px; height:55px;">
+							</a> </strong>
+							<span class="blank0"></span>
+							<p class="Product-Name">
+								<a name="ch_miook-01-0-0064374" class="track" target="_blank"
+									title="{$item['name']}"
+									href="{$item['url']}">
+									{$item['name']}<font class="Product-Name">&#12288;</font>
+								</a>
+							</p>
+						</li>
+					{/query}
+					</ul>
+					<span class="blank10"></span>
+					<div class="pruarea" id="appendvjia">
+						
+					</div>
+					
+				</div>
+			</div>
+			<div class="clear">
+			</div>
+			<span class="blank10"></span>
+			{/if}
+
+			<span id="vjiacheckout" class="blank10"></span>
+			
+			<div class="blank10"></div>
+
+		</div>
+		<span class="blank10"></span>
+	</div>
+</div>

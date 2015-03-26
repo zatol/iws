@@ -1,0 +1,1265 @@
+{set:$seo_data=array(); $site_config=new Config('site_config');$site_config=$site_config->getInfo();}
+	{set:$seo_data['title']=$name}
+	{if:isset($site_config['name'])}
+		{set:$seo_data['title'].="_".$site_config['name']}
+	{/if}
+	{if:$keywords!=""}
+		{set:$seo_data['keywords']=$keywords}
+	{/if}
+	{if:$description!=""}
+		{set:$seo_data['description']=$description}
+	{/if}
+	{set:seo::set($seo_data);}
+<style type="text/css">
+@import url("{skin:css/v_products.css}");
+</style>
+<script type="text/javascript" src="{theme:/javascript/v_products.js}"></script>
+<script type="text/javascript" src="{theme:javascript/cookie.js}"></script>
+<script language="javascript" type="text/javascript">
+$(function() {
+	//js加载cookie recentlyviewedproducts
+	var cook = $.cookie('recentlyviewedproducts');
+	if(cook=='' || cook == null)
+	{
+		cook = '{$id}'+',';
+	}
+	else
+	{
+		var temp = ','+cook;
+		var str = ','+'{$id}'+',';
+		if(!(temp.indexOf(str)>=0))
+		{
+			cook += '{$id}'+',';
+		}
+	}
+	var options = {expires:1};
+	$.cookie('recentlyviewedproducts',cook,options);
+
+	$('.sel_area').hover(
+			function(){
+				$('.area_box').show();
+			},function(){
+				$('.area_box').hide();
+			}
+	);
+	$('.area_box').hover(
+			function(){
+				$('.area_box').show();
+			},function(){
+				$('.area_box').hide();
+			}
+	);
+});
+var url_path = 	encodeURIComponent('{$url}');
+function searPrivice(value)
+{
+	var url = '{url:/block/searchPrivice/@Math@}';
+	url = url.replace("@Math@",Math.random);
+
+	$.get(url,{area_name:value},function(date){
+		if(date!="0")
+		{
+			var arr = date.split(',');
+			delivery(arr[0],arr[1]);
+		}
+		else
+		{
+			delivery('0',value);
+		}
+	});
+}
+function delivery(privice,city)
+{
+	$('#city').html(city);
+	var weight = '{$weight}';//重量
+	var number = $('#number').val();
+	if(number==undefined)
+	{
+		number = 1;
+	}
+	//通过省份id查询出配送方式，并且传送总重量计算出运费,然后显示配送方式Math.random
+	weight = parseInt(weight)*parseInt(number);
+	var url = '{url:/block/order_delivery/province/@privice@/weight/@weight@/@Math@}';
+	url = url.replace("@privice@",privice).replace("@weight@",weight).replace("@Math@",Math.random);
+	$.getJSON(url,	function(json){
+		var html_va = '';
+		for( a in json)
+		{
+			if(json[a]['if_delivery']==0)
+			{
+				html_va += json[a]['name']+':<b class="orange">'+json[a]['price']+'元</b>';
+				if(json[a]['description']!='')
+				{
+					html_va += '('+json[a]['description']+')';
+				}
+				html_va += '&nbsp;&nbsp;';
+			}
+			else
+			{
+				html_va += json[a]['name']+':<b class="orange">该地区无法送到</b>&nbsp;&nbsp;';
+			}
+		}
+		$('#delive').html(html_va);
+	});
+}
+function clearCook()
+{
+	$.cookie('recentlyviewedproducts',null);
+	window.location.reload();
+}
+
+//选择当前Tab
+function selectTab(curr_div,curr_lab)
+{
+	$("div[name='div_name']").hide();
+	$("#"+curr_div).show();
+
+	$("label[name='lab-name']").removeClass();
+	$("#"+curr_lab).addClass('current');
+}
+
+function check_type()
+{
+	//goods模式
+	if($('#products_id').val() == undefined)
+	{
+		var type = 'goods';
+	}
+
+	//product模式
+	else
+	{
+		var product_id = parseInt($('#products_id').val());
+		if(isNaN(product_id))
+		{
+			msg = '请选择商品的规格';
+		}
+		var goods_id = product_id;
+		var type     = 'product';
+	}
+	return type;
+
+}
+
+//显示抢购倒计时
+var cd_timer = new countdown();
+
+//立即购买按钮
+function buy_now()
+{
+	var num  = $('#number').val();
+
+	{if:isset($spec_ids) && count($spec_ids)>0}
+	var type = 'product';
+	var id   = $('#products_id').val();
+	{else:}
+	var type = 'goods';
+	var id   = $('#goods_id').val();
+	{/if}
+
+	if(type == 'product' && id == '')
+	{
+		alert('请选择货品的规格值');
+		return '';
+	}
+	{set:$promo = IReq::get('promo') ? '&promo='.IReq::get('promo').'&active_id='.IReq::get('regiment_id') : ''}
+	{if:IReq::get('promo')}
+	url = "{url:/simple/cart2/id/@id@/num/@num@/type/@type@/promo/@promo@/active_id/@active_id@}";
+	url = url.replace("@id@",id).replace("@num@",num).replace("@type@",type).replace("@promo@",'{echo:IReq::get("promo")}').replace("@active_id@","{echo:IReq::get('regiment_id')}");
+	{else:}
+	url = "{url:/simple/cart2/id/@id@/num/@num@/type/@type@/}";
+	url = url.replace("@id@",id).replace("@num@",num).replace("@type@",type);
+	{/if}
+	window.location.href=url;
+}
+</script>
+<div class="danpinBox">
+	<a name="top"></a>
+
+	<div class="breadNav">
+		<a name="nav" title="首页" href="{url:}"> 首页</a><span>&gt;</span>
+		{if:isset($category['id'])}
+		<a title="{$category['name']}" href="{url:/site/pro_list/cat/$category[id]}">{$category['name']}</a><span>&gt;</span>
+		{/if}
+		<span name="24434" id="styleinfo">{$name}</span>
+	</div>
+
+	<span class="blank15"></span>
+	<div class="danpinArea">
+		<div class="danpinTitleTab" id="productTitle">
+
+			<h2>
+				{$name}
+			</h2>
+			<div>
+				<!--  a href="//help.vancl.com/Category/14-1.html"
+					title="特例品不享受VIP/SVIP价优惠，点击查看详细规则" target="_blank" class="track"
+					name="item-item-select-special">特例品(******详情******)</a-->
+			</div>
+
+		</div>
+		<div class="blank0"></div>
+		<div class="danpin_colLef">
+
+			<div class="danpinLeft">
+				<div class="smallImg">
+					<div style="visibility: hidden" class="smallImgUp upper"></div>
+					<ul id="imageMenu">
+					{set:$idimg = 0;}
+					{foreach:items=$photo}
+							{set:	$img=IUrl::creatUrl().$item['img'];
+									$left_img=Thumb::get($item['img'],400,400);
+									$right_image=Thumb::get($item['img'],68,68);
+							}
+
+						<li class="track" name="item-item-img-{$idimg}" {if:$idimg==0}id="onlickImg"{/if}>
+							<span
+								style="background-image: url({$right_image});"
+								name="{$left_img}"
+								class="SpriteSmallImgs">&nbsp;</span>
+						</li>
+						{set:$idimg++;}
+					{/foreach}
+
+
+					</ul>
+					<div style="visibility: hidden" class="smallImgDown downer"></div>
+				</div>
+				<span class="blank5"></span>
+			</div>
+
+			<div class="danpinColCenter">
+				<div id="vertical" class="bigImg">
+				{set:$left_img=$right_img=IUrl::creatUrl().'views/default/skin/default/images/front/nopic_435_435.gif'}
+				{if:isset($photo) && count($photo)>0}
+					{set:$left_img=Thumb::get($photo[0]['img'],400,400);}
+					<img title="{$name}"
+						src="{$left_img}"
+						id="midimg">
+				{/if}
+					<div style="left: 0px; top: 0px; display: none;" id="winSelector">
+					</div>
+
+				</div>
+				<div class="fangdaArea">
+					<!--  div class="danpin_weibok" id="share">
+						<p>
+							点击分享：
+						</p>
+						<a href="#" name="item-item-share-1" class="track"></a><a href="#"
+							name="item-item-share-2" class="track"></a><a href="#"
+							name="item-item-share-3" class="track"></a><a href="#"
+							name="item-item-share-4" class="track"></a><a href="#"
+							name="item-item-share-5" class="track"> </a><a href="#"
+							name="item-item-share-6" class="track"></a><a href="#"
+							name="item-item-share-7" class="track"></a>
+					</div-->
+					<p style="float: right;" class="fangda">
+						<span
+							style="width: 9px; height: 23px; background-position: -589px 0"
+							class="sprites"></span>
+						<span>
+						{if:isset($photo) && count($photo)>0}
+						<a target="_blank"
+							href="{url:/site/pic_show/id/$id}"
+							name="item-item-img-zoomin" class="track">放大查看</a>{/if}
+						</span>
+					</p>
+					<p style="float: right;" class="fangda soucang">
+						<span class="sprites"></span>
+						<span>
+						{if:$this->user['user_id'] == null}
+							{set:$tmpId=IReq::get('id');}
+							<a target="_blank"
+							href="{url:/simple/login/?callback=/site/products/id/$tmpId}"
+							name="item-item-select-favorite" class="dp_scbtn track">收藏商品</a>
+							{else:}
+							<a target="_blank"
+							href="javascript:void(0)"
+							name="item-item-select-favorite" class="dp_scbtn track">收藏商品</a>
+							{/if}
+						</span>
+					</p>
+				</div>
+			</div>
+
+		</div>
+		<div class="danpinRight">
+			<div id="pricearea" name="Normal">
+
+
+				<span class="blank10"></span>
+				<div class="brandNumArea">
+					{if:isset($brand)}
+
+					<span class="brandName">商品品牌：
+						<p>
+							{$brand}
+						</p> </span> {/if}
+
+					<span id="productcode">商品编号：{echo:$goods_no?$goods_no:$id}</span>
+				</div>
+				<span class="blank5"></span>
+				<!-- START -->
+				{set:$real_price = 0;}
+				{if:$active!=''}
+					{if:$active=='time'}
+							{if:isset($promotion)}
+							{set:$real_price = $promotion['award_value'];}
+							<div class="cuxiaoPrice">
+								限时抢购价：
+								<span>￥<strong>{$promotion['award_value']}</strong>
+								</span>
+								{query:name=promotion fields=award_value,end_time,user_group where=type eq 1 and `condition` eq $id and  NOW() between start_time and end_time}
+										{set:$free_time = ITime::getDiffSec($item['end_time'])}
+										<span class="time" id="promotiona">还剩 <i class="bold red2" id='cd_hour_promotiona'>{echo:floor($free_time/3600);}</i>小时<i class="bold red2" id='cd_minute_promotiona'>{echo:floor(($free_time%3600)/60);}</i>分<i class="bold red2" id='cd_second_promotiona'>{echo:$free_time%60;}</i>秒结束</span>
+										<script type='text/javascript'>
+											cd_timer.add('promotiona');
+										</script>
+								{/query}
+			
+							</div>
+							<span class="blank10"></span>
+							<div class="MSpriceArea">
+								<span>市场价：￥<strong>{if:$mpa!=''}{if:$mpa!=$mpi}{$mpi}-{$mpa}{else:}{$mpa}{/if}{else:}{$market_price}{/if}</strong>
+								</span>
+			
+								<span>售价：￥{$sell_price}{if:$sell_price!=0}({echo:number_format($promotion['award_value']/$sell_price*10,2)})折{/if}&nbsp;立省：￥{echo:abs($sell_price-$promotion['award_value'])}</span>
+							</div>
+							{else:}
+							<div class="MSpriceArea">
+								<span><img src="{skin:images/front/grab_expir.png}"/></span><br>
+								<span>售价：￥{if:$ma!=''}{if:$ma!=$mi}￥{$mi}-￥{$ma}{else:}￥{$ma}{/if}{else:}￥{$sell_price}{/if}</span>
+								
+							</div>
+							{/if}
+						{else:}
+							{if:isset($regiment)}
+							{set:$real_price = $regiment['regiment_price'];}
+								<div class="cuxiaoPrice">
+									团 购 价：
+									<span>￥<strong>{$regiment['regiment_price']}</strong>
+									</span>
+									{query:name=regiment fields=id as rid,regiment_price,end_time,start_time where= goods_id eq $id and  NOW() between start_time and end_time}
+												{set:$free_time = ITime::getDiffSec($item['end_time'])}
+												<span class="time" id="promotiona">还剩 <i class="bold red2" id='cd_hour_promotionb'>{echo:floor($free_time/3600);}</i>小时<i class="bold red2" id='cd_minute_promotionb'>{echo:floor(($free_time%3600)/60);}</i>分<i class="bold red2" id='cd_second_promotionb'>{echo:$free_time%60;}</i>秒结束</span>
+												<script type='text/javascript'>
+													cd_timer.add('promotionb');
+												</script>
+												{query:name=regiment_user_relation fields= count(id) as tot where=regiment_id eq $item[rid] item = $va}
+													<span class="bold red2">已参加团购{$va['tot']}人</span>
+												{/query}
+									{/query}
+								</div>
+								<span class="blank10"></span>
+								<div class="MSpriceArea">
+									<span>市场价：￥<strong>{if:$mpa!=''}{if:$mpa!=$mpi}{$mpi}-{$mpa}{else:}{$mpa}{/if}{else:}{$market_price}{/if}</strong>
+									</span>
+				
+									<span>售价：￥{$sell_price}{if:$sell_price!=0}({echo:number_format($regiment['regiment_price']/$sell_price*10,2)})折{/if}&nbsp;立省：￥{echo:abs($sell_price-$regiment['regiment_price'])}</span>
+								</div>
+								{else:}
+								<div class="MSpriceArea">
+									<span><img src="{skin:images/front/group_expir.png}"/></span><br>
+									<span>售价：￥{if:$ma!=''}{if:$ma!=$mi}￥{$mi}-￥{$ma}{else:}￥{$ma}{/if}{else:}￥{$sell_price}{/if}</span>
+								</div>
+							{/if}
+					{/if}
+				{else:}
+				{set:$real_price = $sell_price;}
+				<div class="MSpriceArea">
+					<span>市场价：￥<strong>{if:$mpa!=''}{if:$mpa!=$mpi}{$mpi}-{$mpa}{else:}{$mpa}{/if}{else:}{$market_price}{/if}</strong>
+					</span>
+
+					<span>售价：￥{if:$ma!=''}{if:$ma!=$mi}{$mi}-{$ma}{else:}{$ma}{/if}{else:}{$sell_price}{/if}</span>
+				</div>
+				{/if}
+				<!-- END -->
+
+				<span class="blank10"></span>
+				<div class="pingfen">
+
+					<span>用户评分：</span>
+					<!--  sub style="background-position: -2084px 0px" class="SpriteStar"></sub><sub
+						style="background-position: -2084px 0px" class="SpriteStar"></sub><sub
+						style="background-position: -2084px 0px" class="SpriteStar"></sub><sub
+						style="background-position: -2084px 0px" class="SpriteStar"></sub><sub
+						style="background-position: -2084px 0px" class="SpriteStar"></sub-->
+					<span class="grade"><i style="width:{echo:$comment_num?(14*$comment_point/$comment_num):0}px;"></i></span>	
+
+					<span class="Order_yiyoupl"><a class="track"
+						name="item-item-select-tofeedback" href="#feedback">({$comment_num}人已评论)</a>
+					</span>
+
+				</div>
+				<span class="blank10"></span>
+			</div>
+			<div class="selectArea">
+				<div class="selColorArea">
+					<span class="blank10"></span>
+
+					<div class="danpinColor_Select">
+						<div style="line-height: 18px;" class="danpinColorTitle">
+							<p>
+								净含量：
+							</p>
+						</div>
+						<div class="selColor">
+							<ul>
+
+								<li title="100g" name="0064386" id="onlickColor">
+
+									<div name="False" class="colorBlock">
+										<a href="0064386.html?ref=item_color_0064386"
+											name="item-item-select-color_1" class="track"> <span
+											style="background-position: 0px -0px" class="SpriteColors">&nbsp;</span>
+											<p>
+												100g
+											</p> </a>
+									</div>
+
+									<span class="colorHoverok"></span>
+
+								</li>
+
+							</ul>
+						</div>
+						<div class="blank0">
+						</div>
+					</div>
+
+					<div class="selSizeArea">
+
+
+						<div style="display: none" class="danpinColorTitle">
+							<p>
+								特殊占位属性：
+							</p>
+						</div>
+						<div style="display: none" class="selSize">
+							<ul>
+
+								<li name="00244750" title="10" id="onlickSelSize">
+									<p>
+										100g
+									</p>
+
+									<span></span>
+								</li>
+
+							</ul>
+						</div>
+
+						<div style="display: none;" class="danpin_xuanzeGMcm">
+							<span class="sprites"
+								style="height: 16px; display: block; width: 16px; background-position: -1911px 0pt; margin: 2px; float: left;"></span>
+							<p>
+								请选择您要购买的商品尺码
+							</p>
+						</div>
+
+					</div>
+					<div class="blank8ie"></div>
+
+
+					<div class="goodsNum">
+						<div style="line-height: 18px;" class="danpinColorTitle">
+							<p>
+								数量：
+							</p>
+						</div>
+						<div class="danpinnumSelect">
+							<select id="selectedAmount">
+
+								<option value="1">
+									1
+								</option>
+
+								<option value="2">
+									2
+								</option>
+
+								<option value="3">
+									3
+								</option>
+
+								<option value="4">
+									4
+								</option>
+
+								<option value="5">
+									5
+								</option>
+
+								<option value="6">
+									6
+								</option>
+
+								<option value="7">
+									7
+								</option>
+
+								<option value="8">
+									8
+								</option>
+
+								<option value="9">
+									9
+								</option>
+
+								<option value="10">
+									10
+								</option>
+
+							</select>
+							<span class="LastNum" id="comeon">余量有限</span>
+							<span class="blank15"></span>
+						</div>
+					</div>
+
+					<div class="AreaItotal">
+						<div class="SelectAreaItotal">
+
+
+							<div style="" class="goodsAddArea">
+								<div class="danpinColorTitle">
+									<p>
+										库存：
+									</p>
+								</div>
+								<div class="goodsAdd">
+									<p class="cityAdd">
+										<span class="goodsAdd"><span id="shippingAddr">北京</span><span
+											id="citystatus">(有货)</span>
+										</span><strong>&nbsp;</strong>
+									</p>
+									<span id="stockinfo" class="fahuoDuanq">从最近库房发货</span>
+
+								</div>
+								<div class="addressWindows" style="display: none">
+									<span class="blank10"></span>
+
+									<p>
+										<span>华北地区：</span><a name="hs-110000" href="#">北京</a>、
+										<a name="hs-120000" href="#">天津</a>、
+										<a name="hs-130000" href="#">河北</a>、
+										<a name="hs-140000" href="#">山西</a>、
+										<a name="hs-150000" href="#">内蒙古</a>
+									</p>
+
+									<p>
+										<span>华东地区：</span><a name="hs-310000" href="#">上海</a>、
+										<a name="hs-320000" href="#">江苏</a>、
+										<a name="hs-330000" href="#">浙江</a>、
+										<a name="hs-370000" href="#">山东</a>、
+										<a name="hs-340000" href="#">安徽</a>、
+										<a name="hs-350000" href="#">福建</a>
+									</p>
+
+									<p>
+										<span>华南地区：</span><a name="hs-440000" href="#">广东</a>、
+										<a name="hs-450000" href="#">广西</a>、
+										<a name="hs-460000" href="#">海南</a>
+									</p>
+
+									<p>
+										<span>华中地区：</span><a name="hs-420000" href="#">湖北</a>、
+										<a name="hs-430000" href="#">湖南</a>、
+										<a name="hs-410000" href="#">河南</a>、
+										<a name="hs-360000" href="#">江西</a>
+									</p>
+
+									<p>
+										<span>西南地区：</span><a name="hs-510000" href="#">四川</a>、
+										<a name="hs-530000" href="#">云南</a>、
+										<a name="hs-520000" href="#">贵州</a>、
+										<a name="hs-540000" href="#">西藏</a>、
+										<a name="hs-500000" href="#">重庆</a>
+									</p>
+
+									<p>
+										<span>西北地区：</span><a name="hs-640000" href="#">宁夏</a>、
+										<a name="hs-650000" href="#">新疆</a>、
+										<a name="hs-630000" href="#">青海</a>、
+										<a name="hs-610000" href="#">陕西</a>、
+										<a name="hs-620000" href="#">甘肃</a>
+									</p>
+
+									<p>
+										<span>东北地区：</span><a name="hs-210000" href="#">辽宁</a>、
+										<a name="hs-220000" href="#">吉林</a>、
+										<a name="hs-230000" href="#">黑龙江</a>
+									</p>
+
+								</div>
+							</div>
+
+							<div class="shoppingCarArea">
+								<div class="goodsCar">
+									<span class="blank8"></span><span style="" class="dpxj0523">小计：￥<span
+										class="dpxjA0523">9.00</span>
+									</span>
+									<span class="blank0"></span>
+								</div>
+							</div>
+						</div>
+						<div class="shoppingBox">
+							<a id="addToShoppingCar" href="#"
+								name="item-item-select-shopping" class="dp_gwbtn track">放入购物车</a>
+						</div>
+						<span class="blank0"></span>
+					</div>
+
+					<div class="blank0">
+					</div>
+				</div>
+				<div class="blank0">
+				</div>
+			</div>
+			<div class="blank15">
+			</div>
+
+
+			<div class="danpin_YhTsBox">
+				<h4>
+					优惠提示：
+				</h4>
+
+				<ul>
+
+					<li>
+						全场购物满99元免运费
+					</li>
+
+				</ul>
+			</div>
+
+
+		</div>
+	</div>
+	
+
+	<span class="blank25"></span>
+	<div class="sideBarSettabArea">
+		<div class="sideBarArea">
+
+
+			
+			<!--同类最热销START -->
+
+			<div class="onlyPageX">
+				<h3>
+					同类最热销
+				</h3>
+
+				<ul>
+				{query:name=commend_goods as cg join= left join goods as lg on lg.id eq cg.goods_id fields=lg.name,lg.market_price,lg.sell_price,lg.small_img,lg.id where=commend_id eq 3 AND lg.is_del eq 0 AND lg.id is not null order=lg.sort asc,lg.id desc limit=5}
+					<li>
+						<a name="r-item-cht-1-0064386" class="track"
+							rel="r-item-cht-1-0064386" title="{$item['name']}"
+							href="{url:/site/products/id/$item[id]}" target="_blank"><img
+								original="{echo:IUrl::creatUrl().$item['small_img']}"
+								alt="{$item['name']}"
+								src="{echo:IUrl::creatUrl().$item['small_img']}"
+								style="display: inline;">
+						</a>
+
+						<p>
+							<a name="r-item-cht-1-0064386" class="track"
+								rel="r-item-cht-1-0064386" href="{url:/site/products/id/$item[id]}" target="_blank">{$item['name']}
+								100g</a>
+						</p>
+						<span>市场价￥{$item['market_price']}<em>售价￥{$item['sell_price']}</em>
+						</span>
+					</li>
+				{/query}
+					
+				</ul>
+				<span class="blank15"></span>
+			</div>
+			<span class="blank20"></span>
+			<!--同类最热销END -->
+			<div id="tj">
+			<!-- 购买此商品的顾客还购买过START -->
+
+				<div class="onlyPageX">
+					<h3>
+						购买此商品的顾客还购买过
+					</h3>
+
+					<ul>
+					{query:name=order_goods as og join= join order as o on og.order_id eq o.id left join goods as lg on lg.id eq og.goods_id AND lg.is_del eq 0 fields= DISTINCT lg.name,format(lg.market_price,2) as market_price,format(lg.sell_price,2) as price,lg.small_img,lg.id  where= o.user_id in ($shop_goods) AND lg.id is not null order = o.completion_time desc limit=5}
+
+						<li>
+							<a name="r-item-pap-1-0064386" class="track"
+								rel="r-item-pap-1-0064386" title="{$item['name']}"
+								href="{url:/site/products/id/$item[id]}" target="_blank"><img
+									original="{echo:IUrl::creatUrl().$item['small_img']}"
+									alt="{$item['name']}"
+									src="{echo:IUrl::creatUrl().$item['small_img']}"
+									style="display: inline;">
+							</a>
+
+							<p>
+								<a name="r-item-pap-1-0064386" class="track"
+									rel="r-item-pap-1-0064386" href="{url:/site/products/id/$item[id]}" target="_blank">{$item['name']}</a>
+							</p>
+							<span>市场价￥{$item['market_price']}<em>售价￥{$item['price']}</em>
+							</span>
+						</li>
+					{/query}
+
+
+					</ul>
+					<span class="blank15"></span>
+				</div>
+				<span class="blank20"></span>
+			<!-- 购买此商品的顾客还购买过END -->
+
+			</div>
+			<!--我最近看过START -->
+			<div class="onlyPageX">
+				<h3>
+					我最近看过
+				</h3>
+				<span class="blank5"></span>
+				<p class="Latelyclear">
+                <a href="javascript:clearCook()">清空</a></p>
+				<ul>
+				{set:$cook_id ='0'}
+				  {if:isset($_COOKIE['recentlyviewedproducts'])}
+					{set:$cook_id = IFilter::act( substr($_COOKIE['recentlyviewedproducts'],0,-1) ); }
+				  {/if}
+				 {query:name=goods as lg  fields=lg.name,lg.market_price,lg.sell_price,lg.small_img,lg.id where=lg.id in ($cook_id) limit=5}
+
+					<li>
+						<a name="r-item-rbs-1-0064386" class="track"
+							rel="r-item-rbs-1-0064386" title="{$item['name']}"
+							href="{url:/site/products/id/$item[id]}" target="_blank"><img
+								original="{echo:IUrl::creatUrl().$item['small_img']}"
+								alt="{$item['name']}"
+								src="{echo:IUrl::creatUrl().$item['small_img']}"
+								style="display: inline;">
+						</a>
+
+						<p>
+							<a name="r-item-rbs-1-0064386" class="track"
+								rel="r-item-rbs-1-0064386" href="{url:/site/products/id/$item[id]}" target="_blank">{$item['name']}</a>
+						</p>
+						<span>市场价￥{$item['market_price']}<em>售价￥{$item['sell_price']}</em>
+						</span>
+					</li>
+					
+ 				 {/query}
+
+				</ul>
+				<span class="blank15"></span>
+			</div>
+			<span class="blank20"></span>
+			<!--我最近看过END -->
+
+			<div style="width: 200px; height: 220px; overflow: hidden;"
+				class="itemad">
+				<a target="_blank"
+					href="http://mall.vjia.com/baiyixiuzi?source=vancl-singleproduct-jx"
+					name="item-vjia" class="track"><img
+						style="width: 200px; height: 220px;"
+						src="http://i4.vanclimg.com/users/18/20130104/vancl-singleproduct-jx_130104.jpg">
+				</a>
+			</div>
+		</div>
+		<div class="RsetTabArea">
+
+			<div id="product_set">
+
+			</div>
+
+
+			<div class="RsetTabMenu">
+				<ul>
+					<li class="hover track" name="item-item-info-t">
+						商品信息
+					</li>
+					<li class="down track" name="item-item-comment-t">
+						最新评论
+						<strong>({$comment_num})</strong>
+					</li>
+					<li class="down track" name="item-item-quiz-t">
+						疑难提问
+						<strong>({$refer})</strong>
+					</li>
+
+					<li class="down">
+						<a target="_blank" href="/styles/static.mvc?Position=AfterService"
+							class="track" name="item-item-service-t">售后服务</a>
+					</li>
+					<li class="three5 down">
+						<a target="_blank" href="/styles/static.mvc?Position=PayMethod"
+							class="track" name="item-item-howbuy-t">如何购买</a>
+					</li>
+				</ul>
+			</div>
+			<div class="RsetTabCon">
+				<span class="blank15"></span>
+				<div class="area1">
+					<div style="position: relative; top: 0px; right: 0px; z-index: 0" id="attr">
+							<h3>
+								产品属性：
+							</h3>
+							<div class="dpShuXing">
+								<ul>
+								<li title="{$name}">
+									<span>商品名称：</span>{$name}
+								</li>
+								{if:isset($brand) && $brand!=''}
+									<li title="{$brand}">
+										<span>品　　牌：</span>{$brand}
+									</li>
+								{/if}
+								{if:isset($weight) && $weight!=''}
+									<li title="{$weight}">
+										<span>商品毛重：</span>{$weight}
+									</li>
+								{/if}
+								{if:isset($unit) && $unit!=''}
+									<li title="{$unit}">
+										<span>单　　位：</span>{$unit}
+									</li>
+								{/if}
+								{if:isset($up_time) && $up_time!=''}
+									<li title="{$up_time}">
+										<span>上架时间：</span>{$up_time}
+									</li>
+								{/if}
+								{if:count($attribute)>0}
+									{foreach:items=$attribute}
+									<li title="{$item['attribute_value']}">
+										<span>{$item['name']}：</span>{$item['attribute_value']}
+									</li>
+									{/foreach}
+								{/if}
+
+
+								</ul>
+								<span class="blank0"></span>
+							</div>
+						</div>
+						<span class="blank20"></span>
+
+					{if:strlen($content1)>0}
+					<div style="display: block;">
+						<h3>
+							产品描述：
+						</h3>
+						<span class="blank8"></span>
+						{$content1}
+					</div>
+					{/if}
+					
+				</div>
+			</div>
+
+
+			<span class="blank20"></span>
+			<div class="liketabfg">
+				<span class="fgnameleft">最新评论</span><span class="fgbgright"></span><span
+					class="blank0"></span>
+			</div>
+
+			<div class="RsetTabCon">
+
+
+				<span class="blank10"><a name="feedback">&nbsp;</a>
+				</span>
+
+				<div style="margin: 0px auto;" class="NewComment">
+
+					<div style="height: auto; padding-bottom: 4px;"
+						class="NewCommentOne">
+						<h3>
+							<em>所有打分及评论均来自已购买本产品的用户</em><span
+								style="width: 14px; height: 14px; background-position: -2853px 0; margin: 5px 0 0 7px; padding: 0; display: inline;"
+								class="sprites"></span><span>商品评论（共<strong>{$comment_num}</strong>名用户）</span>
+
+							<div class="titlepj">
+								<label>
+									综合评分
+								</label>
+								<div style="margin-top: 5px; display: inline; float: left;">
+									<span class="grade"><i style="width:{echo:$comment_num?(14*$comment_point/$comment_num):0}px;"></i></span>
+								</div>
+							</div>
+
+						</h3>
+						<div class="plGoodBad">
+
+							<ul>
+								<li class="goodPing">
+									<p>
+										好评率
+									</p>
+									<p class="goodPLv">
+										{echo:$comment_point/5*100;}% 
+									</p>
+								</li>
+								<li class="haozhonghuai">
+									<dl>
+										<dd>
+											好评
+											<span><strong style="width: {if:$comment_point>=4}{echo:$comment_point/5*100;}{else:}0{/if}%">&nbsp;</strong>
+											</span>{if:$comment_point>=4}{echo:$comment_point/5*100;}{else:}0{/if}%
+										</dd>
+										<dd>
+											中评
+											<span class="boxZP"><strong style="width: {if:$comment_point>=3&&$comment_point<4}{echo:$comment_point/5*100;}{else:}0{/if}%">&nbsp;</strong>
+											</span>{if:$comment_point>=3&&$comment_point<4}{echo:$comment_point/5*100;}{else:}0{/if}%
+										</dd>
+										<dd>
+											差评
+											<span class="boxCP"><strong style="width: {if:$comment_point>=1&&$comment_point<3}{echo:$comment_point/5*100;}{else:}0{/if}%">&nbsp;</strong>
+											</span>{if:$comment_point>=1&&$comment_point<3}{echo:$comment_point/5*100;}{else:}0{/if}%
+										</dd>
+									</dl>
+								</li>
+
+								<li class="haozhonghuai">
+									<dl
+										style="float: left; width: 170px; margin-left: 20px; display: inline;">
+
+										<dd>
+											<em> 外观</em><sub style="background-position: -2084px 0px"
+												class="SpriteStar"></sub><sub
+												style="background-position: -2084px 0px" class="SpriteStar"></sub><sub
+												style="background-position: -2084px 0px" class="SpriteStar"></sub><sub
+												style="background-position: -2084px 0px" class="SpriteStar"></sub><sub
+												style="background-position: -2084px -26px"
+												class="SpriteStar"></sub>
+										</dd>
+
+										<dd>
+											<em> 舒适</em><sub style="background-position: -2084px 0px"
+												class="SpriteStar"></sub><sub
+												style="background-position: -2084px 0px" class="SpriteStar"></sub><sub
+												style="background-position: -2084px 0px" class="SpriteStar"></sub><sub
+												style="background-position: -2084px 0px" class="SpriteStar"></sub><sub
+												style="background-position: -2084px -26px"
+												class="SpriteStar"></sub>
+										</dd>
+
+										<dd>
+											<em> 香味</em><sub style="background-position: -2084px 0px"
+												class="SpriteStar"></sub><sub
+												style="background-position: -2084px 0px" class="SpriteStar"></sub><sub
+												style="background-position: -2084px 0px" class="SpriteStar"></sub><sub
+												style="background-position: -2084px 0px" class="SpriteStar"></sub><sub
+												style="background-position: -2084px 0px" class="SpriteStar"></sub>
+										</dd>
+
+									</dl>
+									<div class="xingqingPL">
+										<a id="pinglundetail" href="javascript:void(0)"
+											name="/styles/feedbackmarks.aspx?styleid=24434">详情</a>
+									</div>
+								</li>
+								<li class="meGouMai">
+									<p>
+										我已购买过此商品
+									</p>
+									<a class="goumaiButton track" target="_blank"
+										name="item-item-comment-mine"
+										href="{url:/site/comments/id/$id}"> </a>
+
+									<span class="blank10"></span><a title="点击查看较早的评论"
+										class="act0703Link01" href="//review.vancl.com/24434.html"
+										target="_blank"></a>
+
+									<span class="blank10"></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<span class="blank10"></span>
+					<div class="sizeinfo">
+						<ul class="YHsize">
+							<li class="chimaGoodBad">
+								<span class="sizeicon"></span>尺码
+							</li>
+							<li>
+								100% 的用户认为实际尺码
+								<span>&lt;合适&gt;</span>
+							</li>
+							<li>
+								0% 的用户认为实际尺码
+								<span>&lt;偏小&gt;</span>
+							</li>
+							<li>
+								0% 的用户认为实际尺码
+								<span>&lt;偏大&gt;</span>
+							</li>
+						</ul>
+					</div>
+
+					<span class="blank10"></span>
+					<ul class="hzcTitle act0703hzcTitle">
+						<li name="item-item-comment-all_t" class="commonPL track">
+							最新评论（
+							<strong id="feedbackcount0">{$comment_num}</strong>）
+						</li>
+						<li name="item-item-comment-good" class="track">
+							好评（
+							<strong id="feedbackcount1">366</strong>）
+						</li>
+						<li name="item-item-comment-average" class="track">
+							中评（
+							<strong id="feedbackcount2">45</strong>）
+						</li>
+						<li name="item-item-comment-bad" class="track">
+							差评（
+							<strong id="feedbackcount3">8</strong>）
+						</li>
+					</ul>
+					<span class="blank10"></span>
+					<div class="NewCommentDetail">
+					<!-- START -->
+					{query:name=comment as c join=left join goods as lg on c.goods_id eq lg.id AND lg.is_del eq 0 left join user as u on u.id eq c.user_id fields=c.time,u.head_ico,c.comment_time,c.contents,c.point,lg.id as gid,c.user_id  where=c.goods_id eq $id and c.status eq 1 order=c.comment_time desc id=$quer_com page=1}
+				
+						<div class="plZCO">
+							<div class="plContent">
+							{query:name=user as u join=left join member as m on m.user_id eq u.id fields=u.username,u.head_ico,m.group_id,m.area where=u.id eq $item[user_id] item=$va}
+								<div class="plCinfo">
+									<span class="blank20"></span>
+									<div>
+										<a href="javascript:void(0)" name="item-item-comment-user_id"
+											class="track"> <img border="0"
+												style="width: 69px; height: 69px; display: inline;"
+												original="{if:$va['head_ico']}{echo:IUrl::creatUrl().$va['head_ico']}{else:}{skin:images/front/user_ico.gif}{/if}"
+												src="{if:$va['head_ico']}{echo:IUrl::creatUrl().$va['head_ico']}{else:}{skin:images/front/user_ico.gif}{/if}">
+										</a>
+									</div>
+									<span class="blank10"></span><a
+										href="javascript:void(0)"
+										name="item-item-comment-user_id" class="track">
+										{if:$va['username']}{$va['username']}{/if}</a><span class="blank10"></span>
+									{query:name=user_group fields=group_name where=id eq $va[group_id] item=$it}
+									<div style="background-position: -192px -320px"
+										class="UserLevel">
+									</div>
+									{/query}
+									<span class="blank10"></span>
+									<!-- TODO用户地址数据取注册时的IP地址 用户修改无效 -->
+									<span style="color: #666666;">{set:$areaids = substr($va['area'],1,strlen($va['area'])-2);}{query: name=areas where=parent_id eq 0 and area_id in ($areaids) item=$ar}{$ar['area_name']}{/query}</span>
+									<span class="blank10"></span>
+
+									<!--  div class="pluLinkAll">
+										<a href="/comments/y2ojfqtZkQrYKgbhffleXQ==.html"
+											target="_blank" name="item-item-comment-user_all"
+											class="track"> 该用户的评论<span
+											style="font-size: 8px; margin-left: 3px;">&gt;&gt;</span>
+										</a>
+									</div-->
+								</div>
+							{/query}
+
+								<div style="min-height: 212px;" class="plConr">
+									<span class="blank15"></span>
+									<div class="plrfen">
+										<span class="grade"><i style="width:{echo:$comment_num?(14*$comment_point/$comment_num):0}px;"></i></span>	
+										<span class="blank5"></span>
+										<!--  ul>
+											<li>
+												净含量：
+												<span>100g</span>
+											</li>
+
+											<li>
+												特殊占位属性：
+												<span>100g</span>
+											</li>
+											<div
+												style="height: 0; line-height: 0; font-size: 0; overflow: hidden; float: none; width: 100%;"
+												class="clear">
+											</div>
+
+											<li>
+												该用户认为实际尺码：
+												<em>[合适]</em>
+											</li>
+										</ul-->
+										<span class="blank5"></span>
+										<p class="danpv2_linex">
+										</p>
+									</div>
+									<div class="plCoNR">
+										<span>评价：</span>
+										<label>
+											{$item['contents']}
+										</label>
+									</div>
+									<span class="blank25"></span>
+
+									<div style="_padding-bottom: 62px;" class="plDYinfo">
+										<!--  span>这条评论对我：</span>
+										<a href="/styles/ajaxfeedbackvote.mvc?id=9214945&amp;t=pros"
+											name="item-item-comment-useful" class="track new-btn"><strong>有用<em>(0)</em>
+										</strong>
+										</a>
+										<a href="/styles/ajaxfeedbackvote.mvc?id=9214945&amp;t=cons"
+											name="item-item-comment-useless" class="track new-btn"><strong>没用<em>(0)</em>
+										</strong>
+										</a><a onclick="return false"
+											href="/styles/ajaxfeedbackreplylist.mvc?id=9214945&amp;first=true"
+											name="item-item-comment-reply" class="showfile track huiFu"><label>
+												我要回复
+												<em>(0)</em>
+											</label>
+										</a-->
+										<span>评论时间 {$item['comment_time']}</span>
+									</div>
+									<span class="blank0"></span>
+									<div class="notesNewpl" style="display: none;">
+									</div>
+									<span class="blank0"></span>
+								</div>
+							</div>
+							<div class="clear">
+							</div>
+							<p class="Sdanpyyimg">
+							</p>
+						</div>
+					{/query}
+					<!-- END -->
+
+
+					</div>
+
+				</div>
+				<div id="feedbackpagerarea">
+					<div class="area2Page" id="styleAssessesPager">
+					<!-- START -->
+
+
+						<div class="area2Page">
+							
+						</div>
+					<!-- END -->
+
+
+					</div>
+				</div>
+
+				<span class="blank10"></span>
+				
+			</div>
+
+			<span class="blank15"></span>
+			<div class="liketabfg">
+				<span class="fgnameleft">疑难提问</span><span class="fgbgright"></span><span
+					class="blank0"></span>
+			</div>
+
+			<div class="RsetTabCon">
+
+
+				<span class="blank10"></span>
+				<div name="43" class="area3 root">
+
+					<div class="area3Head" style="float: left; width: 100%;">
+						<span class="area3Sp01" style="float: left;">
+							<div
+								style="width: 14px; height: 14px; background-position: -3482px 0; margin: 6px;"
+								class="sprites">
+							</div> </span><span class="area3Sp02">疑难提问</span>
+						<span class="area3Sp03"
+							style="margin-right: 10px; margin-left: 10px; float: left;">共<strong
+							id="quizcount">{$refer}</strong>条</span>
+						<span style="float: right; margin-right: 40px;" class="buttonred"
+							id="tiwen"><a style="color: White"
+							href="{url:/site/consult/id/$id}" name="item-item-quiz-mine"
+							class="track">我要提问</a><a name="quiz" href="#quiz"></a> </span>
+
+						<span style="float: right;"> <select id="questionOrderType"
+								style="float: left;">
+								<option value="0" selected="selected" style="float: left;">
+									更新时间
+								</option>
+								<option value="1">
+									回复次数
+								</option>
+							</select> </span><span style="float: right;">排序方式：</span>
+
+					</div>
+
+					<div id="stylequestionslist">
+						<!-- START -->
+						{query:name=refer as r join=left join user as u on r.user_id eq u.id  fields=u.username,u.head_ico,r.user_id,r.time as rtime,r.question,r.reply_time,r.answer where=r.goods_id eq $id order=r.time desc id=$ref page=1}
+
+						<div class="area3Con">
+							<span class="blank20"></span>
+							<div class="userQuesArea">
+								<h4>
+									{$item['username']} 问：
+								</h4>
+								<h5>
+									{$item['rtime']}
+								</h5>
+							</div>
+
+							<div style="clear: both; padding: 10px;">
+								{$item['question']}
+							</div>
+
+							<span class="blank15"></span>
+							{if:$item['answer']}
+
+							<h6>
+								{echo:$siteConfig->name} 回答：
+							</h6>
+							<span class="blank8"></span>
+							<p class="adminAsk">
+								{$item['answer']}
+							</p>
+							{/if}
+							<span class="blank10"></span>
+							<div class="notesNewpl" style="display: none;">
+							</div>
+							<span class="blank20"></span>
+						</div>
+						{/query}
+						<!-- END -->
+
+
+					</div>
+					<div style="border-top: 1px solid #e1e1e1;" class="area2Page"
+						id="stylequestionsPager">
+						<!-- START -->
+
+						<div class="area2Page">
+							
+						</div>
+						<!-- END -->
+
+					</div>
+
+				</div>
+
+			</div>
+
+
+			<div style="display: none" class="RsetTabCon">
+			{query:name=help fields=content where=id eq 52}
+						{echo:$item['content']}
+					{/query}
+			</div>
+
+
+			<div style="display: none" class="RsetTabCon">
+			{query:name=help fields=content where=id eq 53}
+						{echo:$item['content']}
+					{/query}
+			</div>
+
+			<span class="blank10"></span>
+		</div>
+	</div>
+</div>

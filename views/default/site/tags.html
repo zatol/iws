@@ -1,0 +1,20 @@
+<div class="searchWordsAllbody2" id="searchWordsAllbody">
+	<div class="searchWordsAbTop"></div>
+	<div class="searchWordsAbMid">
+		<div class="searchWordschild">
+			<div class="searchWordschildclass searchWordschildclassH">
+				<span>热词</span>
+			</div>
+			<div class="searchWordschilddetail">
+				{query:name=keyword where=hot eq 1 limit=50 order=`order` asc}
+				{set:$searchWord =urlencode($item['word']);}
+				<a class="track" name="hp-hp-head-swords_m-n"
+					href="{url:/site/search_list/word/$searchWord}">{$item['word']}</a>
+				{/query}
+				<span class="blank0"></span>
+			</div>
+			<span class="blank0"></span>
+		</div>
+	</div>
+	<div class="searchWordsAbBotm"></div>
+</div>

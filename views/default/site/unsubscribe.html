@@ -1,0 +1,120 @@
+<style type="text/css"> 
+.tipsbordersuff {
+    background: url("{skin:images/front/post.gif}") no-repeat scroll 21px 21px;
+    border: 1px solid #CACBCB;
+    overflow: hidden;
+    text-align: center;
+}
+.tipsbordersuff {
+    float: left;
+    margin: 0 auto;
+    width: 978px;
+}
+.tipsbordertext {
+    float: left;
+    font-size: 13px;
+    padding: 26px 5px 0 80px;
+}
+.tipsbordertext h5 {
+    font-size: 14px;
+    line-height: 32px;
+}
+.tipsbordertext p {
+    color: #999999;
+    font-size: 12px;
+    padding-bottom: 5px;
+    margin-left: 50px;
+    text-align: left;
+}
+
+.tipsbordertext dl {
+    margin: 20px 50px 10px;
+    text-align: left;
+}
+.tipsbordertext dl {
+    font: 700 12px/24px 宋体;
+    text-align: left;
+}
+.tipsbordertext dl dd {
+    font: 400 12px/20px 宋体;
+}
+.tipsbordertext dl dd strong {
+    color: #FF5500;
+}
+.tipsbordertext dl dd span {
+    padding-left: 12px;
+}
+
+</style>
+<script language="javascript">
+function unsubscribe()
+{
+	var email=$("#email").val();
+	if(email=="")
+	{
+		alert("请输入邮件地址!");
+		return;
+	}
+	$.post(
+		"{url:/site/unsubscribe_act/}",
+		{'email':email},
+		function(c)
+		{
+			if(c=='success')
+			{
+				var content=$("#unsubscribe_success").html();
+				var tmpdialog=art.dialog({'title':"",'content':content,'lock':true});
+			}
+			else
+			{
+				alert(c);
+			}
+		}
+	);
+}
+</script>
+<div class="tipsbordersuff">
+	<div class="tipsbordertext">
+		<h5>
+			<img src="{skin:}images/front/subscibe.gif" width="88" height="23" alt="" />
+		</h5>
+		<p>
+			您曾经订阅了我们的电子目录，因此我们将不时给您发送本店的相关活动公告，产品信息。如果您不想频繁收到我们的邮件或不想收到我们的相关更新，请输入您的E-Mail地址，选择"退订"即可，期待您继续关注我们。
+		</p>
+		<dl>
+			<dd>
+				E-mail:<input class="gray" type="text" id="email" />
+				<input type="button" onclick="unsubscribe();" class="submit_cancel" value="我要退订" />
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				您还可以：
+			</dt>
+			{set:$callback = IReq::get('callback')}
+			{if:$callback != ''}
+			<dd>
+					<a href="{url:$callback}">·继续操作>></a>
+			</dd>
+			{/if}
+			{if:$this->user['user_id']}
+			<dd>
+					<a href="{url:/ucenter/index}">·个人中心>></a>
+			</dd>
+			{/if}
+			<dd>
+					<a href="{url:/site/index}">·网站首页>></a>
+			</dd>
+		</dl>
+	</div>
+</div>
+
+<div id="unsubscribe_success" style="display:none;">
+	<div class="popwin" style="height:150px">
+		<a class="close_2 f_r mt_10" onclick="location.reload();" style="cursor:pointer">关闭</a>
+		<div class="cont">
+			<p class="red2 f14 bold m_10"><img src="{skin:}images/front/face.gif" width="42" height="42" /> 谢谢</p>
+			<p class="gray f14 bold">我们已收到您的相关订阅更新，将于10个工作日内生效，请见谅...</p>
+		</div>
+	</div>
+</div>

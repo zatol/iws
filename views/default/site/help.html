@@ -1,0 +1,86 @@
+{set:$seo_data=array();$site_config=new Config('site_config');$site_config=$site_config->getInfo();}	
+	
+{set:$seo_data['title']=isset($site_config['name'])?$site_config['name']:""}
+{set:$seo_data['title']=$this->help_row['name'].'_'.$seo_data['title'] }
+{set:seo::set($seo_data);}
+{set:$cat_id=$this->cat_row['id'];}
+<div class="helpCon">
+	<div class="helpCenterHead">
+		<div style="height: 15px; clear: both; overflow: hidden">
+		</div>
+		<p class="helpCenterTitle">
+			<span>您当前的位置：</span><a href="{url:}">首页</a><span>&gt;</span><a href="{url:/site/help_list/id/$cat_id}">{$this->cat_row['name']}</a><span>&gt;</span>{$this->help_row['name']}
+		</p>
+	</div>
+	<div class="blank0">
+	</div>
+	<div class="help_left">
+		<!-- 自助服务 -->
+		<!-- 帮助导航 -->
+		<div class="fuwu">
+			<h1>
+				<em></em>帮助导航
+				<em></em>
+			</h1>
+			<div style="padding-bottom: 0px; border-bottom: none;"
+				class="selfSeviserBox">
+				<div class="nav">
+					<ul id="silder">
+						<li class="nav_li nav_li_hover" id="li_17">
+							<a href="javascript:void(0);">{$this->cat_row['name']}</a>
+						</li>
+						{query:name=help_category where=position_left eq 1 order=sort desc,id desc}
+						<li class="nav_nr" id="cate_17" style="display: block;">
+						{query:name=help where=cat_id eq $cat_id order=sort desc,id desc item=$help_row}
+							<a href="{url:/site/help/id/$help_row[id]/}" class="track"
+								name="left_category_22">{$help_row['name']}</a>
+							<br>
+							{/query}
+						</li>
+						{/query}
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- 联系客服 -->
+		<div class="fuwu topMargin10">
+			<h1>
+				<em></em>联系方式
+				<em></em>
+			</h1>
+			<div class="selfSeviserBox">
+				<div class="lianxi clearfix">
+					<p>
+						<span>热线：18280460862</span>
+					</p>
+					<p>
+						邮箱：
+						<b>qiaitao@gmail.com </b>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="help_right">
+		<div class="liucheng">
+			<div class="biaoti">
+				<b>{$this->help_row['name']}</b>
+			</div>
+			<div id="helpcontent" class="content">
+				<p>
+					<br>
+					&nbsp;&nbsp;&nbsp; {$this->help_row['content']}
+				</p>
+				<p>
+					&nbsp;&nbsp;&nbsp;
+					<span style="color: #e53333;"><br> </span>
+				</p>
+				<p>
+					&nbsp;
+				</p>
+
+			</div>
+		</div>
+	</div>
+</div>

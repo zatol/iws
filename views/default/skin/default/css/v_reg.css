@@ -1,0 +1,891 @@
+
+body, html {
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    padding: 0;
+}
+img {
+    border: medium none;
+}
+h1, h2, h3, h4, h5, h6, hr, blockquote, form, ul, ol, li, p, pre, dl, dt, dd, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+ul, ol, li {
+    list-style: none outside none;
+}
+sup {
+    vertical-align: text-top;
+}
+sub {
+    vertical-align: text-bottom;
+}
+legend {
+    color: #000000;
+}
+fieldset {
+    border: 0 none;
+}
+button, input, select, textarea {
+    font-size: 100%;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.clear {
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+}
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+/*.clearfix {
+    display: inline-block;
+    overflow: hidden;
+}*/
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.hr_10 {
+    clear: both;
+    font-size: 1px;
+    height: 10px;
+    line-height: 1px;
+    overflow: hidden;
+}
+body, button, input, select, textarea {
+    color: #000000;
+    font-family: "宋体";
+    font-size: 12px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+address, cite, dfn, em, var {
+    font-style: normal;
+}
+code, kbd, pre, samp {
+    font-family: courier new,courier,monospace;
+}
+.bold {
+    font-weight: bold;
+}
+a, area {
+}
+:focus {
+}
+.topMargin5 {
+    margin-top: 5px;
+}
+.topMargin10 {
+    margin-top: 10px;
+}
+.topMargin8 {
+    margin-top: 8px;
+}
+.topMargin20 {
+    margin-top: 20px;
+}
+.leftMargin5 {
+    margin-left: 5px;
+}
+.leftMargin10 {
+    margin-left: 10px;
+}
+.wrapper {
+    height: 100%;
+    margin: 0 auto;
+    width: 980px;
+}
+.regist {
+    border: 1px solid #C3C3C3;
+    width: 978px;
+}
+.regist h1 {
+    background: url("../images/front/jianbian.jpg") repeat-x scroll left top transparent;
+    border-bottom: 1px solid #C3C3C3;
+    font-size: 14px;
+    height: 27px;
+    line-height: 27px;
+    padding-left: 10px;
+}
+.content_left {
+    float: left;
+    padding: 41px 41px 10px;
+    width: 683px;
+}
+.tag {
+    background: url("../images/front/xian2.gif") repeat-x scroll left bottom transparent;
+    height: 45px;
+    line-height: 45px;
+    padding-bottom: 10px;
+    width: 682px;
+}
+.tag h2 {
+    background: url("../images/front/num_1.gif") no-repeat scroll 10px center transparent;
+    color: #656565;
+    float: left;
+    font-size: 14px;
+    font-weight: normal;
+    text-indent: 42px;
+    width: 145px;
+}
+.tag ul {
+    float: left;
+    width: 400px;
+}
+.tag li {
+    background: url("../images/front/tag_bg.gif") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    float: left;
+    height: 45px;
+    padding-left: 40px;
+    width: 94px;
+}
+.tag li.tb-email {
+    background-position: 0 0;
+    margin-right: 10px;
+}
+.tag li.tb-phone {
+    background-position: -144px -45px;
+}
+.tag li.tb-email-select {
+    background-position: 0 -45px;
+}
+.tag li.tb-phone-select {
+    background-position: -144px 0;
+}
+.yi {
+    padding-left: 45px;
+}
+.yi:hover {
+    color: #CC0000;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.er {
+    padding-left: 63px;
+}
+.er:hover {
+    color: #CC0000;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.infor {
+    padding-top: 20px;
+    width: 682px;
+}
+.infor h2 {
+    background: url("../images/front/num_2.gif") no-repeat scroll 10px 0 transparent;
+    color: #656565;
+    float: left;
+    font-size: 14px;
+    font-weight: normal;
+    height: 45px;
+    line-height: 26px;
+    margin-top: 13px;
+    text-indent: 42px;
+    width: 140px;
+}
+.email {
+    float: left;
+    width: 535px;
+}
+.gray {
+    height: 44px;
+    line-height: 44px;
+    padding: 5px 0 5px 24px;
+    width: 515px;
+}
+.gray label {
+    float: left;
+}
+.gray input {
+    border: 1px solid #A5AFC3;
+    float: left;
+    height: 19px;
+    line-height: 19px;
+    margin-right: 5px;
+    margin-top: 12px;
+    width: 197px;
+}
+.tips, .tips3, .tips1, .tips4, .tips5 {
+    border: 1px solid #36689B;
+    color: #434343;
+    float: left;
+    line-height: 17px;
+    padding-left: 3px;
+    width: 202px;
+}
+.tips3 {
+    margin-top: -4px;
+}
+.tips1 {
+    margin-top: 13px;
+}
+.tips4 {
+    margin-top: 3px;
+}
+.tips5 {
+    margin: -20px 0 0 38px;
+}
+.password {
+    height: 44px;
+    line-height: 44px;
+    padding: 5px 0 5px 24px;
+    width: 515px;
+}
+.password label {
+    display: inline-block;
+}
+.password img, .password a {
+    margin-right: 10px;
+    margin-top: 11px;
+}
+.password input {
+    border: 1px solid #A5AFC3;
+    height: 19px;
+    line-height: 19px;
+    margin: 12px 5px 0 0;
+    vertical-align: middle;
+    width: 197px;
+}
+.tips2, .tips6, .tips7 {
+    background: url("../images/front/shurubg0316.jpg") no-repeat scroll 5px center transparent;
+    border: 1px solid #CC9998;
+    color: #A10000;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 11px;
+    padding-left: 3px;
+    text-indent: 25px;
+    width: 202px;
+}
+.tips6 {
+    margin: -20px 0 0 38px;
+}
+.bt {
+    color: #656565;
+    float: left;
+    padding-left: 120px;
+    padding-top: 10px;
+}
+.bt a {
+    color: #A20000;
+}
+.bt p {
+    padding-bottom: 10px;
+}
+.submitStyle {
+    background: url("../images/front/bt_bg.jpg") no-repeat scroll center center transparent;
+    border: 0 none;
+    clear: both;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 27px;
+    line-height: 27px;
+    padding: 1px;
+    text-align: center;
+    width: 127px;
+}
+.submitStyle:hover {
+    text-decoration: underline;
+}
+.submitingStyle {
+    color: #656565;
+}
+.content_right {
+    background-color: #F9F9F9;
+    border-left: 1px solid #C3C3C3;
+    float: right;
+    height: 500px;
+    width: 211px;
+}
+.content_right p {
+    padding-top: 130px;
+    text-align: center;
+}
+.content_right p a {
+    background: url("../images/front/bt2_bg.jpg") no-repeat scroll center center transparent;
+    display: inline-block;
+    height: 19px;
+    line-height: 19px;
+    margin-left: 2px;
+    text-align: center;
+    width: 61px;
+}
+.log2 {
+    background: url("../images/front/bt2.jpg") no-repeat scroll center center transparent;
+    clear: both;
+    color: #656565;
+    display: block;
+    float: left;
+    height: 23px;
+    margin-right: 5px;
+    padding-bottom: 0;
+    padding-top: 4px;
+    text-align: center;
+    width: 127px;
+}
+.log2 img {
+    margin-right: 3px;
+}
+.hideDiv {
+    display: none;
+    visibility: hidden;
+}
+.DisplayDiv {
+    display: block;
+    visibility: visible;
+}
+.email label, .email input {
+    float: left;
+}
+.email label {
+    text-align: right;
+    width: 100px;
+}
+.success-tip {
+    background: url("../images/front/yes.gif") no-repeat scroll center center transparent;
+    float: left;
+    height: 14px;
+    margin-top: 12px;
+    width: 15px;
+}
+#Img1, .change-img {
+    cursor: pointer;
+    float: left;
+}
+.change-img:hover {
+    text-decoration: none;
+}
+.nextcode, .change {
+    color: Gray;
+    display: block;
+    line-height: 12px;
+    width: 37px;
+}
+.change {
+    color: #A00002;
+}
+.hiddenSubmit {
+    display: none;
+    visibility: hidden;
+}
+.showSubmit {
+    display: block;
+    visibility: visible;
+}
+.validating {
+    background: url("../images/front/loading.gif") no-repeat scroll center center transparent;
+    width: 30px;
+}
+.tips7 {
+    height: 50px;
+    line-height: 16px;
+    margin-top: -5px;
+    padding-left: 29px;
+    text-indent: 0;
+    width: 180px;
+}
+.phonelogin {
+    color: #7030A0;
+    height: 15px;
+    line-height: 15px;
+    text-decoration: none;
+}
+.grayback {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #FAFAFA;
+    border-color: #F2F2F2;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 2px 2px 1px;
+}
+.regtips {
+    border: 1px solid #36689B;
+    color: #434343;
+    float: left;
+    height: 37px;
+    line-height: 17px;
+    margin-top: 2px;
+    padding-left: 3px;
+    padding-top: 3px;
+    width: 238px;
+}
+.sprite_a {
+    background: url("../images/front/sprite_a.png") no-repeat scroll left top transparent;
+}
+.asRegister_tipspic {
+    background-position: 0 0;
+    height: 25px;
+    margin: 0 auto;
+    width: 220px;
+}
+.textindent {
+    text-indent: -9999px;
+}
+.asRegister_tipsname {
+    color: #8C8C8C;
+    text-align: center;
+}
+.asRegister_tipsname .shopping {
+    background-position: 0 -39px;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-size: 12px;
+    height: 29px;
+    line-height: 29px;
+    margin-left: 10px;
+    text-align: center;
+    width: 98px;
+}
+.asRegister_tipsname .asRFt {
+    float: left;
+    line-height: 29px;
+    margin-left: 80px;
+}
+.asVerify_tips {
+    background: none repeat scroll 0 0 #FEFEF1;
+    border: 1px solid #FFEEC4;
+    color: #666666;
+    margin: 0 auto;
+    padding: 10px 0;
+    text-align: center;
+    width: 620px;
+}
+.asVerify_mail, .asVerify_Mobile {
+    background-position: -120px -102px;
+    color: #444444;
+    display: inline;
+    float: left;
+    height: 80px;
+    line-height: 20px;
+    margin-left: 220px;
+    padding-left: 65px;
+    width: 285px;
+}
+.asVerify_Mobile {
+    background-position: 0 -188px;
+    margin-left: 0;
+    padding-left: 100px;
+}
+.asBtn {
+    background-position: 0 -354px;
+    display: block;
+    height: 27px;
+    line-height: 27px;
+    overflow: hidden;
+    text-align: center;
+    width: 99px;
+}
+.asBtn01 {
+    background-position: 0 -1200px;
+    display: block;
+    height: 27px;
+    line-height: 27px;
+    overflow: hidden;
+    text-align: center;
+    width: 129px;
+}
+.box3, .box7, .box10, .box15, .box20, .box30, .box40, .box50, .box80 {
+    clear: both;
+    display: block;
+    font-size: 0;
+    height: 7px;
+    line-height: 0;
+}
+.box10 {
+    height: 10px;
+}
+.box15 {
+    height: 15px;
+}
+.box20 {
+    height: 20px;
+}
+.box30 {
+    height: 30px;
+}
+.box40 {
+    height: 40px;
+}
+.box50 {
+    height: 50px;
+}
+.box80 {
+    height: 80px;
+}
+.box3 {
+    height: 3px;
+}
+.margb10 {
+    clear: both;
+    margin-bottom: 10px;
+}
+.as_clear {
+    clear: both;
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+}
+.fontWrb {
+    font: bold 15px/24px "微软雅黑";
+}
+.fontgry9 {
+    color: #999999;
+}
+.fontreda {
+    color: #A10000;
+}
+.fontB14b {
+    color: #333333;
+    font-size: 14px;
+    font-weight: bold;
+}
+.fontR14b {
+    color: #A10000;
+    font-size: 14px;
+    font-weight: bold;
+}
+.fontgry3 {
+    color: #333333;
+}
+.fontRa02 {
+    color: #A00002;
+}
+.spR40 {
+    padding-right: 40px;
+}
+.whitef:link, .whitef:visited {
+    color: #FFFFFF;
+}
+.whitef:hover {
+    color: #FFFFFF;
+}
+a, a:visited {
+    color: #333333;
+    text-decoration: none;
+}
+.reda10_ft14:link, .reda10_ft14:visited {
+    color: #A10000;
+    font-size: 14px;
+}
+.reda10_ft14:hover {
+    text-decoration: underline;
+}
+.reda10_ft12:link, .reda10_ft12:visited {
+    color: #A10000;
+    font-size: 12px;
+}
+.reda10_ft12:hover {
+    text-decoration: underline;
+}
+.asfontnone {
+    display: none;
+}
+.aslinx {
+    background-position: 0 -943px;
+    display: block;
+    font-size: 0;
+    height: 2px;
+    line-height: 0;
+    width: 890px;
+}
+.Rclear {
+    clear: both;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+}
+#v2regListInfo_bar label {
+    float: left;
+    line-height: 22px;
+}
+#livalidatecode label {
+    margin-top: 15px;
+}
+.v2regListInfo_rtCont {
+    float: left;
+    height: 48px;
+    width: 432px;
+}
+.reginput_01, .reginput_02 {
+    border: 1px solid #A5AFC3;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    margin-right: 8px;
+    width: 198px;
+}
+.reginput_02 {
+    margin-top: 16px;
+    width: 48px;
+}
+.v2regList_Btnimg {
+    background: url("../images/front/sprite_a.png") no-repeat scroll 0 -354px transparent;
+    float: left;
+    height: 22px;
+    margin-top: -3px;
+    padding-top: 5px;
+    position: relative;
+    width: 97px;
+}
+.v2regList_Btnimg img {
+    margin-right: 3px;
+}
+.v2regBtn_02 {
+    float: left;
+    margin-top: 5px;
+}
+#livalidatecode .v2regBtn_02 {
+    margin-top: 18px;
+}
+.v2reg_Safetyinfo {
+    color: #666666;
+    float: left;
+    line-height: 22px;
+}
+.v2regfl, .v2regimg_01 {
+    float: left;
+}
+.v2regimg_01 {
+    background: url("../images/front/sprite_a.png") no-repeat scroll 0 -1097px transparent;
+    float: left;
+    height: 12px;
+    margin-right: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+    width: 140px;
+}
+.v2regimg_02 {
+    background: url("../images/front/sprite_a.png") no-repeat scroll 0 -1117px transparent;
+    float: left;
+    height: 12px;
+    margin-right: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+    width: 140px;
+}
+.v2regimg_03 {
+    background: url("../images/front/sprite_a.png") no-repeat scroll 0 -1139px transparent;
+    float: left;
+    height: 12px;
+    margin-right: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+    width: 140px;
+}
+.v2reg_tips01 {
+    color: #999999;
+    height: 22px;
+    line-height: 18px;
+}
+.v2reg_bg {
+    background: none repeat scroll 0 0 #FAFAFA;
+    border: 1px solid #F2F2F2;
+}
+.v2reg_bg1 {
+    border: 1px solid #FFFFFF;
+}
+#v2regListInfo_bar li {
+    clear: both;
+    margin-top: 3px;
+    padding: 5px 0;
+}
+.v2reg_tips02 {
+    border: 1px solid #FFD5D5;
+    color: #A10000;
+    display: inline-block;
+    padding: 3px 5px;
+}
+.change-img_01 {
+    float: left;
+    margin-left: 7px;
+}
+.v2reg_bt {
+    margin-left: 100px;
+}
+.v2reg_Class {
+    float: left;
+}
+.box5 {
+    clear: both;
+    display: block;
+    font-size: 0;
+    height: 5px;
+    line-height: 0;
+}
+.asPhoneregBtn {
+    background-position: 0 -354px;
+    border: 0 none;
+    display: block;
+    float: left;
+    height: 27px;
+    line-height: 27px;
+    margin-top: -3px;
+    text-align: center;
+    width: 97px;
+}
+.clear {
+    clear: both;
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+}
+.iFloatingwindow {
+    background: none repeat scroll 0 0 #FFF7F7;
+    border: 1px solid #FFB8B8;
+    display: none;
+    left: 220px;
+    padding: 7px;
+    position: absolute;
+    top: 35px;
+}
+.iFloatingwindow dd {
+    color: #000000;
+    float: left;
+    font-family: Verdana;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.iFloatingwindow .inviteTips_ft {
+    clear: left;
+    color: #804117;
+    line-height: 20px;
+    margin-top: 5px;
+    text-align: center;
+    width: 180px;
+}
+.iFloatingwindow .inviteTips_ft img {
+    margin-right: 5px;
+    margin-top: 0;
+    vertical-align: middle;
+}
+.iFloatingwindow .inviteTips_img img {
+    margin-top: 5px;
+    vertical-align: middle;
+}
+.iFloatingwindow .inviteTips_img a, .iFloatingwindow .inviteTips_img a:visited {
+    display: inline-block;
+}
+.iFloatingInput {
+    border: 1px solid #AAAAAA;
+    font-weight: bold;
+    height: 20px;
+    margin-top: 3px;
+    width: 60px;
+}
+.ftgry6 {
+    color: #666666;
+}
+a.grayft6:link, a.grayft6:visited {
+    color: #666666;
+}
+.iFloatingIco {
+    left: 33px;
+    position: absolute;
+    top: -6px;
+}
+.FSVerification {
+    color: #808080;
+    float: left;
+    line-height: 14px;
+    margin-left: 7px;
+    margin-top: 25px;
+}
+a.reda02, a.reda02:visited {
+    color: #A00002;
+}
+#img_validatecode {
+    cursor: pointer;
+    float: left;
+}
+.orderChangeTsk80EE8D67985E {
+    background-color: #FFFFFF;
+    border: 1px solid #A10000;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 15px;
+    position: fixed;
+    width: 300px;
+    z-index: 1000006;
+}
+.orderChangeTsk80EE8D67985E h3 {
+    background: url("https://ssl.vanclimg.com/Others/2012/3/6/tsbg0117.jpg") repeat-x scroll left top transparent;
+    color: #FFFFFF;
+    height: 23px;
+    line-height: 23px;
+    width: 300px;
+}
+.orderChangeTsk80EE8D67985E h3 span {
+    float: left;
+    margin-left: 3px;
+}
+.orderChangeTsk80EE8D67985E h3 a:link, .orderChangeTsk80EE8D67985E h3 a:visited {
+    color: #FFFFFF;
+    float: right;
+    margin-right: 6px;
+}
+.orderChangeTsk80EE8D67985E h3 a img {
+    display: inline;
+    float: left;
+    margin-top: 6px;
+}
+.orderChangeTsk80EE8D67985E .Word80EE8D67985E {
+    color: #333333;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 15px auto 10px;
+    padding: 0 10px;
+    text-align: left;
+}
+.orderChangeTsk80EE8D67985E div {
+    display: inline;
+    float: left;
+    margin: 0 0 0 120px;
+}
+.orderChangeTsk80EE8D67985E div .queding80EE8D67985E {
+    background: url("https://ssl.vanclimg.com/Others/2012/3/6/queding0117.jpg") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    cursor: pointer;
+    float: left;
+    height: 19px;
+    width: 56px;
+}
+.orderChangeTsk80EE8D67985E div span {
+    float: left;
+    margin-left: 10px;
+    margin-top: 2px;
+}
+.orderChangeTsk80EE8D67985E div span a:link, .orderChangeTsk80EE8D67985E span div a:visited {
+    text-decoration: underline;
+}
+#maskdiv80EE8D67985E {
+    background: none repeat scroll 0 0 black;
+    border: 0 none;
+    display: none;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100000;
+}

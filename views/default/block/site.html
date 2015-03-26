@@ -1,0 +1,91 @@
+{if:$mod == 'mycart'}
+	<span class="blank10"></span>
+	{if:!empty($data)}
+	<div id="minishoppingcar_have_product" class="havepru">
+		<h2>
+			最近加入的商品：
+		</h2>
+		<ul>
+		{foreach:items = $data}
+			<li>
+				<div class="carListLeft">
+					<a href="{url:/site/products/id/$item[goods_id]}"><img width="36"
+							heigth="36" alt="{$item['name']}"
+							src="{webroot:$item[list_img]}">
+					</a>
+				</div>
+				<div class="carListRight">
+					<h3>
+						<a title="{$item['name']}"
+							href="{url:/site/products/id/$item[goods_id]}">{$item['name']}</a>
+					</h3>
+					<span class="blank0"></span>
+					<div class="priceArea">
+						<span><a
+							onclick="removeCart('{url:/simple/removeCart}','{$item['id']}','{$item['type']}');$('#minishoppingcar_have_product').hide('slow');"
+							href="javascript:void(0);" name="head-minicart-delproduct"
+							class="track">删除</a>
+						</span>
+						<strong>￥{$item['sell_price']}</strong><em>×{$item['count']}</em>
+					</div>
+				</div>
+				<span class="blank0"></span>
+			</li>
+			{/foreach}
+		</ul>
+		<span class="blank10"></span>
+		<div class="ShopCarPage">
+			<div class="SCtotalpage">
+				<div>
+					购物车中共有
+					<span id="shoppingcar_product_totalcount"
+						car_product_total="shoppingCar_product_totalcount">{$count}</span> 件商品
+				</div>
+				<strong><a rel="nofollow"
+					href="{url:/simple/cart}"
+					name="head-minicart-shopping" class="track"></a>
+				</strong>
+			</div>
+		</div>
+		<span class="blank5"></span>
+	</div>
+	<span class="blank0"></span>
+	{else:}
+	<div id="minishoppingcar_no_product" class="shopnopru" >
+		<div id="div_mycart" class="SCtotalpage">
+			您的购物车中没有任何商品
+		</div>
+		<div class="noPruSeeCar">
+			<div>
+				<a rel="nofollow"
+					href="{url:/simple/cart}"
+					name="head-minicart-shopping_n" class="track"></a>
+			</div>
+		</div>
+	</div>
+	<span class="blank8"></span>
+	{/if}
+{/if}
+
+{if:$mod == 'selectProduct'}
+	<table width="100%">
+		<col />
+		<col width="80px" />
+		<col width="60px" />
+		{foreach:items = $productList}
+		<tr>
+			<td align="left">
+				{set:$spec_array=Block::show_spec($item['spec_array']);}
+				{foreach:items=$spec_array item=$specValue key=$specName}
+					{$specName}：{$specValue} &nbsp&nbsp
+				{/foreach}
+			</td>
+			<td align="center"><span class="bold red2">￥{$item['sell_price']}</span></td>
+			<td align="right"><label class="btn_gray_s"><input type="button" onclick="joinCart_ajax('{$item['id']}','product');" value="购买"></label></td>
+		</tr>
+		{/foreach}
+		<tr>
+			<td colspan='3' align="left"><a href='{url:/site/products/id/$item[goods_id]}'>查看更多</a></td>
+		</tr>
+	</table>
+{/if}

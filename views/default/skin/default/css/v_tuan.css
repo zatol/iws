@@ -1,0 +1,2178 @@
+
+@charset "utf-8";
+.blank03 {
+    clear: both;
+    display: block;
+    font-size: 0;
+    height: 3px;
+}
+.blank07 {
+    clear: both;
+    display: block;
+    font-size: 0;
+    height: 7px;
+}
+.CENdiv {
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px;
+}
+.smmenudiv {
+    background-image: url("http://i.vanclimg.com/Tuan/nd/smmenubj.jpg");
+    height: 38px;
+    line-height: 38px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px;
+}
+.smmenudiv ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 0 25px;
+}
+.smmenudiv ul li {
+    color: #666666;
+    float: left;
+    font-family: "宋体";
+    font-size: 12px;
+    height: 12px;
+}
+.smmenudiv ul li img {
+    display: block;
+    font-size: 0;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 13px;
+}
+.smmenudiv ul li span {
+    color: #B80001;
+}
+.smmenudiv ul li a:link {
+    color: #666666;
+    text-decoration: none;
+}
+.smmenudiv ul li a:visited {
+    color: #666666;
+    text-decoration: none;
+}
+.smmenudiv ul li a:hover {
+    color: #666666;
+    text-decoration: underline;
+}
+.smmenudiv ul li a:active {
+    color: #666666;
+    text-decoration: none;
+}
+.smmenudiv ul li span a:link {
+    color: #B80001;
+    text-decoration: none;
+}
+.smmenudiv ul li span a:visited {
+    color: #B80001;
+    text-decoration: none;
+}
+.smmenudiv ul li span a:hover {
+    color: #B80001;
+    text-decoration: underline;
+}
+.smmenudiv ul li span a:active {
+    color: #B80001;
+    text-decoration: none;
+}
+.entcon {
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px;
+}
+.entbordiv {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #FFFFFF;
+    border-color: #E5E5E5;
+    border-image: none;
+    border-right: 1px solid #E5E5E5;
+    border-style: none solid solid;
+    border-width: 1px;
+    float: left;
+    width: 978px;
+}
+.infotop {
+    width: 978px;
+}
+.infotop ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.infotop ul li {
+    float: left;
+}
+.infotop ul li span {
+    color: #666666;
+    display: block;
+    float: left;
+    font-family: "宋体";
+    font-size: 12px;
+    height: 29px;
+    line-height: 29px;
+    padding-left: 25px;
+    padding-right: 10px;
+}
+.blank15 {
+    clear: both;
+    display: block;
+    font-size: 0;
+    height: 15px;
+}
+.info_lay {
+    background-color: #F1F1F1;
+    border: 1px solid #EAEAEA;
+    color: #666666;
+    display: block;
+    float: left;
+    font-family: "宋体";
+    font-size: 12px;
+    height: 27px;
+    line-height: 27px;
+    margin-right: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.defaulIndex {
+    background-color: #F1F1F1;
+    border: 1px solid #EAEAEA;
+    color: #666666;
+    display: block;
+    float: left;
+    font-family: "宋体";
+    font-size: 12px;
+    height: 27px;
+    line-height: 27px;
+    margin-right: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.info_lay a {
+    color: #666666;
+    font-family: "宋体";
+    font-size: 12px;
+    text-decoration: none;
+}
+.info_lay a.laylink01 {
+    background-image: url("http://i.vanclimg.com/Tuan/nd/ico02.jpg");
+    background-position: right center;
+    background-repeat: no-repeat;
+    color: #B80001;
+    font-family: "宋体";
+    font-size: 12px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+.info_lay a.laylink01:visited {
+    background-image: url("http://i.vanclimg.com/Tuan/nd/ico02.jpg");
+    background-position: right center;
+    background-repeat: no-repeat;
+    color: #B80001;
+    font-family: "宋体";
+    font-size: 12px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+.info_lay a.laylink01:hover {
+    background-image: url("http://i.vanclimg.com/Tuan/nd/ico02.jpg");
+    background-position: right center;
+    background-repeat: no-repeat;
+    color: #B80001;
+    font-family: "宋体";
+    font-size: 12px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+.info_lay a.laylink01:active {
+    background-image: url("http://i.vanclimg.com/Tuan/nd/ico02.jpg");
+    background-position: right center;
+    background-repeat: no-repeat;
+    color: #B80001;
+    font-family: "宋体";
+    font-size: 12px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+.info_lay a.laylink02:link {
+    background-image: url("http://i.vanclimg.com/Tuan/nd/ico03.jpg");
+    background-position: right center;
+    background-repeat: no-repeat;
+    color: #666666;
+    font-family: "宋体";
+    font-size: 12px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+.info_lay a.laylink02:visited {
+    background-image: url("http://i.vanclimg.com/Tuan/nd/ico03.jpg");
+    background-position: right center;
+    background-repeat: no-repeat;
+    color: #666666;
+    font-family: "宋体";
+    font-size: 12px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+.info_lay a.laylink02:hover {
+    background-image: url("http://i.vanclimg.com/Tuan/nd/ico03.jpg");
+    background-position: right center;
+    background-repeat: no-repeat;
+    color: #666666;
+    font-family: "宋体";
+    font-size: 12px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+.info_lay a.laylink02:active {
+    background-image: url("http://i.vanclimg.com/Tuan/nd/ico03.jpg");
+    background-position: right center;
+    background-repeat: no-repeat;
+    color: #666666;
+    font-family: "宋体";
+    font-size: 12px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+.info_lay a.laylink03:link {
+    background-image: url("http://i.vanclimg.com/Tuan/nd/ico04.jpg");
+    background-position: right center;
+    background-repeat: no-repeat;
+    color: #B80001;
+    font-family: "宋体";
+    font-size: 12px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+.info_lay a.laylink03:visited {
+    background-image: url("http://i.vanclimg.com/Tuan/nd/ico04.jpg");
+    background-position: right center;
+    background-repeat: no-repeat;
+    color: #B80001;
+    font-family: "宋体";
+    font-size: 12px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+.info_lay a.laylink03:hover {
+    background-image: url("http://i.vanclimg.com/Tuan/nd/ico04.jpg");
+    background-position: right center;
+    background-repeat: no-repeat;
+    color: #B80001;
+    font-family: "宋体";
+    font-size: 12px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+.info_lay a.laylink03:active {
+    background-image: url("http://i.vanclimg.com/Tuan/nd/ico04.jpg");
+    background-position: right center;
+    background-repeat: no-repeat;
+    color: #B80001;
+    font-family: "宋体";
+    font-size: 12px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+.info_lay a.laylink04:link {
+    background-image: url("http://i.vanclimg.com/Tuan/nd/ico05.jpg");
+    background-position: right center;
+    background-repeat: no-repeat;
+    color: #666666;
+    font-family: "宋体";
+    font-size: 12px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+.info_lay a.laylink04:visited {
+    background-image: url("http://i.vanclimg.com/Tuan/nd/ico05.jpg");
+    background-position: right center;
+    background-repeat: no-repeat;
+    color: #666666;
+    font-family: "宋体";
+    font-size: 12px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+.info_lay a.laylink04:hover {
+    background-image: url("http://i.vanclimg.com/Tuan/nd/ico05.jpg");
+    background-position: right center;
+    background-repeat: no-repeat;
+    color: #666666;
+    font-family: "宋体";
+    font-size: 12px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+.info_lay a.laylink04:active {
+    background-image: url("http://i.vanclimg.com/Tuan/nd/ico05.jpg");
+    background-position: right center;
+    background-repeat: no-repeat;
+    color: #666666;
+    font-family: "宋体";
+    font-size: 12px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+.inforight {
+    background-color: #F1F1F1;
+    border: 1px solid #EAEAEA;
+    color: #666666;
+    font-family: "宋体";
+    font-size: 12px;
+    height: 27px;
+    line-height: 27px;
+    margin-left: 52px;
+    width: 400px;
+}
+.inforight img {
+    display: block;
+    float: left;
+}
+.marcontent {
+    width: 978px;
+}
+.marcontent ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.marcontent ul li {
+    background-color: #FBFBFB;
+    float: left;
+    height: 497px;
+    margin-left: 25px;
+    margin-right: -7px;
+    margin-top: 20px;
+    width: 296px;
+}
+.titlefont {
+    color: #666666;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    font-weight: bold;
+    height: 83px;
+    line-height: 20px;
+    padding-left: 13px;
+    padding-top: 10px;
+    width: 270px;
+}
+.titlefont span {
+    color: #B80001;
+}
+.prodiv {
+    height: 270px;
+    padding-left: 13px;
+    position: relative;
+    text-align: center;
+    width: 270px;
+}
+.blank10 {
+    clear: both;
+    display: block;
+    font-size: 0;
+    height: 10px;
+}
+.proinfo {
+    background-image: url("http://i.vanclimg.com/Tuan/nd/probotbj.jpg");
+    height: 124px;
+    width: 296px;
+}
+.promon {
+    background-image: url("http://i.vanclimg.com/Tuan/nd/bj01.jpg");
+    color: #666666;
+    display: inline;
+    float: left;
+    font-family: "宋体";
+    font-size: 14px;
+    height: 37px;
+    line-height: 16px;
+    margin-left: 13px;
+    width: 96px;
+}
+.promon div {
+    padding-left: 10px;
+    padding-top: 2px;
+}
+.promon label {
+    font-size: 12px;
+}
+.promon span {
+    font-family: Tahoma,Geneva,sans-serif;
+}
+.gmdiv {
+    color: #666666;
+    float: left;
+    font-family: "宋体";
+    font-size: 14px;
+    height: 37px;
+    text-align: right;
+    width: 174px;
+}
+.gmdiv span {
+    color: #B80001;
+    font-family: Tahoma,Geneva,sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+.money {
+    color: #FFFFFF;
+    float: left;
+    font-family: "微软雅黑","宋体";
+    font-size: 24px;
+    padding-left: 13px;
+    padding-top: 15px;
+    width: 125px;
+}
+.money span {
+    font-family: Tahoma,Geneva,sans-serif;
+    font-size: 24px;
+}
+.money label {
+    font-family: Tahoma,Geneva,sans-serif;
+    font-size: 31px;
+}
+.look {
+    float: left;
+    padding-top: 2px;
+    text-align: right;
+    width: 145px;
+}
+.protime {
+    clear: both;
+    color: #666666;
+    font-family: "宋体";
+    font-size: 12px;
+    padding-top: 14px !important;
+    width: 296px;
+}
+.protime span {
+    font-family: Tahoma,Geneva,sans-serif;
+}
+.protime img {
+    display: block;
+    float: left;
+    padding-left: 60px;
+    padding-right: 4px;
+    padding-top: 3px;
+}
+.moreimg {
+    float: left;
+    padding-bottom: 5px;
+    width: 978px;
+}
+.moreimg ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 20px 0 0 48px;
+}
+.moreimg ul li {
+    border: 1px solid #838383;
+    float: left;
+    font-size: 0;
+    margin-right: 62px;
+    padding: 3px;
+}
+.moreimg ul li img {
+    height: 161px;
+    width: 240px;
+}
+.moreimg1 {
+    float: left;
+    padding-bottom: 32px;
+    width: 978px;
+}
+.moreimg1 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 20px 0 0 48px;
+}
+.moreimg1 ul li {
+    border: 1px solid #838383;
+    float: left;
+    font-size: 0;
+    margin-right: 62px;
+    padding: 3px;
+}
+.moreimg1 ul li img {
+    height: 161px;
+    width: 240px;
+}
+.blank60 {
+    clear: both;
+    display: block;
+    font-size: 0;
+    height: 60px;
+}
+.info_lay a {
+    background-image: url("http://i.vanclimg.com/Tuan/nd/ico03.jpg");
+    background-position: right center;
+    background-repeat: no-repeat;
+    color: #666666;
+    font-family: "宋体";
+    font-size: 12px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+
+.textScrollArea1 {
+    height: 27px;
+}
+#textScrollArea1 {
+    font-size: 14px;
+    height: 27px;
+    overflow: hidden;
+    width: 368px;
+}
+#textScroll1 {
+    display: inline;
+    float: left;
+    height: 10000%;
+}
+#textScrollCon11, #textScrollCon21 {
+    display: inline;
+    float: left;
+    height: auto;
+    width: 368px;
+}
+#textScrollCon1 span a:link, #textScrollCon1 span a:visited, #textScrollCon1 span a:hover {
+    color: #A10000;
+    font-weight: bold;
+}
+#textScrollCon11 a, #textScrollCon21 a {
+    color: #000000;
+    padding-left: 0;
+}
+#textScrollCon11 a:hover, #textScrollCon21 a:hover {
+    color: #A10000;
+}
+html {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #000000;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, textarea, p, th, td {
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+fieldset, img {
+    border: 0 none;
+}
+li {
+    list-style: none outside none;
+}
+em, strong, th {
+    font-style: normal;
+    font-weight: normal;
+}
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+input, textarea, select {
+    font-size: 100%;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+body {
+    color: #333333;
+    font-family: "宋体";
+    font-size: 12px;
+}
+a:link, a:visited {
+    color: #333333;
+    outline: medium none;
+    text-decoration: none;
+}
+a:hover {
+    color: #A10000;
+    text-decoration: none;
+}
+.blank0 {
+    clear: both;
+    display: block;
+    font-size: 1px;
+    line-height: 0;
+    visibility: hidden;
+}
+.blank5 {
+    clear: both;
+    display: block;
+    font-size: 1px;
+    height: 5px;
+    overflow: hidden;
+}
+.blank8 {
+    clear: both;
+    display: block;
+    font-size: 1px;
+    height: 8px;
+    overflow: hidden;
+}
+.blank10 {
+    clear: both;
+    display: block;
+    font-size: 1px;
+    height: 10px;
+    overflow: hidden;
+}
+.blank12 {
+    clear: both;
+    display: block;
+    font-size: 1px;
+    height: 12px;
+    overflow: hidden;
+}
+.blank15 {
+    clear: both;
+    display: block;
+    font-size: 1px;
+    height: 15px;
+    overflow: hidden;
+}
+.blank20 {
+    clear: both;
+    display: block;
+    font-size: 1px;
+    height: 20px;
+    overflow: hidden;
+}
+.blank25 {
+    clear: both;
+    display: block;
+    font-size: 1px;
+    height: 25px;
+    overflow: hidden;
+}
+.blank35 {
+    clear: both;
+    display: block;
+    font-size: 1px;
+    height: 35px;
+    overflow: hidden;
+}
+.blank50 {
+    clear: both;
+    display: block;
+    font-size: 1px;
+    height: 50px;
+    overflow: hidden;
+}
+#bodydiv {
+    background: none repeat scroll 0 0 #EBEBEB;
+    min-width: 980px;
+    position: relative;
+}
+.left_cont {
+    float: left;
+    width: 718px;
+}
+.left_cont_top {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #838383;
+    clear: both;
+    float: left;
+}
+.right_cont {
+    float: right;
+    width: 248px;
+}
+.t_txt {
+    color: #2E2E2E;
+    font: 22px/30px '微软雅黑';
+    padding: 15px;
+}
+.t_txt span {
+    color: #D50001;
+}
+.main_content {
+    background: none repeat scroll 0 0 #EBEBEB;
+    margin: 0 auto;
+    position: relative;
+    width: 980px;
+}
+.friend_link {
+    border-bottom: 1px solid #CACACA;
+    height: 34px;
+    line-height: 33px;
+    overflow: hidden;
+    padding-left: 260px;
+}
+.friend_link a {
+    background: url("http://i.vanclimg.com/tuan/css/images/Index/tg05.jpg") no-repeat scroll 0 5px transparent;
+    display: block;
+    float: left;
+    padding-left: 20px;
+}
+.f1 {
+    background-position: 0 0;
+    width: 52px;
+}
+.friend_link .f0 {
+    background-position: 0 0;
+    display: block;
+    float: left;
+    width: 50px;
+}
+.friend_link .f2 {
+    background-position: -73px 5px;
+    width: 40px;
+}
+.friend_link .f3 {
+    background-position: -138px 5px;
+    width: 40px;
+}
+.friend_link .f4 {
+    background-position: -201px 5px;
+    width: 28px;
+}
+.friend_link .f5 {
+    background-position: -251px 5px;
+    width: 45px;
+}
+.friend_link .f6 {
+    background-position: -315px 5px;
+    width: 45px;
+}
+.fast_buy {
+    padding: 0 0 0 10px;
+    width: 706px;
+}
+.productitem {
+    width: 718px;
+}
+.left_cont_bottom {
+    width: 718px;
+}
+.buy {
+    display: block;
+    height: 78px;
+    left: -54px;
+    position: relative;
+    width: 272px;
+    z-index: 10;
+}
+.buy_left {
+    float: left;
+    width: 218px;
+}
+.buy_left .b1 {
+    height: 101px;
+}
+.buy_right {
+    float: right;
+    margin-right: 10px;
+    overflow: hidden;
+    width: 465px;
+}
+.prod_txt {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #838383;
+    line-height: 24px;
+    padding: 10px;
+}
+.prod_txt h3 {
+    color: #D50001;
+    font: bold 16px/1 '微软雅黑';
+}
+.prod_txt h4 {
+    color: #9E9E9E;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+.prod_txt .line {
+    border-bottom: 1px dotted #999999;
+    line-height: 0;
+    margin: 0;
+}
+.prod_txt dd {
+    display: inline;
+    float: left;
+    margin: 7px 5px 0 0;
+}
+.prod_txt dd p {
+    border: 1px solid #E0E0E0;
+    display: block;
+    height: 30px;
+    padding: 2px 0 2px 2px;
+    width: 78px;
+}
+.prod_txt dd p span {
+    display: inline;
+    line-height: 12px;
+}
+.prod_txt dd img {
+    display: block;
+    float: left;
+    height: 30px;
+    width: 30px;
+}
+.btnArea {
+    margin: 16px 0;
+}
+.btnArea .btnLeft {
+    display: inline;
+    float: left;
+}
+.btnArea .btnRight {
+    display: inline;
+    float: right;
+}
+.btnArea .btnRight a img {
+    margin-left: 16px;
+}
+.btnArea a.guanzhu:link, .btnArea a.guanzhu:visited, .btnArea a.guanzhu:hover {
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-family: 微软雅黑;
+    font-size: 16px;
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    width: 100px;
+}
+.hot {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #838383;
+    margin-bottom: 3px;
+    padding: 3px;
+}
+.hot img {
+}
+.tg_rule h3, .path h3, .other_tg h3 {
+    background: url("http://i.vanclimg.com/tuan/css/images/Index/tg08.jpg") no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    font: 14px/2.5 '微软雅黑';
+    height: 34px;
+    text-align: center;
+}
+.tg_rule div, .path div {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-color: -moz-use-text-color #838383 #838383;
+    border-image: none;
+    border-right: 1px solid #838383;
+    border-style: none solid solid;
+    border-width: 0 1px 1px;
+    padding: 10px;
+}
+.tg_rule div p {
+    line-height: 22px;
+    padding: 0 5px;
+}
+.path div p {
+    text-align: center;
+}
+.other_tg {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #838383;
+}
+.o_price {
+    float: left;
+    width: 75px;
+}
+.other_tg .pic {
+    float: left;
+    padding-left: 5px;
+    width: 138px;
+}
+.other_tg .pic img {
+    width: 135px;
+}
+.o_price span {
+    background: url("http://i.vanclimg.com/tuan/css/images/Index/tg17.jpg") repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    display: block;
+    font: 18px/2 '微软雅黑';
+    height: 43px;
+    padding-left: 5px;
+    width: 72px;
+}
+.other_tg .o_price p {
+    font-size: 15px;
+    line-height: 20px;
+    padding: 0;
+    text-align: center;
+}
+.other_tg .o_price .t1 {
+    font-size: 12px;
+}
+.other_tg a {
+    color: #FFFFFF;
+    padding: 14px 10px 0 0;
+}
+.other_tg p {
+    color: #000000;
+    line-height: 22px;
+    padding: 5px 15px;
+}
+.other_title {
+    background: url("http://i.vanclimg.com/tuan/css/images/Index/tg08.jpg") no-repeat scroll 0 0 transparent;
+    height: 34px;
+}
+.other_title_left {
+    float: left;
+    width: 200px;
+}
+.other_title_right {
+    color: #FFFFFF;
+    float: right;
+    font: 14px/2.5 '微软雅黑';
+    height: 34px;
+    text-align: center;
+}
+.other_title_right a:hover {
+    text-decoration: underline;
+}
+.other_Link a {
+    color: #FFFFFF;
+}
+.red {
+    color: #D60001;
+    font-family: Arial;
+    font-weight: bold;
+}
+.red2 {
+    color: #D60001;
+}
+.other_tg p img {
+    border: 1px solid #8F8884;
+    width: 210px;
+}
+.pd_r10 {
+    padding-right: 10px;
+}
+.tg_txt {
+    font-size: 13px;
+    text-align: center;
+}
+.f_a {
+    font-family: Arial;
+    font-weight: bold;
+}
+.good {
+    background: url("http://i.vanclimg.com/tuan/css/images/Index/tg13.jpg") no-repeat scroll 0 0 transparent;
+    height: 62px;
+    padding-top: 35px;
+}
+.good p {
+    font-family: '宋体';
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0 70px 0 20px;
+}
+.good p a {
+    color: #D50001;
+    font-family: '宋体';
+    font-size: 12px;
+}
+.buy {
+    background-color: #ECECEC;
+}
+.buy a {
+    display: block;
+    height: 78px;
+    text-indent: -10000px;
+    width: 272px;
+}
+.t_price {
+    color: #000000;
+    font: bold 20px/2 '微软雅黑';
+    padding-top: 0;
+}
+.b1 p {
+    text-align: center;
+}
+.b1 {
+    background-color: #ECECEC;
+    border: 1px solid #CACACA;
+    margin-bottom: 5px;
+}
+.b1 .red {
+    font-size: 18px;
+    padding-right: 10px;
+}
+.buy_left .b2 {
+    background: url("http://i.vanclimg.com/tuan/css/images/Index/tg15.jpg") no-repeat scroll 220px center transparent;
+    border: 1px solid #CACACA;
+    margin: 0;
+}
+.b2 .p1 {
+    color: #000000;
+    font: 14px/1 '微软雅黑';
+    padding-bottom: 10px;
+    padding-top: 25px;
+    text-align: center;
+}
+.b2 p {
+    padding-left: 20px;
+    text-align: center;
+}
+.b2 .red, .b3 .red {
+    font-size: 14px;
+    padding: 0 5px;
+}
+.buy_left .b3 {
+    background-color: #ECECEC;
+    border-top: 1px solid #CACACA;
+}
+.b3 p {
+    font-size: 14px;
+    padding-top: 15px;
+    text-align: center;
+}
+.b3 .p2 {
+    background: url("http://i.vanclimg.com/tuan/css/images/Index/tg16.jpg") no-repeat scroll 60px center transparent;
+    color: #B80001;
+    font-weight: bold;
+    height: 36px;
+    line-height: 32px;
+    padding-left: 40px;
+    padding-top: 10px;
+}
+.b3 .p3 {
+    color: #000000;
+    font-family: "微软雅黑";
+    font-size: 17px;
+    font-weight: bold;
+}
+.s1 {
+    border-right: 1px solid #CACACA;
+    border-top: 1px solid #CACACA;
+    float: left;
+    height: 51px;
+    padding-top: 8px;
+    width: 107px;
+}
+.s2 {
+    border-top: 1px solid #CACACA;
+    float: left;
+    padding-top: 8px;
+    width: 107px;
+}
+.s1 span, .s2 span {
+    font: bold 16px/1.5 '微软雅黑';
+}
+.isOver {
+    background: url("http://i.vanclimg.com/tuan/css/images/Index/tg18.png") no-repeat scroll 0 0 transparent;
+    height: 118px;
+    left: 80px;
+    position: absolute;
+    width: 158px;
+    z-index: 1000;
+}
+.problem_txt {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-left: 1px solid #838383;
+    border-right: 1px solid #838383;
+    line-height: 24px;
+    padding: 0 0 20px;
+}
+.problem_txt h3 {
+    border-bottom: 1px solid #D50001;
+    color: #A40001;
+    font: bold 18px/2.5 '微软雅黑';
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+.problem_txt h4 {
+    background: none repeat scroll 0 0 #EBEBEB;
+    color: #A40001;
+    font: bold 15px/2 '微软雅黑';
+    margin: 10px 40px;
+}
+.problem_txt p {
+    color: #010101;
+    font: 14px/1.2 '微软雅黑';
+    padding: 0 40px 20px;
+}
+.tg-listArea {
+    background: none repeat scroll 0 0 #FEFEFE;
+    border: 1px solid #838383;
+    display: inline;
+    float: left;
+    height: 435px;
+    margin-bottom: 11px;
+    padding: 16px;
+    width: 319px;
+}
+.d70001 {
+    color: #D70001;
+}
+.m12 {
+    margin-left: 12px;
+}
+.tg-listTop {
+    color: #000000;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    font-weight: bold;
+    height: 104px;
+    line-height: 20px;
+    overflow: hidden;
+}
+.tg-listCenter {
+    height: 214px;
+    position: relative;
+    text-align: center;
+    width: 319px;
+}
+.poa {
+    background: url("http://i.vanclimg.com/tuan/css/images/Index/tfl.png") no-repeat scroll 0 0 transparent;
+    bottom: 0;
+    display: block;
+    height: 118px;
+    position: absolute;
+    right: 0;
+    text-indent: -9999px;
+    width: 141px;
+    z-index: 900;
+}
+.pob {
+    background: url("http://i.vanclimg.com/tuan/css/images/Index/qgwb.png") no-repeat scroll 0 0 transparent;
+    bottom: 0;
+    display: block;
+    height: 118px;
+    position: absolute;
+    right: 0;
+    text-indent: -9999px;
+    width: 141px;
+    z-index: 900;
+}
+.poc {
+    background: url("http://i.vanclimg.com/tuan/css/images/Index/twl.png") no-repeat scroll 0 0 transparent;
+    bottom: 0;
+    display: block;
+    height: 118px;
+    position: absolute;
+    right: 0;
+    text-indent: -9999px;
+    width: 141px;
+    z-index: 900;
+}
+.tg-listBottom {
+    border: 1px solid #CACACA;
+    height: 104px;
+    margin-top: 7px;
+    width: 317px;
+}
+.tg-listBottomt {
+    background: none repeat scroll 0 0 #EBEBEB;
+    height: 28px;
+    line-height: 28px;
+}
+.tg-listBottomtl {
+    display: inline;
+    float: left;
+}
+.tg-listBottomtl p {
+    line-height: 28px;
+    margin-left: 5px;
+}
+.tg-listBottomtl p span {
+    display: block;
+    float: left;
+    height: 28px;
+    line-height: 28px;
+}
+.tg-listBottomtl p .money {
+    font-family: "微软雅黑";
+    font-size: 14px;
+    font-weight: bold;
+}
+.tg-listBottomtl p .linethrough {
+    margin-right: 10px;
+}
+.tg-listBottomtl p .linethrough span {
+    text-decoration: line-through;
+}
+.tg-listBottomtr {
+    color: #2D2D2D;
+    display: inline;
+    float: right;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 9px;
+}
+.tg-listBottomc {
+    border-bottom: 1px dotted #C2C2C2;
+    float: left;
+    height: 49px;
+    width: 318px;
+}
+.tg-listBottomcl {
+    display: inline;
+    float: left;
+    font-family: "微软雅黑";
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 0 9px;
+}
+.tg-listBottomcr {
+    display: inline;
+    float: right;
+    margin: 7px 9px 0 0;
+}
+.go-red a {
+    background: url("http://i.vanclimg.com/tuan/css/images/Index/gored.gif") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 35px;
+    text-indent: -9999px;
+    width: 108px;
+}
+.tg-listBottomb {
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+}
+.tg-listBottomb span {
+    font-family: "微软雅黑";
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 3px;
+}
+.adbottom {
+    margin: 0 auto;
+    width: 980px;
+}
+.searchPage1 {
+    display: inline;
+    float: right;
+    width: 718px;
+}
+.PageBar41 {
+    float: right;
+}
+.PageBar41 a {
+    background-color: #FFFFFF;
+    border: 1px solid #DFDFDF;
+    color: #999999;
+    display: inline;
+    float: left;
+    height: 18px;
+    line-height: 18px;
+    margin-left: 4px;
+    padding: 0 5px;
+    text-decoration: none;
+}
+.PageBar41 a:hover {
+    color: #A10000;
+}
+.PageBar41 span {
+    color: #9F9F9F;
+    display: inline;
+    float: left;
+    font-size: 12px;
+    line-height: 19px;
+}
+.PageBar41 em {
+    color: #A10000;
+    font-style: normal;
+}
+.PageBar41 label {
+    background-color: #FFFFFF;
+    border: 1px solid #A10000;
+    color: #A10000;
+    display: inline;
+    float: left;
+    font-size: 12px;
+    height: 18px;
+    line-height: 18px;
+    margin-left: 5px;
+    padding: 0 5px;
+    text-decoration: none;
+}
+.price_box {
+    border: 1px solid #838383;
+    margin-bottom: 5px;
+}
+.price_list {
+    height: 30px;
+}
+.price_list dd, .price_list dt {
+    color: #323232;
+    float: left;
+    font: 12px/2.5 "Microsoft YaHei,宋体";
+}
+.price_list dt {
+    font-weight: bold;
+    margin-left: 10px;
+    text-align: center;
+    width: 50px;
+}
+.pro_order dd {
+    background: url("http://i.vanclimg.com/Tuan/css/images/Today/pl_bg2.jpg") no-repeat scroll left center transparent;
+    padding-left: 2px;
+}
+.pro_order dd a {
+    display: block;
+    height: 30px;
+    text-indent: 14px;
+}
+.ordertype a {
+    background: url("http://i.vanclimg.com/Tuan/css/images/Today/init_up.jpg") no-repeat scroll 100% 0 transparent;
+    width: 61px;
+}
+.ordertype .init_down {
+    background: url("http://i.vanclimg.com/Tuan/css/images/Today/init_down.jpg") no-repeat scroll 100% 0 transparent;
+}
+.ordertype a.up {
+    background: url("http://i.vanclimg.com/Tuan/css/images/Today/up0_bg.jpg") no-repeat scroll 100% center transparent;
+    color: #A10000;
+    display: block;
+    height: 30px;
+    text-indent: 14px;
+    width: 61px;
+}
+.ordertype a.down {
+    background: url("http://i.vanclimg.com/Tuan/css/images/Today/down0_bg.jpg") no-repeat scroll 100% center transparent;
+    color: #A10000;
+    display: block;
+    height: 30px;
+    text-indent: 14px;
+    width: 61px;
+}
+.defaultorder {
+    width: 50px;
+}
+.defaultorder a {
+    background: url("http://i.vanclimg.com/Tuan/css/images/Today/defaultorder_bg.jpg") no-repeat scroll -2px center transparent;
+    width: 50px;
+}
+.defaultorder a.up:link, .defaultorder a.up:visited, .defaultorder a.up:hover {
+    color: #A10000;
+}
+.line2 {
+    margin: 0 10px;
+}
+.d_bg {
+    background: url("http://i.vanclimg.com/Tuan/css/images/Today/pl_bg2.jpg") no-repeat scroll left center transparent;
+}
+.sizeList {
+    color: #999999;
+}
+.sizeList table {
+    margin: 0 auto;
+    width: 100%;
+}
+.sizeList thead {
+    background: none repeat scroll 0 0 #F3F3F3;
+}
+.sizeList thead td {
+    text-align: center;
+}
+.sizeList td {
+    border: 1px solid #E4E4E4;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+}
+.loverYrg {
+    background-color: #ECECEC;
+    border-top: 1px solid #CACACA;
+    padding-top: 20px;
+}
+.loverYrg div {
+    padding-left: 0;
+    padding-top: 20px;
+    text-align: center;
+}
+.loverYrg div span {
+    color: #A10000;
+}
+.loverTing {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #838383;
+    clear: right;
+    float: left;
+    padding: 10px;
+}
+.loverTingTitle {
+    color: #E40001;
+    font-size: 14px;
+    font-weight: bold;
+    padding-right: 10px;
+}
+.loverTingInfo {
+    color: #666666;
+    height: 40px;
+    line-height: 40px;
+}
+.aixinList img {
+    display: inline;
+    float: left;
+}
+.nameList {
+    margin: 0 0 0 10px;
+}
+.nameList li {
+    color: #333333;
+}
+.nameList li p h1 p {
+    color: #333333;
+}
+.search img {
+    border: 0 none;
+}
+#TuanBasketResult {
+    border: 0 none;
+    padding: 0;
+}
+.st {
+    color: #000000;
+    font: 12px/24px 宋体;
+    padding: 5px 10px;
+}
+.inp {
+    clear: both;
+    overflow: hidden;
+    padding: 5px;
+}
+.inp .bg {
+    background: none repeat scroll 0 0 #A40001;
+    height: 24px;
+}
+.inp .bg .inpL {
+    border: 1px solid #A40001;
+    color: #CCCCCC;
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    width: 160px;
+}
+.inp .bg .btnsearch {
+    float: left;
+    height: 24px;
+    width: 61px;
+}
+.success {
+    clear: both;
+    padding: 5px 10px;
+}
+.success .tit {
+    color: #2E2E2E;
+    font: 12px/24px 宋体;
+    text-align: left;
+}
+.success .cp {
+    color: #0E0C0C;
+    font: bold 12px/24px 宋体;
+    text-align: right;
+}
+.success .cp span {
+    color: #AD0002;
+    font-family: 微软雅黑,黑体;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+    padding-left: 10px;
+}
+.success .btn {
+    margin-top: 10px;
+    text-align: right;
+}
+.fail {
+    background: url("http://i.vanclimg.com/Tuan/css/images/TuanBasket/failbg.jpg") no-repeat scroll 20px center transparent;
+    clear: both;
+    height: 50px;
+    padding: 5px 10px;
+}
+.fail .info {
+    color: #2D2C2C;
+    font: bold 13px/24px 宋体;
+    padding-left: 80px;
+    text-align: left;
+}
+.success .btn a {
+    padding: 14px 0 0;
+}
+#main {
+    float: left;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 718px;
+}
+.tjdp {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #838383;
+    height: 100%;
+    line-height: 24px;
+    overflow: hidden;
+    padding: 10px;
+    text-align: left;
+}
+.tjdp .hT {
+    color: #D50001;
+    font-family: 微软雅黑,黑体;
+    font-size: 16px;
+    font-weight: bold;
+    height: 24px;
+    line-height: 24px;
+}
+.tjdp .hT span {
+    color: #444444;
+    font: 12px/24px 宋体;
+    margin-left: 20px;
+}
+.clear {
+    clear: both;
+}
+.pro {
+    margin: 10px 0;
+}
+.pro img {
+    border: 0 none;
+}
+.pro .proL {
+    background: url("http://i.vanclimg.com/Tuan/css/images/probg.jpg") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 196px;
+    overflow: hidden;
+    width: 607px;
+}
+.pro .proL ul {
+    color: #444444;
+    font: 12px/24px 宋体;
+    list-style: none outside none;
+    margin: 25px 0 0 25px;
+    padding: 0;
+}
+.pro .proL ul li {
+    float: left;
+    list-style: none outside none;
+    overflow: hidden;
+    width: 70px;
+}
+.pro .proL ul li .price {
+    color: #C90909;
+    float: left;
+    font-family: 微软雅黑,黑体;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 20px;
+    width: 45px;
+}
+.pro .proL ul li .addbtn {
+    float: left;
+    line-height: 30px;
+    margin-top: 5px;
+}
+.pro .proL ul li .b1 {
+    border: 1px solid #D50001;
+    height: 68px;
+    margin-bottom: 5px;
+    width: 68px;
+}
+.pro .proL ul li .b2 {
+    border: 1px solid #D3D3D3;
+    height: 68px;
+    margin-bottom: 5px;
+    width: 68px;
+}
+.pro .proL ul li .add {
+    margin: 35px 3px;
+}
+.pro .proR {
+    float: right;
+    text-align: left;
+    width: 85px;
+}
+.pro .proR .ptotal {
+    color: #444444;
+    font: 12px/24px 宋体;
+    margin-top: 25px;
+}
+.pro .proR .ptotal span {
+    color: #444444;
+    font: 24px/24px Arial;
+}
+.pro .proR .pprice {
+    color: #D50001;
+    font-family: 微软雅黑,黑体;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 50px;
+}
+.area3 {
+    border: 1px solid #CFCFCF;
+}
+.area3Head {
+    background: url("http://i.vanclimg.com/Others/2010/8/20/areaHeadBg.gif") repeat-x scroll 0 0 transparent;
+    border-bottom: 1px solid #CFCFCF;
+    height: 26px;
+}
+.buttonred {
+    background-color: #CD0001;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 26px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.area3HeadBorder {
+    background: url("http://i.vanclimg.com/Others/2010/8/20/areaHeadBg.gif") repeat-x scroll 0 0 transparent;
+    border: 1px solid #CFCFCF;
+    height: 26px;
+}
+.area3Head span {
+    display: inline;
+    float: left;
+    line-height: 26px;
+}
+.area3 .allUser {
+    border-bottom: 1px solid #CFCFCF;
+    color: #999999;
+    height: 35px;
+    line-height: 35px;
+    padding-right: 10px;
+    text-align: right;
+}
+.area3Sp01 img {
+    margin: 6px 8px 0;
+}
+.area3Sp02, .area3Sp03 {
+    color: #333333;
+    font-size: 14px;
+    font-weight: bold;
+}
+.area3Sp03 {
+    margin-left: 8px;
+    margin-right: 106px;
+}
+.area3Sp03 strong {
+    color: #A10000;
+    font-weight: bold;
+}
+.area3Head select {
+    height: 20px;
+    margin-top: 3px;
+    width: 90px;
+}
+.area3Head button {
+    background: none repeat scroll 0 0 #A50000;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 14px;
+    height: 26px;
+    line-height: 26px;
+    margin-left: 58px;
+    text-align: center;
+    width: 84px;
+}
+.area3Con {
+    padding: 0 10px 0 15px;
+}
+.area2Head {
+    background: none repeat scroll 0 0 #F0F0F0;
+    height: 35px;
+    line-height: 35px;
+    width: 694px;
+}
+.area2Head li {
+    color: #333333;
+    display: inline;
+    float: left;
+}
+.area2HeadLeft {
+    font-size: 14px;
+    text-indent: 20px;
+    width: 385px;
+}
+.area2HeadCenter {
+    width: 180px;
+}
+.area2HeadRight {
+    width: 125px;
+}
+.area2Con {
+    border-bottom: 1px solid #CFCFCF;
+    width: 694px;
+}
+.area2ConP {
+    color: #999999;
+    line-height: 20px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+.selCS {
+    height: 20px;
+    line-height: 20px;
+    margin: 0 auto;
+    width: 654px;
+}
+.selCS span {
+    color: #999999;
+    display: inline;
+    float: left;
+    margin-right: 24px;
+}
+li.pageRightc {
+    border: 1px solid #B2B2B2;
+}
+.tarea2Pagec {
+    height: 44px;
+}
+.tarea2Pagec ul {
+    display: inline;
+    float: right;
+    margin-top: 15px;
+}
+.tarea2Pagec li {
+    display: inline;
+    float: left;
+    font-family: 宋体;
+    font-size: 12px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+    height: 15px;
+    line-height: 15px;
+    padding: 0 4px;
+    text-decoration: none;
+}
+.tarea2Pagec li strong {
+    color: #A10000;
+    font-weight: bold;
+}
+.mrnonec {
+    margin-right: 0;
+}
+.tg_rule p span.redDot {
+    color: red;
+    font-size: 35px;
+}
+.CENdiv {
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px;
+}
+#play {
+    overflow: hidden;
+}
+#play_text {/*
+    float: left;
+    height: 20px;
+    margin-top: -5px;
+    width: 100%;*/
+}
+#play_text UL {
+    float: right;
+    list-style-type: none;
+    margin-top: -27px;
+    opacity: 0.8;
+    padding-top: 1px;
+    /*position: relative;*/
+    right: 20px;
+    z-index: 3;
+}
+#play_text UL LI {
+    background-color: #FFFFFF;
+    border: 1px solid #CECECE;
+    color: #7F0019;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-family: "Arial";
+    font-size: 9px;
+    height: 15px;
+    margin: 2px;
+    padding-top: 3px;
+    text-align: center !important;
+    width: 15px;
+}
+#play_list A {
+    display: block;
+    overflow: hidden;
+}
+#play_list img {
+    vertical-align: top !important;
+}
+
+.smmenudiv {
+    background-image: url("http://i.vanclimg.com/Tuan/nd/smmenubj.jpg");
+    height: 38px;
+    line-height: 38px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px;
+}
+.smmenudiv ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 0 25px;
+}
+.smmenudiv ul li {
+    color: #666666;
+    float: left;
+    font-family: "宋体";
+    font-size: 12px;
+    height: 12px;
+}
+.smmenudiv ul li img {
+    display: block;
+    font-size: 0;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 13px;
+}
+.smmenudiv ul li span {
+    color: #B80001;
+}
+.smmenudiv ul li a:link {
+    color: #666666;
+    text-decoration: none;
+}
+.smmenudiv ul li a:visited {
+    color: #666666;
+    text-decoration: none;
+}
+.smmenudiv ul li a:hover {
+    color: #666666;
+    text-decoration: underline;
+}
+.smmenudiv ul li a:active {
+    color: #666666;
+    text-decoration: none;
+}
+.smmenudiv ul li span a:link {
+    color: #B80001;
+    text-decoration: none;
+}
+.smmenudiv ul li span a:visited {
+    color: #B80001;
+    text-decoration: none;
+}
+.smmenudiv ul li span a:hover {
+    color: #B80001;
+    text-decoration: underline;
+}
+.smmenudiv ul li span a:active {
+    color: #B80001;
+    text-decoration: none;
+}
+#TuanBasketResult .success a {
+    color: #2E2E2E;
+}
+.topnav {
+    background: url("http://i.vanclimg.com/Tuan/Scripts/Top/IndnavBg.jpg") repeat-x scroll 0 0 transparent;
+    height: 29px;
+    line-height: 29px;
+}
+.topnavbg {
+    margin: 0 auto;
+    width: 980px;
+}
+.toplink {
+    float: left;
+    width: 480px;
+}
+.mem_gerensz {
+    float: right;
+}
+.mem_gerensz li {
+    background: url("http://i.vanclimg.com/Tuan/Scripts/Top/Indnav2Bg.jpg") repeat-x scroll 0 0 transparent;
+    float: left;
+    height: 29px;
+}
+.mem_gerensz .l {
+    background: url("http://i.vanclimg.com/Tuan/Scripts/Top/Indnav2Left.jpg") no-repeat scroll left top transparent;
+    width: 16px;
+}
+.mem_gerensz .r {
+    background: url("http://i.vanclimg.com/Tuan/Scripts/Top/Indnav2Right.jpg") no-repeat scroll left top transparent;
+    width: 16px;
+}
+.mem_grszbar {
+    float: left;
+    padding-left: 15px;
+    width: 100%;
+}
+.mem_szbar li {
+    background: url("http://i.vanclimg.com/Tuan/Scripts/Top/Inline.gif") no-repeat scroll right center transparent;
+    float: left;
+    padding: 0 10px;
+}
+.logowrap {
+    background-color: #FFFFFF;
+    width: 100%;
+}
+.logo {
+    height: 58px;
+    margin: 0 auto;
+    position: relative;
+}
+.email_area {
+    height: 58px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 200px;
+}
+.email_area div input {
+    color: #CCCCCC;
+    float: left;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    width: 150px;
+}
+.email_area div a {
+    display: block;
+    float: right;
+    height: 27px;
+    width: 45px;
+}
+.email_area p {
+    color: #AAAAAA;
+}
+.today_pro {
+    background: url("http://i.vanclimg.com/Tuan/css/ad/topad/t03.jpg") no-repeat scroll left center transparent;
+    height: 24px;
+    left: 345px;
+    line-height: 24px;
+    padding-left: 15px;
+    position: absolute;
+    top: 20px;
+    width: 340px;
+}
+.today_pro span {
+    background: url("http://i.vanclimg.com/Tuan/css/ad/topad/t02.jpg") no-repeat scroll right center transparent;
+    color: #A91000;
+    display: block;
+    float: left;
+    height: 24px;
+    padding-right: 10px;
+}
+.today_pro span a {
+    color: #A91000;
+}
+.menuwrap {
+    background-color: #B80001;
+    width: 100%;
+}
+.menu {
+    font-family: "微软雅黑";
+    margin: 0 auto;
+    position: relative;
+    width: 980px;
+}
+.menunav {
+    background: url("http://i.vanclimg.com/tuan/css/images/Index/tg01.jpg") no-repeat scroll 72px 0 transparent;
+    display: inline;
+    float: left;
+    height: 44px;
+    width: 734px;
+}
+.menunav li {
+    float: left;
+    height: 35px;
+}
+.menunav li a {
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 44px;
+    text-align: center;
+    text-decoration: none;
+}
+.menunav li a span {
+    color: #FFFFFF;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    text-decoration: none;
+    width: 91px;
+}
+.menunav li .nav_on {
+    background: url("http://i.vanclimg.com/tuan/css/images/Index/tg03.jpg") no-repeat scroll 0 0 transparent;
+    color: #A10000;
+    display: block;
+    font-size: 14px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    width: 91px;
+}
+.menunav li .nav_on span {
+    color: #A10000;
+    text-decoration: none;
+}
+.menunav li .todaynav_on {
+    background: url("http://i.vanclimg.com/Tuan/css/images/Today/menunav_active.jpg") no-repeat scroll 0 0 transparent;
+    color: #A10000;
+    display: block;
+    font-size: 14px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    width: 91px;
+}
+.menunav li .todaynav_on span {
+    color: #A10000;
+    text-decoration: none;
+}
+.user_login {
+    background-color: #B80001;
+    float: right;
+    height: 44px;
+    width: 246px;
+}
+.user_login a:link, .user_login a:visited, .user_login a:hover {
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font: bold 14px/3 '微软雅黑';
+    height: 44px;
+    text-align: center;
+    width: 91px;
+}
+.user_login .nav_on {
+    background: url("http://i.vanclimg.com/tuan/css/images/Index/tg03.jpg") no-repeat scroll 0 0 transparent;
+    color: #A10000;
+}
+.user_login .nav_on span {
+    color: #A10000;
+    text-decoration: none;
+}
+.menu .hotgif {
+    background: url("http://i.vanclimg.com/Tuan/css/images/Today/new.gif") no-repeat scroll 0 0 transparent;
+    height: 13px;
+    position: absolute;
+    right: 155px;
+    top: 2px;
+    width: 25px;
+}
+.menucate {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-color: -moz-use-text-color #B80001 #B80001;
+    border-image: none;
+    border-right: 1px solid #B80001;
+    border-style: none solid solid;
+    border-width: 0 1px 1px;
+    clear: both;
+    height: 37px;
+    line-height: 37px;
+    margin: 0 auto;
+    position: relative;
+    width: 978px;
+}
+.menucate .today {
+    margin-left: 19px;
+}
+.menucate .line {
+    margin: 0 5px;
+}
+.menucate a.up:link, .menucate a.up:visited, .menucate a.up:hover {
+    color: #A10000;
+}
+.menucate .hotgif {
+    background: url("http://i.vanclimg.com/Tuan/css/images/Today/hot.gif") no-repeat scroll 0 0 transparent;
+    height: 13px;
+    left: 451px;
+    position: absolute;
+    top: 2px;
+    width: 25px;
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+br.both {
+    clear: both;
+}
+#windowBackground {
+    background: none repeat scroll 0 0 #000000;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 11;
+}
+#windowMain {
+    border: 2px solid #A50003;
+    display: none;
+    font-size: 13px;
+    overflow: hidden;
+    position: absolute;
+    width: 375px;
+    z-index: 100;
+}
+#popupTitle {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #A50003;
+    height: 23px;
+    line-height: 23px;
+    width: 100%;
+}
+#windowMain h1, #windowMain ul, #windowMain li {
+    margin: 0;
+    padding: 0;
+}
+#windowMain h1 {
+    color: #000000;
+    float: left;
+    font-size: 14px;
+    padding-left: 10px;
+    text-align: left;
+}
+#windowMainClose {
+    background: url("http://i.vanclimg.com/Tuan/Scripts/Window/close.gif") no-repeat scroll left top #F3FEE7;
+    color: #000000;
+    display: block;
+    font-size: 14px;
+    line-height: 15px;
+    position: absolute;
+    right: 6px;
+    text-indent: -9999px;
+    top: 4px;
+    width: 20px;
+}
+#windowMain ul.modelwindow {
+    float: left;
+    height: 100%;
+    width: 100%;
+}
+#windowMain ul.modelwindow li {
+    float: left;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    width: 100%;
+}
+#windowContent .modelwindow a.windowbutton, #windowContent .modelwindow a.button {
+    background: none repeat scroll 0 0 #A50003;
+    color: #FFFFFF;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    width: 60px;
+}

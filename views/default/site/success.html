@@ -1,0 +1,71 @@
+<style type="text/css"> 
+.tipsbordersuff {
+    background: url("{skin:images/front/icon_succ_large.png}") no-repeat scroll 21px 21px;
+    border: 1px solid #CACBCB;
+    overflow: hidden;
+    text-align: left;
+}
+.tipsbordersuff {
+    float: left;
+    margin: 0 auto;
+    width: 978px;
+}
+.tipsbordertext {
+    float: left;
+    font-size: 13px;
+    padding: 26px 5px 0 80px;
+    width: 660px;
+}
+.tipsbordertext h5 {
+    font-size: 14px;
+    line-height: 32px;
+}
+.tipsbordertext p {
+    color: #999999;
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+
+.tipsbordertext dl {
+    margin: 20px 0 10px;
+}
+.tipsbordertext dl {
+    font: 700 12px/24px 宋体;
+}
+.tipsbordertext dl dd {
+    font: 400 12px/20px 宋体;
+}
+.tipsbordertext dl dd strong {
+    color: #FF5500;
+}
+.tipsbordertext dl dd span {
+    padding-left: 12px;
+}
+
+</style>
+<div class="tipsbordersuff">
+	<div class="tipsbordertext">
+		<h5>
+			{echo:IReq::get('message') ? IFilter::act( IReq::get('message') ) : '您的操作成功！'}
+		</h5>
+		<dl>
+			<dt>
+				您还可以：
+			</dt>
+			{set:$callback = IReq::get('callback')}
+			{if:$callback != ''}
+			<dd>
+					<a href="{url:$callback}">·继续操作>></a>
+			</dd>
+			{/if}
+			{if:$this->user['user_id']}
+			<dd>
+					<a href="{url:/ucenter/index}">·个人中心>></a>
+			</dd>
+			{/if}
+			<dd>
+					<a href="{url:/site/index}">·网站首页>></a>
+			</dd>
+		</dl>
+	</div>
+</div>

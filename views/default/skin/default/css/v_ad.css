@@ -1,0 +1,2284 @@
+
+.fbListKind {
+    border: 1px solid #DCDCDC;
+    overflow: hidden;
+    width: 198px;
+}
+.sweater-category {
+    background: none repeat scroll 0 0 #585858;
+    height: 28px;
+    margin: 1px;
+    position: relative;
+    width: 196px;
+}
+.sweater-category span {
+    position: absolute;
+}
+.category-left {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+    left: 10px;
+    top: 7px;
+}
+.category-right {
+    right: 10px;
+    top: 9px;
+}
+.category-right a:hover {
+    background: url("http://i.vanclimg.com/channel/shoushi/liststyle.png") no-repeat scroll 0 -66px transparent;
+    color: #A10000;
+}
+.category-right a:link, .category-right a:visited {
+    background: url("http://i.vanclimg.com/channel/shoushi/liststyle.png") no-repeat scroll 0 -53px transparent;
+    color: #FFFFFF;
+    height: 13px;
+    overflow: hidden;
+    padding-left: 8px;
+}
+.categorytitle-bg {
+    background: none repeat scroll 0 0 #F3F3F3;
+    height: 24px;
+    line-height: 24px;
+    margin: 1px;
+    width: 196px;
+}
+.categorytitle-bg h4 {
+    color: #333333;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.other-h4 {
+    background: url("http://i.vanclimg.com/channel/shoushi/liststyle.png") no-repeat scroll 0 -73px transparent;
+    padding-left: 8px;
+}
+.w90 span {
+    display: block;
+    float: left;
+    height: 15px;
+    line-height: 15px;
+    margin: 4px 0;
+    min-width: 90px;
+}
+.w30 span {
+    display: block;
+    float: left;
+    height: 15px;
+    line-height: 15px;
+    margin: 4px 15px 4px 0;
+    width: 30px;
+}
+.w90, .w30 {
+    margin: 6px 0;
+    padding: 0 8px;
+    width: 180px;
+}
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix {
+    display: inline-block;
+    overflow: hidden;
+}
+span.category-visited {
+    display: block;
+}
+.category-visited a:link, .category-visited a:visited, .category-visited a:hover {
+    background: url("http://i.vanclimg.com/channel/maoyi/close.gif") no-repeat scroll right center #A10000;
+    color: #FFFFFF;
+    float: left;
+    line-height: 15px;
+    padding: 0 14px 0 2px;
+}
+.fbListOrder {
+    border: 1px solid #DCDCDC;
+}
+.tab-title {
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: 29px;
+    width: 198px;
+}
+.tab-title li {
+    background: none repeat scroll 0 0 #BDBDBD;
+    border: 1px solid #BDBDBD;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline;
+    float: left;
+    height: 27px;
+    line-height: 27px;
+    text-align: center;
+    width: 96px;
+}
+.tab-title li.hover {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #DCDCDC #FFFFFF #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000;
+    height: 27px;
+    line-height: 27px;
+    width: 98px;
+}
+.Hot_Ranking {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+.Hot_Ranking ul {
+    background: url("http://i.vanclimg.com/channel/maoyi/FBXdotted02.gif") repeat-x scroll left bottom transparent;
+    display: inline;
+    float: left;
+    height: 95px;
+    margin-left: 10px;
+    width: 178px;
+}
+.topImg1 {
+    display: inline;
+    float: left;
+    height: 86px;
+    overflow: hidden;
+    width: 86px;
+}
+.topImg1 img {
+    border: 1px solid #E9E9E9;
+    height: 84px;
+    width: 84px;
+}
+.topWord1 {
+    display: inline;
+    float: right;
+    margin-left: 10px;
+    width: 80px;
+}
+.topWord1 p {
+    line-height: 16px;
+}
+.topWord1 p a:link, .topWord p a:visited {
+    color: #000000;
+    text-decoration: none;
+}
+.topWord1 p a:hover {
+    color: #A00000;
+}
+.Sprice {
+    color: #A10000;
+}
+.FBListPruName {
+    height: 32px;
+    overflow: hidden;
+}
+.topNum1 {
+    background: none repeat scroll 0 0 #828282;
+    color: #FFFFFF;
+    display: block;
+    font-family: Arial;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    width: 18px;
+}
+.top123 {
+    background: none repeat scroll 0 0 #A10000;
+}
+.FbOrdermore {
+    height: 34px;
+    line-height: 34px;
+    padding-right: 10px;
+    text-align: right;
+}
+.sport-bg {
+    background: none repeat scroll 0 0 #E6E6E6;
+    padding-top: 15px;
+}
+.fbListTitle02 {
+    height: 36px;
+    line-height: 36px;
+}
+.fbListTitle02 span {
+    background: url("http://i.vanclimg.com/channel/maoyi/FBXListIco.gif") no-repeat scroll 11px center transparent;
+    color: #000000;
+    display: block;
+    font-family: Microsoft YaHei,"婼";
+    font-size: 18px;
+    font-weight: bold;
+    height: 36px;
+    line-height: 36px;
+    padding-left: 30px;
+}
+.fbListComment {
+    border: 1px solid #DCDCDC;
+}
+.Hot_Comment ul {
+    background: url("http://i.vanclimg.com/channel/shoushi/FBXdotted02.gif") repeat-x scroll left bottom transparent;
+    display: inline;
+    float: left;
+    height: 95px;
+    margin-left: 10px;
+    width: 178px;
+}
+.imgArea {
+    display: inline;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+    width: 86px;
+}
+.imgArea a img {
+    border: 1px solid #BEBEBE;
+    height: 84px;
+    width: 84px;
+}
+.comment_Area {
+    display: inline;
+    float: right;
+    width: 80px;
+}
+.comment_con {
+    color: #323232;
+    height: 48px;
+    line-height: 16px;
+    overflow: hidden;
+    padding-right: 4px;
+}
+.same_p {
+    color: #989898;
+    overflow: hidden;
+    text-align: right;
+    width: 80px;
+}
+.fbListLately {
+    border: 1px solid #DCDCDC;
+}
+.Latelyclear {
+    height: 20px;
+    line-height: 20px;
+    padding-right: 10px;
+    text-align: right;
+}
+.fbLatelyArea ul {
+    background: url("http://i.vanclimg.com/channel/shoushi/FBXdotted02.gif") repeat-x scroll left bottom transparent;
+    display: inline;
+    float: left;
+    height: 95px;
+    margin-left: 10px;
+    width: 178px;
+}
+.fbLatelyArea ul a {
+    color: #000000;
+}
+.topImg1 {
+    display: inline;
+    float: left;
+    height: 86px;
+    overflow: hidden;
+    width: 86px;
+}
+.topWord1 {
+    display: inline;
+    float: right;
+    margin-left: 10px;
+    width: 80px;
+}
+.topWord1 p {
+    line-height: 16px;
+}
+.FBListPruName {
+    height: 32px;
+    overflow: hidden;
+}
+.fbCurrent span {
+    display: inline;
+    float: left;
+    text-align: center;
+    width: 20px;
+}
+.fbCurrent a {
+    display: inline;
+    float: left;
+}
+.s_s0 {
+    background: url("http://i.vanclimg.com/channel/common/ssprites.png") no-repeat scroll 0 -59px transparent;
+    display: inline-block;
+    height: 13px;
+    width: 13px;
+}
+.s_s05 {
+    background: url("http://i.vanclimg.com/channel/common/ssprites.png") no-repeat scroll 0 -33px transparent;
+    display: inline-block;
+    height: 13px;
+    width: 13px;
+}
+.s_s1 {
+    background: url("http://i.vanclimg.com/channel/common/ssprites.png") no-repeat scroll 0 -46px transparent;
+    display: inline-block;
+    height: 13px;
+    width: 13px;
+}
+.Product-Name {
+    color: #A10000;
+}
+.fbListSerArea {
+    background: none repeat scroll 0 0 #F7F7F7;
+    border-color: #CECECE;
+    border-style: solid;
+    border-width: 4px 1px 1px;
+    display: inline;
+    float: left;
+    overflow: hidden;
+    width: 758px;
+}
+.ListPruOrder {
+    background: url("http://i.vanclimg.com/channel/maoyi/FBXdotted02.gif") repeat-x scroll left bottom transparent;
+    display: inline;
+    float: left;
+    margin-left: 14px;
+    width: 725px;
+}
+.fbListLately {
+    border: 1px solid #DCDCDC;
+}
+.about_pro {
+    display: inline;
+    float: right;
+    height: 17px;
+    line-height: 17px;
+}
+.xgsp {
+    display: inline;
+    float: left;
+}
+.about_pro strong {
+    color: #A10000;
+    margin: 0 1px;
+}
+.upPage01 {
+    display: inline;
+    float: left;
+    margin: 0 0 0 5px;
+}
+.fl_one {
+    display: inline;
+    float: left;
+    margin: 0;
+}
+.nextPage01 {
+    display: inline;
+    float: left;
+}
+.FBListSerdiv {
+    height: 20px;
+    line-height: 20px;
+    margin-left: 14px;
+    overflow: hidden;
+}
+.FBList_Oversea {
+    float: left;
+    margin-top: 2px;
+    padding: 0 15px;
+    width: 75px;
+}
+.FBList_Oversea input {
+    margin-right: 5px;
+    vertical-align: -3px;
+}
+.PruOrderKind a:link, .PruOrderKind a:visited {
+    border-right: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    height: 17px;
+    line-height: 17px;
+    padding-left: 8px;
+    width: 42px;
+}
+.PruOrderKind a:hover {
+    color: #FFFFFF;
+}
+.OrderKind01 {
+    background: url("http://i.vanclimg.com/channel/SportV2/arrow01.gif") no-repeat scroll 34px 3px #A10000;
+    color: #FFFFFF;
+}
+.OrderKind02 {
+    background: url("http://i.vanclimg.com/channel/SportV2/arrow02.gif") no-repeat scroll 34px 3px #A10000;
+    color: #FFFFFF;
+}
+.OrderKind03 {
+    background: url("http://i.vanclimg.com/channel/SportV2/arrow03.gif") no-repeat scroll 34px 3px #BDBDBD;
+    color: #DCDCDC;
+}
+.OrderKind04 {
+    background: url("http://i.vanclimg.com/channel/SportV2/arrow04.gif") no-repeat scroll 34px 3px #BDBDBD;
+    color: #DCDCDC;
+}
+.FBpxtitle {
+    display: inline;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    width: 40px;
+}
+.FBpxDetail {
+    display: inline;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    width: 144px;
+}
+.FBpxDetail select {
+    width: 144px;
+}
+.FBhdtitle {
+    border-left: 1px dotted #BEBEBE;
+    display: inline;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 18px;
+    padding-left: 25px;
+    width: 40px;
+}
+.FBhdDetail {
+    display: inline;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+}
+.FBhdDetail .thcheck {
+    display: block;
+    float: left;
+    margin-right: 2px;
+    margin-top: 3px;
+    padding: 0;
+}
+.FBhdDetail span {
+    display: inline;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    padding-right: 18px;
+}
+.FBxstitle {
+    border-left: 1px dotted #BEBEBE;
+    display: inline;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 0;
+    padding-left: 25px;
+    width: 40px;
+}
+.FBxsDetail {
+    display: inline;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+}
+.FBxsDetail input {
+    display: block;
+    float: left;
+    margin-right: 2px;
+    margin-top: 3px;
+}
+.FBxsDetail span {
+    display: inline;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    margin-right: 6px;
+}
+.FBqhlb {
+    background: url("http://i.vanclimg.com/channel/SportV2/qhlb01.gif") no-repeat scroll 0 0 transparent;
+    display: block;
+    float: right;
+    height: 19px;
+    margin-right: 20px;
+    margin-top: 1px;
+    width: 92px;
+}
+.FBqhlb02 {
+    background: url("http://i.vanclimg.com/channel/SportV2/qhlb02.gif") no-repeat scroll 0 0 transparent;
+    display: block;
+    float: right;
+    height: 19px;
+    margin-right: 20px;
+    margin-top: 1px;
+    width: 92px;
+}
+.FBqhlb03 {
+    background: url("http://i.vanclimg.com/channel/fanbuxie/qhlb03.gif") no-repeat scroll 0 0 transparent;
+    display: block;
+    float: right;
+    height: 19px;
+    margin-right: 20px;
+    margin-top: 1px;
+    width: 86px;
+}
+.FBqhlb04 {
+    background: url("http://i.vanclimg.com/channel/fanbuxie/qhlb04.gif") no-repeat scroll 0 0 transparent;
+    display: block;
+    float: right;
+    height: 19px;
+    margin-right: 20px;
+    margin-top: 1px;
+    width: 86px;
+}
+.productList {
+    background: none repeat scroll 0 0 #FFFFFF;
+    width: 757px;
+}
+.scListArea {
+    display: inline;
+    float: left;
+    margin: 22px 8px 0;
+    width: 172px;
+}
+.Product-Name {
+    height: 35px;
+    line-height: 18px;
+    margin-top: 9px;
+    overflow: hidden;
+    width: 170px;
+}
+.Product-Price {
+    margin-top: 9px;
+    width: 170px;
+}
+.Product-Price span {
+    color: #999999;
+    margin-right: 5px;
+}
+.Product-Price strong {
+    color: #A10000;
+    font-weight: bold;
+}
+.searchPage20111226 {
+    color: #333333;
+    float: right;
+}
+.jquery_pager_prevpage20111226 {
+    background: url("http://i.vanclimg.com/channel/newGGpage/lrpoint1226.gif") no-repeat scroll 3px -37px transparent;
+    border: 1px solid #EFEFEF;
+    cursor: pointer;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 14px;
+    text-align: left;
+    width: 43px;
+}
+.jquery_pager_nextpage20111226 {
+    background: url("http://i.vanclimg.com/channel/newGGpage/lrpoint1226.gif") no-repeat scroll 46px 5px transparent;
+    border: 1px solid #EFEFEF;
+    cursor: pointer;
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    padding-right: 14px;
+    text-align: right;
+    width: 43px;
+}
+.pageGGsub20111226 {
+    background: url("http://i.vanclimg.com/channel/newGGpage/lrpoint1226.gif") no-repeat scroll left bottom transparent;
+    border: 0 none;
+    cursor: pointer;
+    float: right;
+    height: 26px;
+    margin-left: 10px;
+    width: 49px;
+}
+.searchPage20111226 li a:link, .searchPage20111226 li a:visited {
+    background: none repeat scroll 0 0 transparent;
+    border: 1px solid #EDEDED;
+    color: #333333;
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    width: 26px;
+}
+.searchPage20111226 strong {
+    float: right;
+    margin-top: 6px;
+}
+.searchPage20111226 span {
+    display: inline;
+    float: right;
+}
+.searchPage20111226 ul {
+    display: inline;
+    float: right;
+    margin-right: 7px;
+}
+.searchPage20111226 .currentpage20111226 {
+    background: none repeat scroll 0 0 #A10000;
+    border: 1px solid #EDEDED;
+    color: #FFFFFF;
+    font-weight: bold;
+    height: 24px;
+    line-height: 24px;
+    width: 26px;
+}
+.searchPage20111226 li {
+    display: inline;
+    float: left;
+    margin-left: 7px;
+    text-align: center;
+}
+.pageGGshuru20111226 {
+    border: 1px solid #EDEDED;
+    float: right;
+    height: 24px;
+    line-height: 24px;
+    margin: 0 4px;
+    text-align: center;
+    width: 26px;
+}
+.allpagesNumber20111226 {
+    display: inline-block;
+    float: right;
+    margin: 6px 10px 0;
+}
+.allpagesNumber20111226 span {
+    float: none;
+    margin: 0 5px;
+}
+#recommendscontainer {
+    margin: 0 auto;
+    width: 980px;
+}
+.clearfix {
+    display: inline-block;
+    overflow: hidden;
+}
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.title2 {
+    background: url("http://i.vanclimg.com/search/recommend/title_bg.jpg") repeat-x scroll left bottom transparent;
+    color: #A10000;
+    font-weight: 700;
+    height: 29px;
+    line-height: 28px;
+    padding: 10px 10px 10px 9px;
+    text-indent: 12px;
+}
+.title2 p {
+    background: url("http://i.vanclimg.com/search/recommend/hot.jpg") no-repeat scroll left top transparent;
+}
+.tuijian2 {
+    background: url("http://i.vanclimg.com/search/recommend/bg.jpg") repeat-x scroll left bottom #FFFFFF;
+    border: 1px solid #D6D6D6;
+    float: left;
+    margin: 0 auto;
+    width: 978px;
+}
+.pad82 {
+    text-indent: 23px;
+}
+.zuijin2 {
+    border-right: 1px solid #D6D6D6;
+    float: left;
+    height: 352px;
+    padding-bottom: 25px;
+    width: 198px;
+}
+.zuijin2 h2 {
+    color: #333333;
+    font-weight: bold;
+    padding: 15px 0 15px 12px;
+}
+.seen_product2 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.seen_product2 p {
+    color: #A10000;
+    float: left;
+    padding-top: 3px;
+}
+.seen_product2 .clearfix {
+    overflow: visible;
+}
+.seen_product2 dl {
+    display: inline-block;
+    padding-bottom: 20px;
+}
+.seen_product2 dt {
+    float: left;
+    height: 68px;
+    margin-right: 10px;
+    width: 68px;
+}
+.seen_product2 dd {
+    float: left;
+    line-height: 21px;
+    max-height: 63px;
+    overflow: hidden;
+    width: 96px;
+}
+.scroll2 {
+    float: left;
+    width: 779px;
+}
+.scroll2 h3 {
+    color: #333333;
+    font-weight: normal;
+    padding: 15px 30px;
+}
+.bt_left2div {
+    background: url("http://i.vanclimg.com/search/recommend/bt_left.jpg") no-repeat scroll center center transparent;
+    display: inline-block;
+    float: left;
+    height: 100px;
+    margin-top: 40px;
+    text-indent: -9999px;
+    width: 21px;
+}
+.newProductList3 {
+    height: 270px;
+    margin: 0 auto;
+}
+.newProductList3 li {
+    display: inline;
+    float: left;
+    height: 260px;
+    margin-left: 10px;
+    width: 172px;
+}
+.newProductList3 li img {
+    border: 1px solid #D6D6D6;
+}
+.newProductList3 li a:hover img {
+    border: 1px solid #A10000;
+}
+.newProductList3 li h4 {
+    font-weight: normal;
+    line-height: 21px;
+    text-align: left;
+    width: 170px;
+}
+.newProductList33 li {
+    display: inline;
+    float: left;
+    margin-left: 13px;
+    width: 172px;
+}
+.newProductList33 li img {
+    border: 1px solid #D6D6D6;
+}
+.newProductList33 li a:hover img {
+    border: 1px solid #A10000;
+}
+.newProductList33 li h4 {
+    font-weight: normal;
+    line-height: 21px;
+    text-align: left;
+    width: 170px;
+}
+.bt_right2div {
+    background: url("http://i.vanclimg.com/search/recommend/bt_right.jpg") no-repeat scroll center center transparent;
+    display: inline-block;
+    float: right;
+    height: 100px;
+    margin-top: 40px;
+    text-indent: -9999px;
+    width: 21px;
+}
+.bar2 {
+    background: url("http://i.vanclimg.com/search/recommend/xian.gif") repeat-x scroll left center transparent;
+    height: 33px;
+    margin: 0 30px;
+    text-indent: -999px;
+}
+.bar2 strong {
+    background: url("http://i.vanclimg.com/search/recommend/bar.jpg") no-repeat scroll center center transparent;
+    display: block;
+    height: 33px;
+    text-indent: -9999px;
+    width: 182px;
+}
+.scPrice2 {
+    color: #7E7E7E;
+}
+.productPrice2 span {
+    margin-right: 2px;
+}
+.productPrice2 span strong {
+    color: #A10000;
+    font-weight: 700;
+}
+.wrapper {
+    margin: 0 auto;
+    width: 980px;
+}
+.fbListLeft {
+    color: #000000;
+    display: inline;
+    float: left;
+    margin-top: 10px;
+    width: 200px;
+}
+.fbListRight {
+    color: #000000;
+    display: inline;
+    float: right;
+    width: 760px;
+}
+.scListArea a img {
+    border: 1px solid #DCDCDC;
+    height: 170px;
+    width: 170px;
+}
+.teshui {
+    background: url("http://i.vanclimg.com/NewVancl/Productlist/icon/icon-off.png") no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    font-family: "arial";
+    font-size: 16px;
+    height: 25px;
+    padding: 18px 0 2px 6px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-indent: 8px;
+    top: 121px;
+    width: 40px;
+}
+.jifen {
+    background: url("http://i.vanclimg.com/NewVancl/Productlist/icon/point.png") no-repeat scroll 0 0 transparent;
+    bottom: 0;
+    color: #FFFFFF;
+    font-family: "arial";
+    font-size: 16px;
+    height: 25px;
+    padding: 18px 0 2px 6px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-indent: 8px;
+    width: 40px;
+}
+.qianggou {
+    background: url("http://i.vanclimg.com/NewVancl/Productlist/icon/qianggou.png") no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    font-family: "arial";
+    font-size: 16px;
+    height: 25px;
+    padding: 18px 0 2px 5px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-indent: 8px;
+    top: 121px;
+    width: 40px;
+}
+.duanma {
+    background: url("http://i.vanclimg.com/search/duan.png") no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    font-family: "arial";
+    font-size: 16px;
+    height: 25px;
+    padding: 18px 0 2px 5px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-indent: 8px;
+    top: 121px;
+    width: 40px;
+    z-index: 2;
+}
+.duanmasmall {
+    background: url("http://i.vanclimg.com/search/duan.png") no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    font-family: "arial";
+    font-size: 12px;
+    height: 25px;
+    padding: 18px 0 2px 5px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-indent: 6px;
+    top: 121px;
+    width: 40px;
+    z-index: 2;
+}
+.qingcang {
+    background: url("http://i.vanclimg.com/NewVancl/Productlist/icon/clear.png") no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    font-family: "arial";
+    font-size: 16px;
+    height: 25px;
+    padding: 18px 0 2px 6px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-indent: 8px;
+    top: 121px;
+    width: 40px;
+}
+.bigsizeIcon {
+    background: url("http://i.vanclimg.com/channel/bigsize/bigIcon.png") no-repeat scroll 0 0 transparent;
+    height: 23px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 33px;
+}
+.lbyVjiaTitle {
+    background: url("http://i.vanclimg.com/search/vjiabanner.jpg") no-repeat scroll center center transparent;
+    height: 40px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    width: 760px;
+}
+.lbyVjiaTitle h1 {
+    color: #5B666B;
+    font-size: 14px;
+    font-weight: bold;
+    height: 2px;
+    line-height: 38px;
+    padding-left: 145px;
+    padding-top: 2px;
+}
+.vjiaIcon {
+    background: url("http://i.vanclimg.com/search/vjiaicon.png") no-repeat scroll 0 0 transparent;
+    height: 50px;
+    left: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 50px;
+    z-index: 3;
+}
+.pruarea2 {
+    margin: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 754px;
+}
+.pruarea2 ul {
+    overflow: hidden;
+    width: 754px;
+}
+.pruarea2 ul li {
+    display: inline;
+    float: left;
+    list-style-type: none;
+    margin: 2px 22px 0 0;
+    overflow: hidden;
+    width: 172px;
+}
+.pruarea2 ul li .pic {
+    height: 172px;
+    margin-bottom: 9px;
+    position: relative;
+    text-align: center;
+    width: 172px;
+}
+.pruarea2 ul li DL {
+    margin: 0;
+    padding: 6px 0 23px;
+}
+.pruarea2 ul li .productName {
+    height: 35px;
+    margin: 13px 0 0;
+    overflow: hidden;
+    width: 150px;
+}
+.pruarea2 ul li .price {
+    margin-top: 9px;
+    padding: 0;
+    text-align: left;
+    width: 150px;
+}
+.pruarea2 .currentColor IMG {
+    border-color: #A5AFC3;
+    border-style: solid;
+    border-width: 2px;
+    margin-top: 0;
+    padding: 1px;
+}
+.pruarea2 ul li .productName A {
+    line-height: 19px;
+}
+.pruarea2 ul li .price .hs {
+    color: #999999;
+    margin-right: 5px;
+}
+.pruarea2 ul li .price .sc {
+    font-weight: bold;
+}
+.pruarea li {
+    display: inline;
+    float: left;
+    height: 265px;
+    margin-right: 10px;
+    overflow: hidden;
+    text-align: center;
+    width: 172px;
+}
+.pruarea li p {
+    height: 39px;
+    line-height: 18px;
+    margin-top: 15px;
+    overflow: hidden;
+    text-align: left;
+}
+.pruarea li > div {
+    text-align: left;
+}
+.Mprice, .Pprice {
+    color: #9F9F9F;
+    margin-right: 10px;
+}
+.Sprice, .Pprice {
+    color: #A10000;
+}
+.Sprice {
+    font-weight: bold;
+}
+.Sprice strong {
+    font-weight: bold;
+    text-decoration: line-through;
+}
+.Mprice strong {
+    font-weight: normal;
+    text-decoration: line-through;
+}
+.Pprice {
+    font-weight: bold;
+}
+.pruarea li .pic {
+    height: 172px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 172px;
+}
+.pruarea li .pic img {
+    border: 1px solid #DBD7D6;
+}
+.pruarea li .pic a:hover img {
+    border: 1px solid #A10000;
+}
+.pruarea1 {
+    border-bottom: 1px solid #C9C9C9;
+}
+.pru1li {
+    border-color: #C9C9C9 #C9C9C9 #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    padding: 4px 8px 4px 4px;
+}
+.pruarea1 .pic {
+    display: inline;
+    float: left;
+    height: 170px;
+    position: relative;
+    width: 170px;
+}
+.pru1detail {
+    display: inline;
+    float: left;
+    padding-left: 22px;
+}
+.pru1detail h2 {
+    color: #333333;
+    font-size: 14px;
+    line-height: 38px;
+}
+.pru1detail .productName {
+    overflow: hidden;
+    width: 350px;
+}
+.divProp p {
+    clear: both;
+    color: #999999;
+    line-height: 26px;
+    width: 300px;
+}
+.divProp p span {
+    color: #A10000;
+    display: inline;
+    float: left;
+}
+.divProp .d1xjdetail {
+    color: #999999;
+    line-height: 16px;
+    padding-top: 5px;
+}
+.pru1price {
+    color: #999999;
+    display: inline;
+    float: right;
+    padding: 14px 12px 11px 0;
+    width: 155px;
+}
+.pru1pricearea {
+    height: 55px;
+}
+.fonthj {
+    color: #141514;
+}
+.fontsj {
+    color: #999999;
+}
+.fontyj {
+    line-height: 24px;
+}
+.fontpf {
+    color: #141514;
+    float: left;
+    line-height: 22px;
+    width: 36px;
+}
+.starImg {
+    float: left;
+    height: 20px;
+    padding-top: 5px;
+    width: 76px;
+}
+.starImg img {
+    margin-right: 2px;
+}
+.pruarea1 DL {
+    margin: 0;
+    padding: 6px 0 23px;
+    width: 350px;
+}
+.pruarea1 DL DD {
+    float: left;
+    height: 26px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 10px 0 0;
+    width: 22px;
+}
+.pruarea1 .currentColor2 {
+    padding: 0;
+    width: 26px;
+}
+.pruarea1 .currentColor IMG {
+    border-color: #A5AFC3;
+    border-right: 2px solid #A5AFC3;
+    border-style: solid;
+    border-width: 2px;
+    margin-top: 0;
+    padding: 1px;
+}
+.pruarea1 .currentColor2 IMG {
+    border-color: #A5AFC3;
+    border-right: 2px solid #A5AFC3;
+    border-style: solid;
+    border-width: 2px;
+    margin-top: 0;
+    padding: 1px;
+}
+.pruarea1 .otherColor2 {
+    padding: 0;
+    width: 26px;
+}
+.pruarea1 .otherColor IMG {
+    border-color: #C8C8C8;
+    border-right: 1px solid #C8C8C8;
+    border-style: solid;
+    border-width: 1px;
+    margin: 1px 0 0 1px;
+    padding: 1px;
+}
+.pruarea1 .otherColor2 IMG {
+    border-color: #C8C8C8;
+    border-right: 1px solid #C8C8C8;
+    border-style: solid;
+    border-width: 1px;
+    margin: 1px 0 0 1px;
+    padding: 1px;
+}
+.pruarea2 {
+    margin: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 754px;
+}
+.pruarea2 ul {
+    overflow: hidden;
+    width: 754px;
+}
+.pruarea2 ul li {
+    display: inline;
+    float: left;
+    list-style-type: none;
+    margin: 2px 22px 0 0;
+    overflow: hidden;
+    width: 172px;
+}
+.pruarea2 ul li span {
+    color: #A10000;
+    float: left;
+}
+.pruarea2 ul li .pic {
+    height: 172px;
+    margin-bottom: 9px;
+    position: relative;
+    text-align: center;
+    width: 172px;
+}
+.pruarea2 ul li .pic img {
+    border: 1px solid #C9C9C9;
+}
+.pruarea2 ul li .pic a:hover img {
+    border: 1px solid #A10000;
+}
+.pruarea2 ul li .productName {
+    height: 35px;
+    margin: 13px 0 0;
+    overflow: hidden;
+    width: 150px;
+}
+.pruarea2 ul li .productName A {
+    line-height: 19px;
+}
+.pruarea2 ul li .titleTopHack {
+    height: 3px;
+    overflow: hidden;
+}
+.pruarea2 ul li .price {
+    margin-top: 9px;
+    padding: 0;
+    text-align: left;
+    width: 150px;
+}
+.pruarea2 ul li .hack {
+    height: 30px;
+    width: 20px;
+}
+.pruarea2 ul li .price STRONG {
+    color: #A10000;
+    font-weight: normal;
+}
+.pruarea2 ul li .price .hs {
+    color: #999999;
+    margin-right: 5px;
+}
+.pruarea2 ul li DL {
+    margin: 0;
+    padding: 6px 0 23px;
+}
+.pruarea2 ul li DL DD {
+    float: left;
+    height: 26px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 10px 0 0;
+    width: 22px;
+}
+.pruarea2 .currentColor2 {
+    padding: 0;
+    width: 26px;
+}
+.pruarea2 .currentColor IMG {
+    border-color: #A5AFC3;
+    border-right: 2px solid #A5AFC3;
+    border-style: solid;
+    border-width: 2px;
+    margin-top: 0;
+    padding: 1px;
+}
+.pruarea2 .currentColor2 IMG {
+    border-color: #A5AFC3;
+    border-right: 2px solid #A5AFC3;
+    border-style: solid;
+    border-width: 2px;
+    margin-top: 0;
+    padding: 1px;
+}
+.pruarea2 .otherColor2 {
+    padding: 0;
+    width: 26px;
+}
+.pruarea2 .otherColor IMG {
+    border-color: #C8C8C8;
+    border-right: 1px solid #C8C8C8;
+    border-style: solid;
+    border-width: 1px;
+    margin: 1px 0 0 1px;
+    padding: 1px;
+}
+.pruarea2 .otherColor2 IMG {
+    border-color: #C8C8C8;
+    border-right: 1px solid #C8C8C8;
+    border-style: solid;
+    border-width: 1px;
+    margin: 1px 0 0 1px;
+    padding: 1px;
+}
+.pruarea2 ul li .price .sc {
+    font-weight: bold;
+}
+.navSelect {
+    background-color: #FFB8C1 !important;
+    color: #FFFFFF !important;
+}
+.s_s0 {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -59px transparent;
+    display: inline-block;
+    height: 13px;
+    width: 13px;
+}
+.s_s05 {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -33px transparent;
+    display: inline-block;
+    height: 13px;
+    width: 13px;
+}
+.s_s1 {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -46px transparent;
+    display: inline-block;
+    height: 13px;
+    width: 13px;
+}
+.s_downbar {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -22px transparent;
+    cursor: pointer;
+    display: block;
+    height: 11px;
+    margin: 0 auto;
+    width: 89px;
+}
+.s_upbar {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -11px transparent;
+    cursor: pointer;
+    display: block;
+    height: 11px;
+    margin: 0 auto;
+    width: 89px;
+}
+.tjred {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -587px transparent;
+    display: inline-block;
+    height: 21px;
+    width: 45px;
+}
+.zcred {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -566px transparent;
+    display: inline-block;
+    height: 21px;
+    width: 45px;
+}
+.s_del {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 11px;
+    width: 11px;
+}
+.s_color0 {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -259px transparent;
+    display: inline-block;
+    height: 17px;
+    width: 31px;
+}
+.s_color1 {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -276px transparent;
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+}
+.s_color2 {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -293px transparent;
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+}
+.s_color3 {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -208px transparent;
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+}
+.s_color4 {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -225px transparent;
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+}
+.s_color5 {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -242px transparent;
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+}
+.s_color6 {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -361px transparent;
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+}
+.s_color7 {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -378px transparent;
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+}
+.s_color8 {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -344px transparent;
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+}
+.s_color9 {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -327px transparent;
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+}
+.s_color10 {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -310px transparent;
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+}
+.s_color11 {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -191px transparent;
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+}
+.s_xiaoliang1 {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -452px transparent;
+    display: inline-block;
+    height: 19px;
+    width: 44px;
+}
+.s_xiaoliang2 {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -414px transparent;
+    display: inline-block;
+    height: 19px;
+    width: 44px;
+}
+.s_haoping1 {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -490px transparent;
+    display: inline-block;
+    height: 19px;
+    width: 44px;
+}
+.s_haoping2 {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -509px transparent;
+    display: inline-block;
+    height: 19px;
+    width: 44px;
+}
+.s_zuixin1 {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -395px transparent;
+    display: inline-block;
+    height: 19px;
+    width: 41px;
+}
+.s_zuixin2 {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -471px transparent;
+    display: inline-block;
+    height: 19px;
+    width: 41px;
+}
+.s_jiage1 {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -528px transparent;
+    display: inline-block;
+    height: 19px;
+    width: 41px;
+}
+.s_jiage2 {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll 0 -547px transparent;
+    display: inline-block;
+    height: 19px;
+    width: 41px;
+}
+.s_jiage3 {
+    background: url("http://i.vanclimg.com/search/ssprites.png") no-repeat scroll -41px -528px transparent;
+    display: inline-block;
+    height: 19px;
+    width: 41px;
+}
+.s_xiangguandu1 {
+    background: url("http://i.vanclimg.com/search/xiangguandu1.jpg") no-repeat scroll -1px 0 transparent;
+    display: inline-block;
+    height: 19px;
+    width: 56px;
+}
+.s_xiangguandu2 {
+    background: url("http://i.vanclimg.com/search/xiangguandu2.jpg") no-repeat scroll -1px 0 transparent;
+    display: inline-block;
+    height: 19px;
+    width: 56px;
+}
+.pruarea .vpureList, .pruarea1 .vpureList, .pruarea2 .vpureList, .productwrapper .vpureList {
+    height: auto;
+}
+.pruarea li .vpureList, .pruarea1 li .vpureList, .pruarea2 li .vpureList, .pruarea2 ul li .pic {
+    height: auto;
+}
+.lookMore_1206 {
+    height: 30px;
+    margin-top: 10px;
+    position: relative;
+    width: 768px;
+}
+.lookMore_Line {
+    background: url("http://i4.vanclimg.com/channel/vjia/morebg_1206.png") repeat-x scroll 0 0 transparent;
+    height: 5px;
+    overflow: hidden;
+    width: 768px;
+}
+.lookMore_Word {
+    background: url("http://i4.vanclimg.com/channel/vjia/morebg_1206.png") no-repeat scroll 0 -8px transparent;
+    color: #343434;
+    font-size: 14px;
+    font-weight: bold;
+    height: 30px;
+    left: 257px;
+    line-height: 24px;
+    position: absolute;
+    text-align: center;
+    top: -2px;
+    width: 253px;
+}
+.fc {
+    background-color: #E6EAF3;
+    border: 1px solid #777777;
+    color: #999999;
+    font-size: 12px;
+    height: 392px;
+    width: 320px;
+    z-index: 9;
+}
+.fc .jJ {
+    height: 200px;
+    margin: 0;
+    padding: 9px 0 10px;
+}
+.fc .jJ img {
+    border: 1px solid #FFFFFF;
+}
+.fc .sd {
+    color: #333333;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+    margin: 0 10px;
+    padding: 0;
+    text-align: center;
+}
+.jJ01 {
+    margin: 7px 0 0 19px;
+}
+.jJ02 {
+    color: #A10000;
+    margin: 17px 0 0 19px;
+}
+.jJ03 {
+    margin: 7px 0 0 19px;
+}
+.jJ03 span {
+    color: #333333;
+}
+.jJ04 {
+    margin: 17px 0 0 19px;
+}
+.jJ04 img {
+    margin-right: 3px;
+}
+.fc02 {
+    background-color: #E6EAF3;
+    border: 1px solid #777777;
+    color: #999999;
+    font-size: 12px;
+    height: 483px;
+    width: 290px;
+    z-index: 9;
+}
+.fc02 .jJ {
+    height: 310px;
+    margin: 0;
+    padding: 9px 0 10px;
+    text-align: center;
+}
+.fc02 .jJ img {
+    border: 1px solid #FFFFFF;
+}
+.fc02 .sd {
+    color: #333333;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+    margin: 0 10px;
+    padding: 0;
+    text-align: center;
+}
+.ico {
+    background-image: url("http://i.vanclimg.com/NewVancl/Productlist/drift/jt.gif");
+    float: left;
+    height: 25px;
+    position: absolute;
+    top: 20px;
+    width: 12px;
+    z-index: 10;
+}
+.fc03 {
+    background-color: #E6EAF3;
+    border: 1px solid #777777;
+    color: #999999;
+    font-size: 12px;
+    height: 60px;
+    padding-top: 25px;
+    width: 200px;
+    z-index: 9;
+}
+.selfsuitCss {
+    float: left;
+    height: 80px;
+    overflow: hidden;
+    width: 886px;
+}
+.selfsuitCss1 {
+    float: left;
+    width: 800%;
+}
+.selfsuitCss2 {
+    float: left;
+}
+.selfsuitCss3 {
+    float: left;
+}
+.awmiookLogo a, .awmiookHotCat span, .awmiookBarLeftList h2 em, .awmiookBarLeftUl li a em, .awmiookTitleBar h3 {
+    display: block;
+    overflow: hidden;
+    text-indent: -9999px;
+    white-space: nowrap;
+}
+.awmiookHotWord a, .awmiookBarLeftList h2 span, .awmiookBarLeftUl li a span, .awmiookPrice span, .awmiookMore {
+    font-family: "Microsoft YaHei",SimHei;
+}
+a:link, a:visited {
+    color: #515151;
+    text-decoration: none;
+}
+a:hover {
+    color: #A10000;
+    text-decoration: none;
+}
+a:active {
+    color: #FF3300;
+}
+.awmiookWarp {
+    margin: 0 auto;
+    width: 980px;
+}
+.awmiookHead {
+    height: 100px;
+}
+.awmiookLogo {
+    background: url("http://i.vanclimg.com/channel/miook/awspritestop.png") no-repeat scroll 0 -50px transparent;
+    float: left;
+    height: 67px;
+    margin-top: 17px;
+    width: 411px;
+}
+.awmiookLogo a {
+    display: block;
+    height: 67px;
+    width: 411px;
+}
+.awmiookSearchBox {
+    display: inline;
+    float: left;
+    margin: 40px 0 0 40px;
+    width: 220px;
+}
+.awmiookHotWord {
+    height: 24px;
+    line-height: 24px;
+    width: 220px;
+}
+.awmiookHotWord a {
+    font-size: 13px;
+    padding-right: 10px;
+}
+.searchInt .searchText {
+    background: url("http://i.vanclimg.com/header/20121207/spritesbg.png") no-repeat scroll 0 -162px transparent;
+    border: medium none;
+    color: #999999;
+    display: inline;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 7px;
+    width: 131px;
+}
+.searchInt .searchBtn {
+    background: url("http://i.vanclimg.com/header/20121207/spritesbg.png") no-repeat scroll -115px -81px #A10000;
+    border: 0 none;
+    cursor: pointer;
+    display: inline;
+    float: left;
+    height: 25px;
+    width: 74px;
+}
+.awmiookBackBox {
+    display: inline;
+    float: left;
+    margin: 40px 0 0 20px;
+}
+.awmiookBack {
+    background: url("http://i.vanclimg.com/channel/miook/awspritestop20121211.png") no-repeat scroll 0 -248px transparent;
+    color: #FFFFFF;
+    display: block;
+    font-family: "Microsoft YaHei",SimHei;
+    font-size: 13px;
+    height: 35px;
+    line-height: 35px;
+    margin-left: 7px;
+    text-align: center;
+    width: 95px;
+}
+a.awmiookBack:link, a.awmiookBack:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+a.awmiookBack:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+a.awmiookBack:active {
+    color: #FF3300;
+}
+#shoppingCarNone {
+    margin-top: 40px;
+}
+.awmiookMenuBar {
+    background: url("http://i.vanclimg.com/channel/miook/awspritestop.png") repeat-x scroll 0 -144px transparent;
+    height: 46px;
+    position: relative;
+    width: 980px;
+}
+.awmiookMenuBarRight {
+    background: url("http://i.vanclimg.com/channel/miook/awspritestop.png") no-repeat scroll -395px -192px transparent;
+    height: 46px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 16px;
+}
+.awmiookMenuTopUl {
+    height: 46px;
+    line-height: 46px;
+}
+.awmiookMenuTopUl li {
+    color: #515151;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+}
+.awmiookMenuTopUl li a {
+    background: url("http://i.vanclimg.com/channel/miook/awspritestop.png") no-repeat scroll 0 -192px transparent;
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    height: 46px;
+    padding-left: 14px;
+    text-align: center;
+}
+.awmiookMenuTopUl li a span {
+    color: #515151;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 44px;
+    line-height: 44px;
+    overflow: hidden;
+    padding-right: 10px;
+    padding-top: 2px;
+}
+.awmiookMenuTopUl li a:link, .awmiookMenuTopUl li a:visited {
+    color: #515151;
+}
+.awmiookMenuTopUl li a:hover {
+    color: #FFFFFF;
+}
+.awmiookMenuTopUl li a:active {
+    color: #FFFFFF;
+}
+.awmiookMenuTopUl li:hover a {
+    background: url("http://i.vanclimg.com/channel/miook/awspritestop.png") no-repeat scroll left top transparent;
+}
+.awmiookMenuTopUl li:hover a span {
+    background: url("http://i.vanclimg.com/channel/miook/awspritestop.png") no-repeat scroll right top transparent;
+    color: #FFFFFF;
+}
+.awmiookMenuTopUl li.topHover a {
+    background: url("http://i.vanclimg.com/channel/miook/awspritestop.png") no-repeat scroll left top transparent;
+    color: #FFFFFF;
+}
+.awmiookMenuTopUl li.topHover a span {
+    background: url("http://i.vanclimg.com/channel/miook/awspritestop.png") no-repeat scroll right top transparent;
+    color: #FFFFFF;
+}
+.awmiookMenuTopUl li.topHover a:link, .awmiookMenuTopUl li.topHover a:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.awmiookMenuTopUl li.topHover a:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.awmiookMenuTopUl li.topHover a:active {
+    color: #FFFFFF;
+}
+.awmiookConTop {
+}
+.awmiookLeftBar {
+    float: left;
+    width: 170px;
+}
+.awmiookAd01 {
+}
+.awmiookAd01 a, .awmiookAd02 a, .awmiookAd03 a {
+    display: block;
+}
+.awmiookAd01 a img, .awmiookAd02 a img, .awmiookAd03 a img {
+    vertical-align: top;
+}
+.awmiookHotCat {
+    border-bottom: 1px solid #7B7979;
+    height: 26px;
+    margin-top: 13px;
+    width: 170px;
+}
+.awmiookHotCat span {
+    background: url("http://i.vanclimg.com/channel/miook/awsprites.png") no-repeat scroll left top transparent;
+    height: 22px;
+    margin-left: 3px;
+    width: 149px;
+}
+.awmiookBarLeftList {
+    overflow: hidden;
+}
+.awmiookBarLeftList h2 {
+    background: none repeat scroll 0 0 #F6F6F6;
+    height: 27px;
+    line-height: 27px;
+    margin: 4px 0 10px;
+    width: 170px;
+}
+.awmiookBarLeftList h2 em {
+    background: url("http://i.vanclimg.com/channel/miook/awsprites.png") no-repeat scroll 0 -24px transparent;
+    display: inline;
+    float: left;
+    height: 26px;
+    margin-left: 6px;
+    width: 14px;
+}
+.awmiookBarLeftList h2.awmiookBarH2 em {
+    background-position: -18px -24px;
+}
+.awmiookBarLeftList h2.awmiookBarH3 em {
+    background-position: -36px -24px;
+}
+.awmiookBarLeftList h2 span {
+    color: #515151;
+    display: inline;
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 12px;
+}
+.awmiookBarLeftUl li a {
+    display: block;
+    height: 19px;
+    line-height: 19px;
+    width: 170px;
+}
+.awmiookBarLeftUl li a em {
+    background: url("http://i.vanclimg.com/channel/miook/awsprites.png") no-repeat scroll -124px -24px transparent;
+    display: inline;
+    float: left;
+    height: 6px;
+    margin: 6px 4px 0 6px;
+    width: 6px;
+}
+.awmiookBarLeftUl li a span {
+    color: #515151;
+    cursor: pointer;
+    float: left;
+    font-size: 13px;
+}
+.awmiookBarLeftUl li a .awmiookNew, .awmiookBarLeftUl li a .awmiookHot {
+    background: url("http://i.vanclimg.com/channel/miook/awsprites.png") no-repeat scroll -54px -24px transparent;
+    display: inline;
+    float: left;
+    height: 13px;
+    margin: 2px 0 0 5px;
+    width: 28px;
+}
+.awmiookBarLeftUl li a .awmiookHot {
+    background-position: -83px -24px;
+}
+.awmiookBarLeftUl li a:hover {
+    background: none repeat scroll 0 0 #EEEAE1;
+}
+.awmiookBarLeftUl li a:hover em {
+    background-position: -133px -24px;
+}
+.awmiookBarLeftUl li a:hover span {
+    color: #A10000;
+}
+.awmiookConTopRight {
+    float: right;
+    overflow: hidden;
+    width: 800px;
+}
+.focusImg3 {
+    background: none repeat scroll 0 0 #FFFFFF;
+    float: left;
+    height: 399px;
+    width: 800px;
+}
+#focusImg3 {
+    height: 399px;
+    position: relative;
+    width: 800px;
+}
+#focusImg3 .msNumber {
+    bottom: 29px;
+    position: absolute;
+    right: 98px;
+}
+#focusImg3 .msNumber li {
+    background: url("http://i5.vanclimg.com/channel/miook/ball01.png") no-repeat scroll 0 0 transparent;
+    color: #A10000;
+    cursor: pointer;
+    display: inline;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    height: 21px;
+    line-height: 21px;
+    margin-left: 4px;
+    overflow: hidden;
+    text-align: center;
+    width: 21px;
+}
+#focusImg3 .msNumber li.hot {
+    background: url("http://i1.vanclimg.com/channel/miook/ball02.png") no-repeat scroll 0 0 transparent;
+    color: #FFFBFC;
+}
+#focusImg3 .vtMzContent {
+    height: 399px;
+    overflow: hidden;
+    width: 800px;
+}
+#focusImg3 .vtMzContentImg li {
+    height: 399px;
+    overflow: hidden;
+    width: 800px;
+}
+.awmiookAd02Box {
+    overflow: hidden;
+    width: 800px;
+}
+.awmiookAd02Box ul {
+    width: 820px;
+}
+.awmiookAd02 {
+    float: left;
+    margin-right: 19px;
+}
+.awmiookAd02 a {
+    display: block;
+    height: 163px;
+    width: 252px;
+}
+.awmiookAd02 a, .awmiookAd03 a {
+    border: 1px solid #CFCFCF;
+}
+.awmiookAd02 a:hover, .awmiookAd03 a:hover {
+    border: 1px solid #A10000;
+}
+.awmiookTitleBar {
+    border-bottom: 1px solid #828080;
+    height: 35px;
+}
+.awmiookTitleBar h3 {
+    background: url("http://i.vanclimg.com/channel/miook/awsprites.png") no-repeat scroll 0 -52px transparent;
+    float: left;
+    height: 26px;
+    width: 262px;
+}
+.awmiookBigSale ul {
+    width: 850px;
+}
+.awmiookBigSale li {
+    display: inline;
+    float: left;
+    height: 223px;
+    margin: 0 32px 0 4px;
+    width: 172px;
+}
+.awmiookBigSale li .pic a {
+    display: block;
+    height: 172px;
+    position: relative;
+    width: 172px;
+}
+.awmiookPrice {
+    background: url("http://i.vanclimg.com/channel/miook/awsprites.png") no-repeat scroll 0 -170px transparent;
+    display: block;
+    height: 57px;
+    overflow: hidden;
+    position: absolute;
+    right: 3px;
+    text-align: center;
+    top: 0;
+    width: 57px;
+}
+.awmiookPrice span {
+    color: #FFFFFF;
+    display: block;
+    font-size: 22.56px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.awmiookPrice span em {
+    font-size: 12px;
+}
+.awmiookBigSale li .pic a img {
+    border: 1px solid #B5B1B2;
+    vertical-align: top;
+}
+.awmiookBigSale li .pic a:hover img {
+    border: 1px solid #A10000;
+}
+.awmiookBigSale li h4 {
+    height: 32px;
+    line-height: 16px;
+    margin: 0 auto;
+    padding-top: 2px;
+    width: 130px;
+}
+.awmiookBigSale li h4 a {
+    color: #000000;
+}
+.awmiookBigSale li h4 a:link, .awmiookBigSale li h4 a:visited {
+    color: #000000;
+    text-decoration: underline;
+}
+.awmiookBigSale li h4 a:hover {
+    color: #A10000;
+    text-decoration: underline;
+}
+.awmiookBigSale li h4 a:active {
+    color: #FF3300;
+}
+.awmiookTime {
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0 auto;
+    width: 130px;
+}
+.awmiookTime span {
+    color: #A10000;
+}
+.awmiookAd03box {
+    overflow: hidden;
+    width: 980px;
+}
+.awmiookAd03box ul {
+    width: 985px;
+}
+.awmiookAd03 {
+    float: left;
+    margin-right: 4px;
+}
+.awmiookProCon01 {
+    width: 980px;
+}
+.awmiookHg01 {
+    height: 33px;
+}
+.awmiookTitleBar h3.awmiookH301 {
+    background-position: 0 -82px;
+    width: 282px;
+}
+.awmiookMore {
+    float: right;
+    font-size: 15.62px;
+    height: 32px;
+    line-height: 32px;
+    padding-top: 1px;
+}
+.awmiookMore span {
+    font-family: "Simsun";
+}
+.awmiookAd04 {
+    width: 345px;
+}
+.awmiookProList {
+    overflow: hidden;
+    width: 607px;
+}
+.awmiookFl {
+    float: left;
+}
+.awmiookFr {
+    float: right;
+}
+.awmiookProList ul {
+    width: 644px;
+}
+.awmiookProList li {
+    display: inline;
+    float: left;
+    height: 205px;
+    margin-right: 37px;
+    width: 176px;
+}
+.awmiookProList li .pic {
+    border-bottom: 1px solid #C7C7C7;
+    padding-bottom: 2px;
+    text-align: center;
+    width: 176px;
+}
+.awmiookProList li .pic a img {
+    border: 1px solid #FFFFFF;
+    vertical-align: top;
+}
+.awmiookProList li .pic a:hover img {
+    border: 1px solid #7D7B7B;
+}
+.awmiookProList li h4 {
+    font-size: 12.62px;
+    height: 32px;
+    line-height: 16px;
+    margin: 0 auto;
+    padding-top: 2px;
+    width: 135px;
+}
+.awmiookProList li h4 a {
+    color: #303030;
+}
+.awmiookProList li h4 a:link, .awmiookProList li h4 a:visited {
+    color: #303030;
+    text-decoration: none;
+}
+.awmiookProList li h4 a:hover {
+    color: #A10000;
+    text-decoration: none;
+}
+.awmiookProList li h4 a:active {
+    color: #FF3300;
+}
+.productPrice {
+    background-color: #FFFFFF;
+    display: block;
+    line-height: 16px;
+    margin: 0 auto;
+    width: 135px;
+}
+.productPrice span strong {
+    color: #A10000;
+    padding-left: 5px;
+}
+.scPrice {
+    color: #474546;
+}
+.awmiookTitleBar h3.awmiookH302 {
+    background-position: 0 -112px;
+    width: 257px;
+}
+.awmiookTitleBar h3.awmiookH303 {
+    background-position: 0 -142px;
+    width: 303px;
+}
+.awmiookDarenScroll {
+    margin: 0 auto;
+}
+.awmiookDarenPic {
+    height: 318px;
+    margin: 0 auto;
+    width: 980px;
+}
+.tehui {
+    clear: both;
+}
+.awmiookBtDrRight, .awmiookBtDrRightHover {
+    background: url("http://i.vanclimg.com/channel/miook/awsprites.png") no-repeat scroll -119px -173px transparent;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    height: 54px;
+    margin-right: 0;
+    margin-top: 107px;
+    text-indent: -9999px;
+    width: 15px;
+}
+.awmiookBtDrRightHover {
+    background-position: -138px -173px;
+}
+.awmiookBtDrLeft, .awmiookBtDrLeftHover {
+    background: url("http://i.vanclimg.com/channel/miook/awsprites.png") no-repeat scroll -76px -173px transparent;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 54px;
+    margin-right: 26px;
+    margin-top: 107px;
+    text-indent: -9999px;
+    width: 15px;
+}
+.awmiookBtDrLeftHover {
+    background-position: -97px -173px;
+}
+.awmiookProductListDr {
+    margin: 0 auto;
+}
+.awmiookProductListDr li {
+    background: none repeat scroll 0 0 #FFFFFF;
+    display: inline;
+    float: left;
+    margin-left: 2px;
+    margin-right: 10px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 214px;
+}
+.awmiookProductListDr li img {
+    vertical-align: top;
+}
+.awmiookProductListDr {
+    float: left;
+    font-size: 12px;
+    overflow: hidden;
+    width: 897px;
+    z-index: 1;
+}
+.awmiookProductListDr .pcont {
+    float: left;
+    overflow: hidden;
+    position: relative;
+    width: 897px;
+}
+.awmiookProductListDr .ScrCont {
+    width: 32766px;
+    z-index: 1;
+}
+.awmiookProductListDr #List1_1 {
+    float: left;
+}
+.awmiookProductListDr #List2_1 {
+    float: left;
+}

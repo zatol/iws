@@ -1,0 +1,84 @@
+{set:$seo_data=array(); $site_config=new
+Config('site_config');$site_config=$site_config->getInfo();}
+{set:$seo_data['title']=isset($site_config['name'])?$site_config['name']:""}
+{set:$seo_data['title']="账号绑定_".$seo_data['title']}
+{set:seo::set($seo_data);}
+<script type="text/javascript" src="{theme:javascript/v_bind.js}"></script>
+<div class="wrapper">
+	<div class="login">
+		<div class="tag">
+			<ul id="tags">
+				<li class="on">
+					绑定已有账户
+				</li>
+				<li class="">
+					完善基本账户信息
+				</li>
+			</ul>
+		</div>
+		<!--tag-->
+		<div id="shows">
+            <div class="user_infor" style="display: block;">
+                <div class="tips" id="vanclLoginError" style="visibility: hidden;"></div>
+                <p><label>用户名：</label><input type="text" value="Email/手机号" name="vanclUserName" id="vanclUserName"></p>
+                <div class="tips" id="vanclUserNameError" style="visibility: hidden;">用户名不能为空!</div>
+                
+                <p><label>密&#12288;码：</label><input type="password" value="" class="inputtextcolor" name="vanclPassword" id="vanclPassword"></p>
+                <div class="tips" id="vanclPasswordError" style="visibility: hidden;"></div>
+                
+                <p style="display:none" id="pValidate">
+                    <label>验证码：</label><input type="text" value="" class="inputtextcolor" name="calcultatevalidate" id="calculatevalidate" style="width: 65px; ime-mode: disabled; -moz-user-select: none;" maxlength="6">
+                    <img style="vertical-align: middle; width: 145px; height: 53px; cursor: pointer;" src="" oldsrc="/Controls/CalculateValidateCode.ashx?key=Login" id="img_validate"><a href="javascript:void(0)" style="cursor: pointer; float:right; line-height:18px;">看不清?换一张</a>
+                </p>
+                <div class="tips" style="display: none; visibility: hidden;" id="validateError"></div>
+                
+                <div class="bt"><a href="#" class="log" id="vanclLogin">绑&#12288;定</a>&#12288;<a href="{url:/simple/find_password/}" class="forget">忘记密码啦？</a></div>
+                
+                <div class="tishi">
+                    <span>提示：</span>您可以直接把第三方登录的用户信息与您的{echo:$siteConfig->name}账号绑定在一起</p>
+                </div>
+                
+                <!--tishi-->
+            </div><!--user_infor-->
+            <div style="display: none;" class="user_infor">
+                <div class="tips" id="vjiaLoginError" style="visibility: hidden;"></div>
+                <p><label>用户名：</label><input type="text" value="Email/手机号" name="PartnerUserName" id="PartnerUserName"></p>
+                <div class="tips" id="vjiaUserNameError" style="visibility: hidden;"></div>
+
+                <p><label>邮&#12288;箱：</label><input type="text" value="" class="inputtextcolor" name="PartnerPassword" id="PartnerPassword"></p>
+                <div class="tips" id="vjiaPasswordError" style="visibility: hidden;"></div>
+
+                <p style="display:none" id="pVjiaValidate"><label>验证码：</label><input type="text" value="" class="inputtextcolor" name="vjiacalcultatevalidate" id="vjiacalculatevalidate" style="width:65px;" maxlength="6">
+                    <img style="vertical-align: middle; width: 145px; height: 53px; cursor: pointer;" src="" oldsrc="/Controls/CalculateValidateCode.ashx?key=VjiaLogin" id="img_vjiaValidate"><a href="javascript:void(0)" style="cursor: pointer; float:right; line-height:18px;">看不清?换一张</a>
+                </p>
+                <div class="tips" style="display: none; visibility: hidden;" id="vjiaValidateError"></div>
+                
+                <div class="bt"><a href="#" class="log" id="vjiaLogin">提&#12288;交</a>&#12288;</div>
+                <div class="tishi">
+                    <span>提示：</span>完善了基本信息后，您可以直接把第三方登录的用户信息与您的{echo:$siteConfig->name}账号绑定在一起。
+                </div><!--tishi-->
+            </div><!--user_infor-->
+        </div>
+		<!--shows-->
+	</div>
+	<!--login-->
+	<div class="advert">
+		<img id="_advertImage"
+			src="https://ssl.vanclimg.com/users/26/20120411/login120412.jpg">
+	</div>
+	<div class="clear"></div>
+</div>
+<script type="text/javascript">
+/*函数在这里*/
+function scroll(a, b, c, d, e) {
+var EACH = function (o, fn) { for (var i = 0; i < o.length; i++) { fn.call(o[i], i, o) } }
+var GF = function (o, t) { var s = o.getElementsByTagName(t), R = []; EACH(s, function (i, v) { s[i].parentNode == o && R.push(s[i]); }); return R; }
+var G = function (x, y) { return GF(document.getElementById(x), y); }
+var T = G(a, b), S = G(c, d); _show(0);
+EACH(T, function (i, o) { T[i].onclick = (function (n) { return function () { _show(n); } })(i); });
+function _show(n) { EACH(T, function (i, o) { S[i].style.display = "none"; T[i].className = "" }); T[n].className = e; S[n].style.display = "block"; }
+}
+/*用法在这里*/
+/*绑定id为tags里的li为标签, id为shows里的div为展示层, hov为标签选中时的样式*/
+scroll("tags", "li", "shows", "div", "on");
+</script>

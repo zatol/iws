@@ -1,0 +1,281 @@
+<script type="text/javascript" src="{theme:javascript/v_cart.js}"></script>
+<div id="wrapper">
+
+	<div id="location">
+
+		<em>1.我的购物车</em>
+		<span>2.填写核对信息单</span>
+		<span>3.成功提交订单</span>
+
+	</div>
+	<div id="content">
+
+
+
+		<div id="cart-gift">
+
+			{if:$this->count>0}
+			{if:ISafe::get('user_id')==''}
+			<div class="cart-top">
+				<h2>
+					临时购物车
+				</h2>
+				<span>现在[<a href="{url:/simple/login}" class="login">登录</a>]，您的<a
+					class="gwqd">选购清单</a>将被记录。</span>
+			</div>
+			<div class="tip">
+				<span>温馨提示：</span>1.选购清单中的商品无法保留库存，请您及时结算。2.商品的价格和库存将以订单提交时为准。
+			</div>
+			{/if}
+			<div id="cart">
+			</div>
+
+			
+			<div data-promotion="False" data-jobs-alert="False" class="clearfix"
+				id="cart-product">
+				<div id="batchdelcart">
+					<table cellspacing="0">
+						<thead>
+							<tr>
+								<th class="bar bd-left">
+									<input type="checkbox" data-del-tip="" value="all-products"
+										name="all-products" class="track all-products-ckb ckb"
+										id="all-ckb-top">
+									<label for="all-ckb-top">
+										全选
+									</label>
+								</th>
+								<th class="image">
+									&nbsp;
+								</th>
+								<th class="name">
+									商品名称
+								</th>
+								<th class="size">
+									规格
+								</th>
+								<th class="presentpoints">
+									积分
+								</th>
+								<th class="price">
+									单价
+								</th>
+								<th class="qty">
+									数量
+								</th>
+								<th class="discount">
+									优惠
+								</th>
+								<th class="subtotal">
+									小计
+								</th>
+								<th class="operate bd-right">
+									操作
+								</th>
+							</tr>
+						</thead>
+						<tbody id="promotion-group">
+						</tbody>
+						<tbody id="general-product">
+						{set:$goodsIdArray = array()} {foreach:items = $this->goodsList}
+						{set:$goodsIdArray[] = $item['id']}
+							<tr class="selected">
+								<td rowspan="1" class="bar bd-left bd-bottom">
+									<input type="checkbox" checked="checked" value=""
+										data-del-tip="" name="p-item" class="track ckb">
+								</td>
+								<td rowspan="1" class="image bd-bottom">
+									<a href="{url:/site/products/id/$item[id]}"
+										target="_blank"> <img src="{webroot:$item[list_img]}"
+											alt="{$item['name']}"> </a>
+								</td>
+								<td class="name bd-bottom">
+									<a title="{$item['name']}"
+										href="{url:/site/products/id/$item[id]}" target="_blank">{$item['name']}</a>
+								</td>
+								<td class="size bd-bottom">
+									
+								</td>
+								<td class="presentpoints bd-bottom">
+									{$item['point']}
+								</td>
+								<td class="price bd-bottom">
+									￥{$item['sell_price']}
+								</td>
+								<td class="qty bd-bottom">
+									<form method="get" action="/mycart/updateqty"
+										class="modify-qty">
+										<a name="sp_cart_mycart_decrease"
+											class="track decrease-disable">减少</a>
+										<input type="text" maxlength="3" value="{$item['count']}"
+											class="modify-product-qty" name="qty">
+										<noscript>
+											&lt;input type="submit" class="nojs-btn" value="修改" /&gt;
+										</noscript>
+										<a name="sp_cart_mycart_increase"
+											href="/mycart/updateqty?sku=01664650&amp;qty=2"
+											class="increase track">增加</a>
+										<input type="hidden" value="1" name="product-qty">
+										<input type="hidden" value="0700766" name="product-code">
+										<input type="hidden" value="01664650" name="sku">
+										<input type="hidden" value="False" name="ispoint">
+									</form>
+								</td>
+								<td class="bd-bottom">
+									{$item['reduce']}
+								</td>
+								<td class="subtotal bd-bottom">
+									￥{$item['sum']}
+								</td>
+								<td class="operate bd-right bd-bottom">
+									<a title="移入收藏夹" name="sp_cart_mycart_addfaverate"
+										class="add-faverate track"
+										href="/mycart/movetofavorites?sku=01664650">收藏</a>
+									<a href="{url:/simple/removeCart/link/cart/type/goods/goods_id/$item[id]}"
+										name="sp_cart_mycart_del" class="del track"> 删除</a>
+								</td>
+							</tr>
+							{/foreach}
+						</tbody>
+						<tbody id="point-product">
+
+						</tbody>
+						<tbody id="present-product">
+
+						</tbody>
+					</table>
+					
+					<div class="bar-summary clearfix">
+						<div class="bar">
+							<input type="checkbox" data-del-tip=""
+								class="track all-products-ckb ckb" value="all-products"
+								name="all-products" id="all-ckb-bt">
+							<label for="all-ckb-bt">
+								全选
+							</label>
+							<a name="sp_cart_mycar_batch_clear" class="batch-del-cart track"
+								href="javascript:;"> 删除</a>
+						</div>
+						<div class="summary">
+							产品数量总计：
+							<span><em>{$this->count}</em>件</span> 赠送积分总计：
+							<span><em>{$item['point']}</em>分</span> 花费积分总计：
+							<span><em>0</em>分</span> 产品金额总计(不含运费)：
+							<span class="amount">￥<em>{$this->final_sum}</em> </span>
+						</div>
+					</div>
+				</div>
+				<div class="btn-panel">
+					<a name="sp_cart_mycar_goBuy" class="go-buy track"
+						href="/mycart/continuetobuy">&lt;&lt;继续购物</a>
+					<a name="sp_cart_mycar_goPay" id="sp_cart_mycar_goPay"
+						href="/checkout?previousUserId=-1" class="checkout track">
+						去结算&gt;&gt;</a>
+				</div>
+			</div>
+
+			 {else:}
+			<!-- empty -->
+			<div id="cart-empty">
+				您的购物车中没有商品，请您先
+				<a href="{url:}">选购商品»</a>
+			</div>
+			{/if}
+
+		</div>
+
+		<h2 class="coudan-title" style="display: none;">
+			凑单商品
+		</h2>
+		<div class="product-list-panel clearfix clearfixCD"
+			id="collocate-list" style="display: none;">
+		</div>
+		<div id="remove-product" style="display: none;">
+			<table cellspacing="0">
+				<thead>
+					<tr>
+						<th colspan="6" scope="col">
+							您删除的商品，您可以
+							<span>重新购买</span> 或
+							<span>放入收藏夹</span>。
+						</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+
+		<div data-present-url="/mycart/presents" id="gift">
+
+
+		</div>
+		<div class="cuxiao" id="recom-browse-collect">
+			<ul class="tab">
+				<li class="selected">
+					<a name="sp_cart_recent" class="track" href="/mycart/recent">最近浏览商品</a>
+				</li>
+				<li>
+					<a name="sp_cart_recommended" class="track"
+						href="/mycart/recommended">推荐商品</a>
+				</li>
+				<li>
+					<a name="sp_cart_favorites" class="track" href="/mycart/favorites">收藏夹</a>
+				</li>
+			</ul>
+			<div class="product-list-panel clearfix" id="recent-browse"
+				style="display: block;">
+
+
+				{set:$cook_id ='0'} {if:isset($_COOKIE['recentlyviewedproducts'])}
+				{set:$cook_id = IFilter::act(
+				substr($_COOKIE['recentlyviewedproducts'],0,-1) ); }
+				{query:name=goods as lg
+				fields=lg.name,lg.market_price,lg.sell_price,lg.small_img,lg.id
+				where=lg.id in ($cook_id) limit=10}
+
+				<ul class="product-list">
+					<li style="display: block;">
+						<a title="{$item['name']}"
+							data-href="{url:/site/products/id/$item[id]}"
+							data-galleryimage="{echo:IUrl::creatUrl().$item['small_img']}"
+							class="list-img-panel" href="{url:/site/products/id/$item[id]}">
+							<img src="{echo:IUrl::creatUrl().$item['small_img']}"
+								data-origin="{echo:IUrl::creatUrl().$item['small_img']}"
+								class="lazy" alt="{$item['name']}"> </a><a class="name"
+							title="{$item['name']}" href="javascript:;">{$item['name']}</a>
+						<div class="price">
+							现价：￥
+							<strong>{$item['sell_price']}</strong>
+						</div>
+
+						<input type="submit"
+							onclick="window.location.href='{url:/simple/joinCart/link/cart/type/goods/goods_id/$item[id]}';"
+							value="放入购物车" class="add-to-cart track"
+							name="sp_cart_mycart_scan_add_to_cart">
+					</li>
+				</ul>
+				{/query} {else:}
+				<div class="product-list-tip">
+					您最近未浏览任何商品。
+				</div>
+				{/if}
+			</div>
+			<div class="product-list-panel clearfix" id="tj-product"
+				style="display: none;">
+			</div>
+			<div class="product-list-panel clearfix" id="favorite"
+				style="display: none;">
+			</div>
+		</div>
+		<div class="help">
+			<div class="suggest">
+				我们会努力改进购物车，欢迎提出宝贵意见。
+				<span><a target="_blank" name="sp_cart_feedback"
+					class="track" href="http://mkt.vancl.com/Survey/1542">意见反馈</a>&gt;&gt;</span>
+			</div>
+		</div>
+		<img style="display: none" src="">
+
+	</div>
+
+</div>

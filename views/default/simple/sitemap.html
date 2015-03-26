@@ -1,0 +1,167 @@
+<style>
+.footer {
+    clear: both;
+    color: #000000;
+    margin: 0 auto;
+    width: 960px;
+}
+.footer a, .footer a:visited {
+    color: #1E50A2;
+}
+.footer a:hover {
+    color: #BA2636;
+}
+.colLM {
+    border-color: #CCCCCC #CCCCCC #CCCCCC;
+    border-image: none;
+    border-right: 1px solid #CCCCCC;
+    border-style: solid solid solid;
+    border-width: 0px 1px 1px;
+    margin: 12px auto 0;
+    width: 960px;
+}
+.titleBar {
+    background: url("{skin:}images/front/jianbian.jpg") repeat-x scroll left top #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    clear: both;
+    height: 25px;
+    line-height: 24px;
+}
+.titleBar h2 {
+	border-left:3px solid #A10000;
+    color: #1E50A2;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 19px;
+}
+.titleBar h2 a, .titleBar h2 a:visited {
+    color: #1E50A2;
+}
+
+.linkBox, .linkBox1, .linkBox2 {
+    padding: 11px 6px 15px 19px;
+}
+.link {
+    clear: both;
+    color: #C1C1C1;
+    display: block;
+    line-height: 21px;
+}
+.link a, .link a:visited {
+    color: #1E50A2;
+}
+.link a:hover {
+    color: #BA2636;
+}
+.linkBox h3 {
+    color: #1E50A2;
+    float: left;
+    font-weight: bold;
+    line-height: 21px;
+    margin: 0 8px 0 0;
+}
+.linkBox .link {
+    line-height: 21px;
+    margin: 4px 0 9px;
+}
+.linkBox .link a {
+    padding: 0 6px;
+}
+.linkBox1 h3 {
+    color: #1E50A2;
+    float: left;
+    font-weight: bold;
+    line-height: 21px;
+    margin: 0 12px 5px 0;
+    width: 66px;
+}
+.linkBox1 .link {
+    margin: 4px 0 9px;
+}
+.linkBox1 .link a {
+    padding: 0 18px 0 14px;
+}
+.linkBox2 h3 {
+    color: #1E50A2;
+    float: left;
+    font-weight: bold;
+    line-height: 21px;
+    margin: 0 12px 5px 0;
+    width: 66px;
+}
+.linkBox2 .link {
+    margin: 4px 0 9px;
+}
+.linkBox2 .link a {
+    padding: 0 12px 0 14px;
+}
+.linkBox .link h3 a, .linkBox1 .link h3 a, .linkBox2 .link h3 a, .linkBox .link h3 a:hover, .linkBox1 .link h3 a:hover, .linkBox .link h3 a:hover {
+    color: #1E50A2;
+    padding: 0;
+}
+.aboutNetease {
+    background: none repeat scroll 0 0 #F2F6FB;
+    border: 1px solid #CCCCCC;
+    height: 25px;
+    margin: 12px auto 0;
+    width: 958px;
+}
+.aboutNetease li {
+    color: #CBCBCB;
+    padding: 7px 0 0;
+}
+.aboutNetease li a {
+    color: #1E50A2;
+    padding: 0 20px;
+}
+.aboutNetease li a:visited {
+    color: #1E50A2;
+}
+.aboutNetease li a:hover {
+    color: #BC2636;
+}
+.linkBox1 a{
+    border: 1px solid #B9B9B9;
+    display: inline-block;
+    margin-right: 3px;
+    padding: 1px;
+}
+.linkBox1 a:hover {
+    border: 1px solid #A10000;
+}
+</style>
+{set:$this->goodsCategory = block::goods_category();}
+<div class="aboutNetease">
+	<ul>
+		<li>
+			{foreach:items = $this->goodsCategory}
+			<a href="#sort_{$key}">{$item['name']}</a>&#12288;-&#12288;
+			{/foreach}
+		</li>
+	</ul>
+</div>
+
+<div class="colLM">
+	{foreach:items = $this->goodsCategory item = $first}
+	<div class="titleBar">
+		<h2>
+			<a name="sort_{$key}" href="{url:/site/pro_list/cat/$first[id]}">{$first['name']}</a>
+		</h2>
+	</div>
+	<div class="linkBox1">
+		{if:isset($first['second'])} {foreach:items = $first['second'] item =
+		$second}
+		<div class="link">
+			<h3>
+				<a href="{url:/site/pro_list/cat/$second[id]}">{$second['name']}</a>
+			</h3>
+			{if:isset($second['more'])} {foreach:items = $second['more'] item =
+			$more}
+			<a href="{url:/site/pro_list/cat/$second[id]}">{$more['name']}</a>
+			{/foreach} {/if}
+		</div>
+		{/foreach} {/if}
+	</div>
+	{/foreach}
+</div>

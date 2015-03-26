@@ -1,0 +1,57 @@
+ {set:$msg = IReq::get('msg') ? IReq::get('msg') : '发生错误'}
+ <!-- urlmanager_class.php $port -->
+ {set:$seo_data['refresh']='20; url='.IUrl::getHost().Iurl::creatUrl()}
+ {set:seo::set($seo_data);}
+<style type="text/css"> 
+body {
+    background: none repeat scroll 0 0 #FFFFFF;
+    font-family: Verdana,Tahoma;
+}
+a {
+    color: #CE4614;
+}
+#msg-box {
+    color: #CE4614;
+    font-size: 0.9em;
+    text-align: center;
+}
+#msg-box .logo {
+    border-bottom: 5px solid #ECE5D9;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+#msg-box .title {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+#msg-box .nav {
+    margin-top: 20px;
+}
+</style>
+<div id='msg-box'>
+	<div class='logo'>
+		<a href="/"><img src="{skin:images/front/cry.gif}" border="0" alt="">
+		</a>
+	</div>
+	<div class='title'>
+		抱歉，您访问的页面没找到
+	</div>
+	<div class='msg'>
+		{echo:htmlspecialchars($msg,ENT_QUOTES)}
+	</div>
+	<div class='nav'>
+		<a href="javascript:history.go(-1)">返回上页</a>
+		<a href="{url:}">返回首页</a>
+	</div>
+</div>
+<table align='center' style='margin-top: 20px;'>
+	<tr>
+		<td>
+			<iframe scrolling='no' frameborder='0'
+				src='http://yibo.iyiyun.com/js/yibo404/key/2892' width='640'
+				height='464' style='display: block;'></iframe>
+		</td>
+	</tr>
+</table>
+</div>

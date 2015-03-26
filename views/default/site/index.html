@@ -1,0 +1,337 @@
+<style type="text/css">
+@import url("{skin:css/v_default.css}");
+</style>
+<div class="focusTop">
+	<div class="focusScrollLeft">
+		<div class="focusImgArea" id="play">
+			<div id="play_list">
+				<div name="focus_img_list" style="width: 710px; height: 340px;">
+					<!--切换图片S-->
+					{foreach:items=$this->index_slide}
+					<a class="track" name="hp-hp-focus-1-n" href="{$item['url']}"
+						target="_blank"><img alt="{$item['name']}"
+							src="{webroot:$item[img]}" width="710px" height="340px" />
+					</a> {/foreach}
+					<!--切换图片S-->
+				</div>
+			</div>
+			<div id="play_text"></div>
+		</div>
+		<div class="textScroll">
+			<div id="textScrollArea">
+				<div id="textScroll">
+					<div id="textScrollCon1">
+						<!--混动信息S-->
+						{query:name=announcement limit=5 order=id desc}
+						{set:$tmpId=$item['id'];}
+						<a class="track" name="hp-hp-focus-marquee-n"
+							href="{url:/site/notice_detail/id/$tmpId}" target=_blank>{$item['title']}</a>&nbsp;&nbsp;{/query}
+						<!--混动信息E-->
+					</div>
+					<div id="textScrollCon2"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="newsAreaRight">
+		<!--广告2S-->
+		<div class="newsAd01">
+			<a class="track" name="hp-hp-focus-r_1-n" target="_blank"
+				href="//item.vancl.com/0562694.html"><img
+					original="//i2.vanclimg.com/catalog/vjia/tianshi/dacu_09.jpg"
+					style="display: inline;width:258px;height:228px;" title="天使之城">
+			</a>
+		</div>
+		<div class="newsAd02">
+			<a class="track" name="hp-hp-focus-r_3-n" target="_blank"
+				href="//dresses.vancl.com/27673-27674-a25806-f1-n4-s3.html"><img
+					original="//i2.vanclimg.com/0wj/qzpd/qzggt05033.jpg"
+					style="display: inline;width:258px;height:138px;">
+			</a>
+		</div>
+		<!--广告2E-->
+	</div>
+	<div class="blank0"></div>
+</div>
+<div class="blank10"></div>
+<!--热门分类-->
+<div class="hotCon">
+	<div class="hotConLeft">
+		<div class="hotConLeftop">
+			<ul>
+				<li class="indexHot">
+					<a class="track" name="hp-hp-hot-logo_1-n"
+						href="//channel.vancl.com/clearance/">清仓断码</a><span></span>
+				</li>
+				<li>
+					<a class="track" name="hp-hp-hot-logo_2-n"
+						href="//channel.vancl.com/salesrank/">热销排行</a>
+				</li>
+				<li>
+					<a class="track" name="hp-hp-hot-logo_3-n"
+						href="//s.vancl.com/search?s=1">到货通知</a>
+				</li>
+			</ul>
+			<h2>
+				<span>热门分类</span>
+			</h2>
+			<div class="blank0"></div>
+		</div>
+		<div class="hotKindsbox">
+			<ul>
+				{foreach:items=$this->goodsCategory item=$first}
+				{if:$first['visibility'] == 1}
+				<li class="">
+					{set:$tmpFirstId=$first['id'];}
+					<div class="hotKindsName">
+						<a class="track" name="hp-hp-hot-1_0-n"
+							href="{url:/site/pro_list/cat/$tmpFirstId}">{$first['name']}</a>
+					</div>
+					<div class="hotKindsCon">
+						<span class="blank15">
+							<!---->
+						</span> {if:isset($first['second'])} {foreach:items=$first['second']
+						item=$second} {if:$second['visibility'] == 1}
+						{set:$tmpSecondId=$second['id'];}
+						<p>
+							<a class="track" name="hp-hp-hot-1_1-n"
+								href="{url:/site/pro_list/cat/$tmpSecondId}" target="_blank">{$second['name']}</a>|
+						</p>
+						{/if} {/foreach} {/if}
+						<p>
+							<span class="blank0">
+								<!---->
+							</span>
+						</p>
+					</div>
+				</li>
+				{/if} {/foreach}
+			</ul>
+		</div>
+	</div>
+	<div class="selTabRight">
+		<!--selTabBox-->
+		<div class="selTabBox">
+			<div class="selTabMenu">
+				<ul>
+					<li id="one1" class="hover">
+						最新动态
+					</li>
+					<li id="one2">
+						积分回馈
+					</li>
+				</ul>
+				<span class="blank0"></span>
+			</div>
+			<div class="selTabCon">
+				<div id="con_one_1">
+					<ul class="dynamicNew">
+						<!--最新动态S-->
+						{query:name=article where=visiblity eq 1 and top eq 1 order=sort
+						ASC,id DESC fields=title,id,style,color limit=5}
+						{set:$tmpId=$item['id'];}
+						<li>
+							<a class="track" name="hp-hp-news-1-n"
+								href="{url:/site/article_detail/id/$tmpId}"
+								style="color: #a10000; font-weight: bold" target="_blank">{if:strlen($item['title'])>25}{echo:substr_replace
+								($item['title'],'...',strlen($item['title'])-12)}{else:}{echo:$item['title']}{/if}</a>&nbsp;
+						</li>
+						{/query}
+						<!--最新动态E-->
+					</ul>
+				</div>
+				<div id="con_one_2" style="display: none;">
+					<ul class="dynamicNew">
+						<li>
+							<span><a class="track" name="hp-hp-userpoints-1-n"
+								href="//tuan.vancl.com/" target="_blank" style="color: #a10000">银联在线支付免运费</a>
+							</span><a class="track" name="hp-hp-userpoints-2-n"
+								href="//tuan.vancl.com/" target="_blank">超值团</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--selTabBox-->
+		<div class="rightBa01">
+			<!--广告3S-->
+			<a class="track" name="hp-hp-hot-r_1-n" target="_blank"
+				href="//catalog.vancl.com/integrated/dclgx_20111227.html"><img
+					original="//i4.vanclimg.com/users/18/20121130/hot1_121130.jpg"
+					style="display: inline;">
+			</a>
+		</div>
+		<!--广告3E-->
+		<div class="blank0"></div>
+	</div>
+	<div class="blank15"></div>
+	<!--新品速递-->
+	<div class="productAreaHead">
+		<h2>
+			<a href="#" class="track" name="hp-hp-newproduct-logo-n"
+				target="_blank">新品速递</a>
+		</h2>
+		<ul>
+			<li></li>
+		</ul>
+		<div class="moreProduct">
+			<a href="#" name="hp-hp-newproduct-more-n" target="_blank">查看更多>></a>
+		</div>
+	</div>
+	<div class="blank10"></div>
+	<div class="adProduct">
+		<div class="productList">
+			<ul>
+				{query:name=commend_goods as co join=left join goods as go on
+				co.goods_id eq go.id where=co.commend_id eq 1 and go.is_del eq 0 AND
+				go.id is not null
+				fields=go.list_img,go.sell_price,go.name,go.market_price,go.id
+				limit=5 order=id desc group = id }
+				<li style="position: relative;" class="scListArea">
+					{set:$tmpId=$item['id'];}
+					<a title="{$item['name']}" target="_blank" rel="zt_shirts-3382-0-0"
+						href="{url:/site/products/id/$tmpId}"><img width="170px"
+							height="170px" alt="{$item['name']}" style="display: inline;"
+							pop="0184281" class="productLazyLoad"
+							original="{webroot:$item[list_img]}"
+							src="http://i.vanclimg.com/search/color3.gif">
+					</a>
+					<p>
+						<a target="_blank" id="sku_0184281" rel="zt_shirts-3382-0-0"
+							title="{$item['name']}" href="{url:/site/products/id/$tmpId}">{$item['name']}</a>
+					</p>
+					<div class="ztAutom5">
+						<span class="Mprice">市场价￥<em>{$item['market_price']}</em>
+						</span>
+						<span class="Sprice">售价￥{$item['sell_price']}</span>
+					</div>
+				</li>
+				{/query}
+			</ul>
+			<span class="blank5"></span>
+		</div>
+		<div class="blank15"></div>
+		{foreach:items=$this->goodsCategory item=$first}
+		{if:$first['visibility'] == 1}
+		<!--当季推荐-->
+		<div class="productAreaHead">
+			{set:$tmpFirstId=$first['id'];}
+			<h2>
+				<a class="track" name="hp-hp-recommend-logo-n"
+					href="{url:/site/pro_list/cat/$tmpFirstId}" target="_blank">{$first['name']}</a>
+			</h2>
+			<ul>
+				{set:$secondIdArray = array()} {if:isset($first['second'])}
+				{foreach:items=$first['second'] item=$second}
+				{if:$second['visibility'] == 1} {set:$secondIdArray[] =
+				$second['id']} {if:$second['more']} {foreach:items=$second['more']
+				item=$v} {set:$secondIdArray[] = $v['id']} {/foreach} {/if}
+				{set:$tmpSecondId=$second['id'];}
+				<li>
+					<a class="track" name="hp-hp-recommend-logo_r_1-n"
+						href="{url:/site/pro_list/cat/$tmpSecondId}" target="_blank">{$second['name']}</a>|
+				</li>
+				{/if} {/foreach} {/if}
+			</ul>
+
+			<div class="moreProduct">
+				<a class="track" name="hp-hp-recommend-more-n"
+					href="{url:/site/pro_list/cat/$tmpFirstId}" target="_blank">查看更多>></a>
+			</div>
+		</div>
+		<div class="blank10"></div>
+		<div class="adProduct">
+			<div class="productList">
+				<ul>
+					{set:$recomCatId = $first['id']} {if:!empty($secondIdArray)}
+					{set:$recomCatId .= ','.join(',', $secondIdArray );} {/if}
+					{query:name=category_extend as ca join = left join goods as go on
+					go.id eq ca.goods_id where = ca.category_id in ($recomCatId) and
+					go.is_del eq 0 limit = 5 order = go.sort asc,go.id desc fields=
+					DISTINCT go.list_img,go.id,go.name,go.sell_price,go.market_price }
+					<li style="position: relative;" class="scListArea">
+						{set:$tmpId=$item['id'];}
+						<a title="{$item['name']}" target="_blank"
+							rel="zt_shirts-3382-0-0" href="{url:/site/products/id/$tmpId}"><img
+								width="170px" height="170px" alt="{$item['name']}"
+								style="display: inline;" pop="0184281" class="productLazyLoad"
+								original="{webroot:$item[list_img]}"
+								src="http://i.vanclimg.com/search/color3.gif">
+						</a>
+						<p>
+							<a target="_blank" id="sku_0184281" rel="zt_shirts-3382-0-0"
+								title="{$item['name']}" href="{url:/site/products/id/$tmpId}">{$item['name']}</a>
+						</p>
+						<div class="ztAutom5">
+							<span class="Mprice">市场价￥<em>{$item['market_price']}</em>
+							</span>
+							<span class="Sprice">售价￥{$item['sell_price']}</span>
+						</div>
+					</li>
+					{/query}
+				</ul>
+				<span class="blank5"></span>
+			</div>
+		</div>
+		<div class="blank15"></div>
+		{/foreach} {/if}
+		<!--潮流搭配-->
+
+		<!--超值特惠-->
+
+		<!--凡客达人-->
+		<div class="masterArea">
+			<div class="masterAreaHead">
+				<h2>
+					<a class="track" name="hp-hp-star-logo-n" href="{url:/site/brand}"
+						target="_blank">品牌列表</a>
+				</h2>
+				<div class="moreProduct">
+					<a class="track" name="hp-hp-star-more-n" href="{url:/site/brand}">查看更多>></a>
+				</div>
+			</div>
+			<div class="blank10"></div>
+			<div class="brand">
+				<ul>
+					{query:name=brand fields=id,name,logo order=sort asc limit=6}
+					{set:$tmpId=$item['id'];}
+					<li>
+						<a href="{url:/site/brand_zone/id/$tmpId}"><img
+								src="{webroot:$item[logo]}" width="110" height="50"
+								alt="{$item['name']}" />
+						</a>
+					</li>
+					{/query}
+				</ul>
+			</div>
+			<div class="blank0"></div>
+		</div>
+		<!--我是凡客-->
+		<div class="myVancl">
+			<div class="masterAreaHead">
+				<h2>
+					<a class="track" name="hp-hp-iamvancl-logo-n"
+						href="javascript:void;">最新评论</a>
+				</h2>
+				<div class="moreProduct"></div>
+			</div>
+			<div class="blank10"></div>
+			<div class="comment">
+				{query:name=comment as co
+						join=left join goods as go on co.goods_id eq go.id
+						order=co.id desc
+						limit=2
+						where=co.status eq 1 AND go.is_del eq 0 AND go.id is not null
+						fields=go.list_img as list_img,go.name as name,co.point,co.contents,co.goods_id
+					}
+					<dl class="no_bg">
+						{set:$tmpGoodsId=$item['goods_id'];}
+						<dt><a href="{url:/site/products/id/$tmpGoodsId}"><img src="{webroot:$item[list_img]}" width="65" height="65" /></a></dt>
+						<dd><a href="{url:/site/products/id/$tmpGoodsId}">{$item['name']}</a></dd>
+						<dd><span class="grade"><i style="width:{echo:$item['point']*14}px"></i></span></dd>
+						<dd class="com_c">{$item['contents']}</dd>
+					</dl>
+					{/query}
+			</div>
+		</div>
+		<div class="blank0"></div>

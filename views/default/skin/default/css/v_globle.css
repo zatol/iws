@@ -1,0 +1,1347 @@
+﻿
+html {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #000000;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, textarea, p, th, td {
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+fieldset, img {
+    border: 0 none;
+}
+li {
+    list-style: none outside none;
+}
+em, strong, th {
+    font-style: normal;
+    font-weight: normal;
+}
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+input, textarea, select {
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+body {
+    color: #333333;
+    font-family: "宋体";
+    font-size: 12px;
+}
+a:link, a:visited {
+    color: #333333;
+    text-decoration: none;
+}
+a:hover {
+    color: #A10000;
+    text-decoration: none;
+}
+.blank0 {
+    clear: both;
+    display: block;
+    font-size: 1px;
+    line-height: 0;
+    visibility: hidden;
+}
+.blank5 {
+    clear: both;
+    display: block;
+    font-size: 1px;
+    height: 5px;
+    overflow: hidden;
+}
+.blank8 {
+    clear: both;
+    display: block;
+    font-size: 1px;
+    height: 8px;
+    overflow: hidden;
+}
+.blank10 {
+    clear: both;
+    display: block;
+    font-size: 1px;
+    height: 10px;
+    overflow: hidden;
+}
+.blank12 {
+    clear: both;
+    display: block;
+    font-size: 1px;
+    height: 12px;
+    overflow: hidden;
+}
+.blank15 {
+    clear: both;
+    display: block;
+    font-size: 1px;
+    height: 15px;
+    overflow: hidden;
+}
+.blank20 {
+    clear: both;
+    display: block;
+    font-size: 1px;
+    height: 20px;
+    overflow: hidden;
+}
+.blank25 {
+    clear: both;
+    display: block;
+    font-size: 1px;
+    height: 25px;
+    overflow: hidden;
+}
+#body {
+    font: 100 12px " SimSun";
+}
+body {
+    font-family: "宋体";
+}
+body {
+    font-family: "宋体";
+}
+#headerTopArea {
+    background: none repeat scroll 0 0 #F7F7F7;
+    border-bottom: 1px solid #CCCCCC;
+    height: 29px;
+}
+#headerTopArea .headerTop {
+    height: 29px;
+    line-height: 29px;
+    margin: 0 auto;
+    width: 980px;
+}
+#headerTopArea .headerTopLeft {
+    display: inline;
+    float: left;
+    padding-left: 12px;
+    width: 480px;
+}
+#headerTopArea .loginArea {
+    display: inline;
+    float: left;
+}
+#headerTopArea .loginArea span {
+    color: #A10000;
+}
+#headerTopArea .loginArea a:link, #headerTopArea .loginArea a:visited, #headerTopArea .loginArea a:hover {
+    color: #A10000;
+}
+#headerTopArea .recommendArea {
+    display: inline;
+    float: left;
+    margin: 0 0 0 15px;
+}
+#headerTopArea .recommendArea a {
+    padding-right: 12px;
+}
+#headerTopArea .headerTopRight {
+    display: inline;
+    float: right;
+    margin-right: 12px;
+    width: 455px;
+}
+#headerTopArea #shoppingCarNone {
+    display: inline;
+    float: left;
+    height: 19px;
+    line-height: 19px;
+    margin-top: 4px;
+    position: relative;
+    width: 119px;
+    z-index: 9999;
+}
+#headerTopArea #shoppingCarNone p {
+    background: url("../images/front/spritesbg.png") no-repeat scroll -111px 4px transparent;
+    height: 19px;
+    padding-left: 24px;
+    width: 98px;
+    z-index: 99;
+}
+#headerTopArea #shoppingCarNone p span {
+    color: #A10000;
+    font-weight: bold;
+    margin: 0 3px;
+}
+#headerTopArea .active p a, #headerTopArea .hover p a {
+    background: url("../images/front/spritesbg.png") no-repeat scroll 0 0 transparent;
+}
+#headerTopArea .active p a {
+    background-position: 82px 8px;
+    padding-right: 11px;
+}
+#headerTopArea .hover p a {
+    background-position: 82px -12px;
+    padding-right: 11px;
+}
+#headerTopArea .hover {
+    border-left: 1px solid #A10000;
+    border-right: 1px solid #A10000;
+    border-top: 1px solid #A10000;
+}
+#headerTopArea .active {
+    border-left: 1px solid #F7F7F7;
+    border-right: 1px solid #F7F7F7;
+    border-top: 1px solid #F7F7F7;
+}
+#headerTopArea div#shoppingCarNone.active {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+}
+#headerTopArea #shoppingCarNone .shopborder {
+    display: block;
+    width: 84px;
+}
+#headerTopArea #shoppingCarNone .shopborder span {
+    color: #A10000;
+    text-align: center;
+}
+#headerTopArea .ShopCarPage {
+    border-top: 1px solid #EDEDED;
+    margin: 0 5px;
+    padding: 0 5px;
+}
+#headerTopArea .SCtotalpage {
+    display: block;
+    float: left;
+    line-height: 22px;
+}
+#headerTopArea .SCtotalpage span {
+    color: #A10000;
+}
+#headerTopArea .SCtotalpage div {
+    display: inline;
+    float: left;
+    overflow: hidden;
+    width: 156px;
+}
+#headerTopArea .SCtotalpage strong img {
+    display: inline;
+    float: left;
+    margin-top: 7px;
+}
+#headerTopArea .SCtotalpage strong a {
+    background: url("../images/front/spritesbg.png") no-repeat scroll -115px -75px transparent;
+    display: inline;
+    float: left;
+    height: 20px;
+    margin-top: 7px;
+    width: 72px;
+}
+#headerTopArea .buymini_topBtn {
+    padding-left: 92px;
+}
+#headerTopArea .buymini_topBtn a {
+    background: url("../images/front/spritesbg.png") no-repeat scroll -70px -209px transparent;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 20px;
+    line-height: 18px;
+    margin-right: 6px;
+    margin-top: 7px;
+    text-align: center;
+    width: 72px;
+}
+#headerTopArea .buymini_paybtn a {
+    background: url("../images/front/spritesbg.png") no-repeat scroll -120px -240px transparent;
+}
+#headerTopArea .buymini_paybtn strong a {
+    background: url("../images/front/spritesbg.png") no-repeat scroll -26px -240px transparent;
+}
+#headerTopArea .SCpage {
+    display: inline;
+    float: right;
+    line-height: 22px;
+}
+#headerTopArea .SCpage input {
+    display: inline;
+    float: left;
+    padding: 3px 2px 0;
+}
+#headerTopArea .SCpage a {
+    display: inline;
+    float: left;
+    padding: 0 2px;
+}
+#headerTopArea .SCuppagebtn {
+    margin-top: 5px;
+}
+#headerTopArea .SCdownpagebtn {
+    margin-top: 5px;
+}
+#headerTopArea .SCpage a.SCnowpage {
+    color: #A10000;
+}
+#headerTopArea .seeCar {
+    clear: both;
+    padding-right: 10px;
+}
+#headerTopArea .seeCar input {
+    display: inline;
+    float: right;
+}
+#headerTopArea .havepru {
+    display: block;
+}
+#headerTopArea .shopnopru {
+    padding: 0 10px;
+}
+#headerTopArea .noPruSeeCar {
+    display: inline;
+    float: right;
+}
+#headerTopArea .noPruSeeCar a {
+    background: url("../images/front/spritesbg.png") no-repeat scroll -26px -240px transparent;
+    display: block;
+    height: 20px;
+    width: 72px;
+}
+#headerTopArea .shopDropListNone {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("../images/front/spritesbg.png") no-repeat scroll 7px -620px #FFFFFF;
+    border-color: -moz-use-text-color #A10000 #A10000;
+    border-image: none;
+    border-right: 1px solid #A10000;
+    border-style: none solid solid;
+    border-width: 0 1px 1px;
+    left: -1px;
+    position: absolute;
+    top: 20px;
+    width: 260px;
+}
+#headerTopArea .active .shopDropList {
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+#headerTopArea .hover .shopDropList {
+    display: block;
+}
+#headerTopArea .shopDropListNone span {
+    line-height: 40px;
+    margin-left: 12px;
+}
+#headerTopArea .shopDropListNone span, #headerTopArea .shopDropListNone strong {
+    display: inline;
+    float: left;
+}
+#headerTopArea .shopDropListNone strong {
+    margin: 10px 0 0 10px;
+}
+#headerTopArea .shopDropList {
+    background: url("../images/front/spritesbg.png") no-repeat scroll 7px -620px #FFFFFF;
+    border-color: -moz-use-text-color #A10000 #A10000;
+    border-image: none;
+    border: 1px solid #A10000;
+    border-style: none solid solid;
+    border-width: 0 1px 1px;
+    left: -1px;
+    position: absolute;
+    top: 18px;
+    width: 260px;
+    z-index: 100;
+}
+#headerTopArea .shopDropList h2 {
+    text-indent: 10px;
+}
+#headerTopArea .shopDropList ul {
+    margin-left: 10px;
+}
+#headerTopArea .shopDropList li {
+    height: 38px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+#headerTopArea .carListLeft {
+    display: inline;
+    float: left;
+    width: 38px;
+}
+#headerTopArea .carListLeft img {
+    border: 1px solid #CCCCCC;
+}
+#headerTopArea .carListRight {
+    display: inline;
+    float: right;
+    width: 200px;
+}
+#headerTopArea .priceArea {
+    width: 200px;
+}
+#headerTopArea .priceArea strong {
+    color: #A10000;
+    font-weight: bold;
+}
+#headerTopArea .priceArea em {
+    color: #999999;
+    display: inline;
+    margin-left: 5px;
+}
+#headerTopArea .priceArea span {
+    display: inline;
+    float: right;
+    margin-right: 10px;
+}
+#headerTopArea .priceArea span a:link, .priceArea span a:visited, .priceArea span a:hover {
+    color: #FF8400;
+}
+#headerTopArea #myVancl {
+    cursor: pointer;
+    display: inline;
+    float: left;
+    height: 18px;
+    line-height: 18px;
+    margin: 3px 0 0 7px;
+    position: relative;
+    width: 68px;
+}
+#headerTopArea .active {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #F7F7F7 #F7F7F7 -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+}
+#headerTopArea .active #DropTitle, #headerTopArea .hover #DropTitle {
+    background: url("../images/front/spritesbg.png") no-repeat scroll 0 0 transparent;
+}
+#headerTopArea .active #DropTitle {
+    background-position: 57px 8px;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    padding-left: 5px;
+    width: 63px;
+}
+#headerTopArea .hover {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #FFFFFF;
+    border-color: #A10000 #A10000 -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+}
+#headerTopArea .hover #DropTitle {
+    background-position: 57px -12px;
+    color: #A10000;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    padding-left: 5px;
+    width: 63px;
+}
+#headerTopArea .hover ul {
+    border-top: medium none;
+    display: block;
+}
+#headerTopArea .myVanclDropList {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #A10000;
+    display: none;
+    left: -1px;
+    padding: 4px 0;
+    position: absolute;
+    top: 18px;
+    width: 68px;
+}
+#headerTopArea .myVanclDropList li {
+    height: 18px;
+    line-height: 18px;
+}
+#headerTopArea .myVanclDropList li a, #headerTopArea .myVanclDropList li a:hover {
+    background: url("../images/front/spritesbg.png") no-repeat scroll 0 0 transparent;
+}
+#headerTopArea .myVanclDropList li a {
+    background-position: -230px 8px;
+    display: block;
+    padding-left: 14px;
+}
+#headerTopArea .myVanclDropList li a:hover {
+    background-position: -230px -12px;
+    text-decoration: underline;
+}
+#headerTopArea #vanclMap {
+    color: #A10000;
+    cursor: pointer;
+    display: inline;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    margin: 3px 3px 0 2px;
+    position: relative;
+    width: 68px;
+    z-index: 15;
+}
+#headerTopArea .mapDropTitle, #headerTopArea .hover .mapDropTitle {
+    background: url("../images/front/spritesbg.png") no-repeat scroll 0 0 transparent;
+}
+#headerTopArea .mapDropTitle {
+    background-position: 57px 8px;
+    border: 1px solid #F7F7F7;
+    display: block;
+    padding-left: 5px;
+}
+#headerTopArea .hover .mapDropTitle {
+    background-position: 57px -12px;
+    color: #A10000;
+    display: block;
+}
+#headerTopArea .mapDropList {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #A10000;
+    display: none;
+    left: -1px;
+    overflow: hidden;
+    padding: 4px 0;
+    position: absolute;
+    top: 18px;
+    width: 68px;
+    z-index: 10;
+}
+#headerTopArea .mapDropList ul {
+    margin: 3px 0;
+}
+#headerTopArea .mapDropList li {
+    width: 70px;
+}
+#headerTopArea .mapDropList li a, #headerTopArea .mapDropList li a:hover {
+    background: url("../images/front/spritesbg.png") no-repeat scroll 0 0 transparent;
+}
+#headerTopArea .mapDropList li a {
+    background-position: -230px 7px;
+    display: block;
+    padding-left: 14px;
+    width: 54px;
+}
+#headerTopArea .mapDropList li a:hover {
+    background-position: -230px -13px;
+    text-decoration: underline;
+}
+#headerTopArea .hotLine {
+    color: #A10000;
+    display: inline;
+    float: right;
+    font-family: Tahoma;
+}
+#headerTopArea .hotLine strong {
+    font-weight: bold;
+    margin: 0;
+}
+#headerTopArea .hotLine span {
+    margin-right: 17px;
+}
+#headerTopArea .hotLine span a:link, .hotLine span a:visited {
+    color: #333333;
+}
+#headerTopArea .hotLine span a:hover {
+    color: #A10000;
+}
+#headerTopArea .hotLine em {
+    background: url("../images/front/spritesbg.png") no-repeat scroll -344px -151px transparent;
+    display: inline-block;
+    height: 26px;
+    vertical-align: middle;
+    width: 19px;
+}
+#logoArea {
+    margin: 0 auto;
+    width: 980px;
+}
+#logoArea .logoSearchSubnavArea {
+    margin: 0 auto;
+    width: 980px;
+}
+#logoArea .logoArea {
+    display: inline;
+    float: left;
+    height: 84px;
+    margin-left: 12px;
+    width: 380px;
+}
+#logoArea .logoArea a:link, .logoArea a:visited, .logoArea #logoArea .searchBarArea {
+    display: inline;
+    float: left;
+    width: 281px;
+}
+#logoArea .search {
+    height: 30px;
+    margin: 4px 0 0;
+    width: 264px;
+}
+#logoArea .searchAreaBlock {
+    display: inline;
+    float: left;
+    height: 84px;
+    padding-left: 5px;
+    width: 281px;
+}
+#logoArea .searchAreaBlock .search {
+    height: 30px;
+    width: 281px;
+}
+#logoArea .searchAreaBlock .searchText {
+    border-color: #BBBBBB #F2F2F2 #F2F2F2 #BBBBBB;
+    border-left: 1px solid #BBBBBB;
+    border-style: solid;
+    border-width: 1px;
+    display: inline;
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    margin: 3px 0 0;
+    width: 184px;
+}
+#logoArea .searchAreaBlock .searchBtn {
+    background: url("../images/front/spritesbg.png") no-repeat scroll -115px -20px transparent;
+    border: 0 none;
+    cursor: pointer;
+    display: inline;
+    float: left;
+    height: 24px;
+    margin: 3px 0 0;
+    width: 64px;
+}
+.searchWords {
+    height: 14px;
+    overflow: hidden;
+    width: 250px;
+}
+#logoArea .searchAreaBlock .searchWords span {
+    color: #A10000;
+}
+#logoArea .searchAreaBlock .searchWords a {
+    margin-right: 7px;
+}
+.searchWordsBox {
+    position: relative;
+    width: 250px;
+    z-index: 7;
+}
+.searchWords {
+    float: left;
+    line-height: 14px;
+    margin-top: 5px;
+    overflow: hidden;
+    width: 204px;
+}
+#logoArea .searchAreaBlock .searchWords span {
+    color: #A10000;
+}
+#logoArea .searchAreaBlock .searchWords a {
+    margin-right: 5px;
+}
+#searchWordsMore {
+    float: left;
+    position: relative;
+    z-index: 9;
+}
+#searchWordsMore .SearchHover {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("../images/front/spritesbg.png") no-repeat scroll 30px -12px transparent;
+    border-color: #CECECE #CECECE #FFFFFF;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    bottom: -1px;
+    cursor: pointer;
+    height: 25px;
+    line-height: 21px;
+    padding-left: 4px;
+    position: relative;
+    width: 40px;
+    z-index: 2;
+}
+#searchWordsMore.active .SearchHover {
+    border: 1px solid #FFFFFF;
+}
+#searchWordsMore.active .searchWordsAllbody {
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+#searchWordsMore.hover .searchWordsAllbody {
+    display: block;
+}
+.searchWordsAllbody {
+    background-color: #FFFFFF;
+    border: 1px solid #CECECE;
+    position: absolute;
+    right: 0;
+    top: 27px;
+    width: 398px;
+}
+.searchWordschild {
+    padding: 6px 0 10px 4px;
+    width: 388px;
+}
+.searchWordschildclass, .searchWordschildclassH {
+    background: url("../images/front/spritesbg.png") no-repeat scroll -227px -139px transparent;
+    color: #202024;
+    float: left;
+    height: 17px;
+    line-height: 17px;
+    margin-top: 2px;
+    text-align: center;
+    width: 36px;
+}
+.searchWordschildclassH {
+    background-position: -267px -139px;
+    color: #FFFFFF;
+}
+.searchWordschilddetail {
+    float: left;
+    line-height: 21px;
+    width: 350px;
+}
+.searchWordschilddetail a {
+    float: left;
+    padding-left: 10px;
+    white-space: nowrap;
+}
+.searchWordskinddot {
+    background: url("http://i.vanclimg.com/header/20110117/childdotbg.gif") repeat-x scroll 0 0 transparent;
+    clear: both;
+    font-size: 1px;
+    height: 1px;
+    margin: 0 auto;
+    width: 388px;
+}
+#logoArea .subNavArea {
+    display: inline;
+    float: left;
+    height: 84px;
+    overflow: hidden;
+    width: 290px;
+}
+#logoArea .subComputer {
+    margin-left: 1px;
+    padding-left: 2px;
+    width: 288px;
+}
+#logoArea .subComputer li {
+    background: url("../images/front/spritesbg.png") no-repeat scroll -228px 15px transparent;
+    display: inline;
+    float: left;
+    height: 27px;
+    line-height: 27px;
+    padding-left: 23px;
+    padding-top: 3px;
+    text-align: left;
+    width: 49px;
+}
+#logoArea .subComputer .en {
+    background: url("../images/front/spritesbg.png") no-repeat scroll -228px 15px transparent;
+}
+#logoArea .trademark li {
+    display: inline;
+    float: left;
+    height: 54px;
+    overflow: hidden;
+    padding-top: 2px;
+}
+#logoArea .trademark li.trademarkMikko {
+    height: 50px;
+    width: 104px;
+}
+#logoArea .trademark li.trademarkMikko a:link, .trademark li.trademarkMikko a:visited, .trademark li.trademarkMikko a:hover {
+    background: url("../images/front/spritesbg.png") no-repeat scroll -299px -453px transparent;
+    display: block;
+    height: 50px;
+    width: 104px;
+}
+#logoArea .trademark li.trademarkVjia {
+    height: 50px;
+    width: 120px;
+}
+#logoArea .trademark li.trademarkVjia a:link, .trademark li.trademarkVjia a:visited, .trademark li.trademarkVjia a:hover {
+    background: url("../images/front/spritesbg.png") no-repeat scroll -297px -400px transparent;
+    display: block;
+    height: 50px;
+    width: 120px;
+}
+#logoArea .trademark li.trademarkPhone {
+    height: 50px;
+    width: 57px;
+}
+#logoArea .trademark li.trademarkPhone a:link, #logoArea .trademark li.trademarkPhone a:visited, #logoArea .trademark li.trademarkPhone a:hover {
+    background: url("../images/front/spritesbg.png") no-repeat scroll -343px -502px transparent;
+    display: block;
+    height: 50px;
+    width: 114px;
+}
+#logoArea .vjiaico {
+    background: url("../images/front/spritesbg.png") no-repeat scroll -360px -40px transparent;
+}
+#logoArea .vjiaico a {
+    display: block;
+    padding-right: 20px;
+}
+#mainNav {
+    background: none repeat scroll 0 0 #A10000;
+    height: 30px;
+    margin: 0 auto;
+    position: relative;
+    width: 980px;
+}
+#mainNav ul {
+    margin-left: 1px;
+}
+#mainNav li {
+    display: inline;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    height: 28px;
+}
+#mainNav li a:link, #mainNav li a:visited {
+    color: #FFFFFF;
+    display: inline;
+    float: left;
+    height: 30px;
+    line-height: 28px;
+    margin-top: 1px;
+    padding: 0 6px 0 7px;
+}
+#mainNav li a:hover {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #A10000;
+    display: block;
+    height: 28px;
+}
+#mainNav .newicon, #mainNav .hoticon, #mainNav .newProductNum {
+    background: url("../images/front/spritesbg.png") no-repeat scroll 0 0 transparent;
+}
+#mainNav .newicon {
+    background-position: -194px -139px;
+    height: 13px;
+    left: 38px;
+    position: absolute;
+    top: -5px;
+    width: 25px;
+    z-index: 5;
+}
+#mainNav .hoticon {
+    background-position: -212px -76px;
+    height: 13px;
+    left: 38px;
+    position: absolute;
+    top: -5px;
+    width: 25px;
+    z-index: 5;
+}
+#mainNav li .pos {
+    position: relative;
+}
+#mainNav .newProductNum {
+    background-position: -115px -48px;
+    color: #333333;
+    display: inline;
+    float: right;
+    height: 18px;
+    line-height: 18px;
+    margin: 6px 10px 0 0;
+    overflow: hidden;
+    width: 67px;
+}
+#mainNav .newProductNum p {
+    margin-left: 0;
+}
+#mainNav .newProductNum p a {
+    display: block;
+    height: 18px;
+    overflow: hidden;
+    text-indent: -9999px;
+    white-space: nowrap;
+    width: 67px;
+}
+#mainNav .newProductNum span {
+    color: #A10000;
+}
+#subNav {
+    border-color: -moz-use-text-color #CCCCCC #CCCCCC;
+    border-image: none;
+    border: 1px solid #CCCCCC;
+    border-style: none solid solid;
+    border-width: 0 1px 1px;
+    height: 30px;
+    margin: 0 auto;
+    width: 978px;
+}
+#subNav li {
+    display: inline;
+    float: left;
+    line-height: 28px;
+    text-align: center;
+}
+#subNav li a, #subNav li a:hover, #subNav li.BgPostwohover a, #subNav .theTag a {
+    background: url("../images/front/spritesbg.png") no-repeat scroll 0 0 transparent;
+}
+#subNav li a {
+    background-position: 48px -27px;
+    color: #000000;
+    display: block;
+    font-size: 14px;
+    line-height: 28px;
+    padding: 0 15px;
+    text-align: center;
+}
+#subNav li a:hover {
+    background-position: 48px -57px;
+    color: #A10000;
+}
+#subNav li.BgPostwohover a {
+    background-position: 48px -57px;
+}
+#subNav .theTag a {
+    background-position: 48px -57px;
+    color: #A10000;
+    display: block;
+    line-height: 30px;
+    text-align: center;
+}
+#subNav li.BgPosition a {
+    background-position: 64px -27px;
+}
+#subNav li.BgPosition a:hover, #subNav li.BgPositionhover a {
+    background-position: 64px -57px;
+}
+#subNav li.BgPosfour a {
+    background-position: 80px -27px;
+}
+#subNav li.BgPosfour a:hover, #subNav li.BgPosfourhover a {
+    background-position: 80px -57px;
+}
+#subNav li.BgPosone a {
+    background-position: 36px -27px;
+    color: #000000;
+}
+#subNav li.BgPosone a:hover {
+    background-position: 36px -57px;
+    color: #A10000;
+}
+#subNav li.BgPosonehover a {
+    background-position: 36px -57px;
+    color: #A10000;
+}
+#subNav .trademark {
+    padding-left: 8px;
+    width: 282px;
+}
+#subNav li.yunfu, #subNav li.vjiaTag {
+    background-image: none;
+}
+#subNav li.yunfu a, #subNav li.vjiaTag {
+    background-image: none;
+}
+#subNav li.vjiaTag {
+    width: auto;
+}
+#subNav .vjiaTag a, #subNav .vjiaTag a:hover {
+    background: url("../images/front/spritesbg.png") repeat scroll -228px -43px transparent;
+    display: inline;
+    padding-left: 26px;
+    width: auto;
+}
+#subNav .hoticon {
+    background: url("../images/front/spritesbg.png") no-repeat scroll -212px -76px transparent;
+    height: 13px;
+    left: 44px;
+    position: absolute;
+    top: -35px;
+    width: 25px;
+    z-index: 5;
+}
+#subNav .newicon {
+    background: url("../images/front/spritesbg.png") no-repeat scroll -194px -139px transparent;
+    height: 13px;
+    left: 44px;
+    position: absolute;
+    top: -35px;
+    width: 25px;
+    z-index: 5;
+}
+#subNav li.BgPositionft4 a {
+    background-position: 76px -27px;
+}
+#subNav li.BgPositionft4 a:hover, #subNav li.BgPositionft4hover a {
+    background-position: 76px -57px;
+}
+#subNav a .vjiaTagft04, #subNav a:hover .vjiaTagft04 {
+    background: url("../images/front/spritesbg.png") repeat scroll -237px -43px transparent;
+    display: block;
+    float: left;
+    height: 14px;
+    margin-top: 7px;
+    overflow: hidden;
+    width: 16px;
+}
+#subNav li.BgPositionft3 a {
+    background-position: 42px -27px;
+}
+#subNav li.BgPositionft3 a:hover, #subNav li.BgPositionft3hover a {
+    background-position: 42px -57px;
+}
+#subNav li .pos {
+    position: relative;
+}
+#subNav {
+    position: relative;
+    z-index: 5;
+}
+#subNav .sub-floor_menus {
+    z-index: 6;
+}
+#subNav .sub-floor-menus .menu {
+    display: none;
+    margin-left: -1px;
+    position: absolute;
+    top: 29px;
+    z-index: 7;
+}
+#subNav .dht {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #A10000;
+    margin-left: -1px;
+    width: 620px;
+}
+#subNav .dht {
+    line-height: 25px;
+}
+#subNav .childleft {
+    display: inline;
+    float: left;
+    width: 510px;
+}
+#subNav .childright {
+    display: inline;
+    float: right;
+    padding-left: 10px;
+    padding-top: 10px;
+    width: 100px;
+}
+#subNav .childright li {
+    background: none repeat scroll 0 0 transparent;
+    clear: both;
+    display: block;
+}
+#subNav .navchild .childright li a, #subNav .navchild .childright li a:hover {
+    background: url("../images/front/spritesbg.png") no-repeat scroll 0 0 transparent;
+}
+#subNav .navchild .childright li a {
+    background-position: -233px -5px;
+    clear: both;
+    color: #A10000;
+    display: block;
+    font-size: 12px;
+    line-height: 30px;
+    padding-left: 10px;
+    text-align: left;
+    width: 72px;
+}
+#subNav .navchild .childright li a:hover {
+    background-position: -233px -5px;
+}
+#subNav .childli {
+    overflow: hidden;
+    padding: 2px 0;
+}
+#subNav .childclass {
+    display: inline;
+    float: left;
+    padding-left: 12px;
+    width: 100px;
+}
+#subNav .childleft .childclass a {
+    background-position: -237px -15px;
+    color: #A10000;
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 5px;
+}
+#subNav .childleft .childclass span {
+	background: url("../images/front/spritesbg.png") no-repeat scroll -237px -15px transparent;
+    color: #A10000;
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 5px;
+}
+#subNav .childdetail {
+    display: inline;
+    float: left;
+    width: 398px;
+}
+#subNav .childdetail a {
+    display: inline;
+    float: left;
+}
+#subNav .childdetail span {
+    color: #999999;
+    display: inline;
+    float: left;
+    padding: 0 6px;
+}
+#subNav .LFkinddot {
+    background: url("http://i.vanclimg.com/header/20110117/childdotbg.gif") repeat-x scroll 0 0 transparent;
+    clear: both;
+    font-size: 1px;
+    height: 1px;
+}
+#footerArea {
+    margin: 0 auto;
+    width: 980px;
+}
+#footerArea .footer {
+    border: 1px solid #CACBCB;
+    width: 978px;
+}
+#footerArea .helpCol_01, #footerArea .helpCol_02, #footerArea .helpCol_03, #footerArea .helpCol_04, #footerArea .helpCol_05, #footerArea .helpCol_06, #footerArea .helpCol_07 {
+    display: inline;
+    float: left;
+}
+#footerArea .helpCol_01 {
+    margin-left: 12px;
+    width: 117px;
+}
+#footerArea .helpCol_02 {
+    width: 125px;
+}
+#footerArea .helpCol_03 {
+    width: 144px;
+}
+#footerArea .helpCol_04 {
+    width: 150px;
+}
+#footerArea .helpCol_05 {
+    width: 128px;
+}
+#footerArea .helpCol_06 {
+    width: 120px;
+}
+#footerArea .helpCol_07 {
+    border-left: 1px solid #A10000;
+    height: 90px;
+    width: 180px;
+}
+#footerArea .helpCol_07 h5, #footerArea .helpCol_07 h4 {
+    line-height: 22px;
+    margin-left: 15px;
+}
+#footerArea .helpCol_07 h5 {
+    color: #666666;
+}
+#footerArea .helpCol_07 h5 strong {
+    color: #333333;
+    font-weight: bold;
+}
+#footerArea .helpCol_07 h4 {
+    color: #A10000;
+    font-family: Tahoma;
+    font-size: 14px;
+}
+#footerArea .helpCol_07 h4 strong {
+    font-weight: bold;
+}
+#footerArea .footer h3 {
+    border-left: 3px solid #A10000;
+    color: #333333;
+    font-weight: bold;
+    text-indent: 4px;
+}
+#footerArea .footer li {
+    line-height: 18px;
+    text-indent: 8px;
+}
+#footerArea .footer li a:link, #footerArea .footer li a:visited {
+    color: #666666;
+}
+#footerArea .footer li a:hover {
+    color: #A10000;
+}
+#footerArea .copyRight {
+    color: #999999;
+    text-align: center;
+}
+#footerArea .subFooter {
+    margin-bottom: 25px;
+    text-align: center;
+}
+#footerArea .subFooter a, #footerArea .subFooter span {
+    margin: 0 10px;
+}
+.blank7 {
+    clear: both;
+    display: block;
+    font-size: 1px;
+    height: 7px;
+    overflow: hidden;
+}
+#footerArea .redLogo:link, #footerArea .redLogo:visited, #footerArea .redLogo:hover {
+    background: url("../images/front/spritesbg.png") no-repeat scroll 0 -400px transparent;
+    display: inline-block;
+    height: 42px;
+    width: 113px;
+}
+#footerArea .costumeOrg {
+    background: url("../images/front/spritesbg.png") no-repeat scroll 0 -448px transparent;
+    display: inline-block;
+    height: 45px;
+    width: 156px;
+}
+#footerArea .wsjyBzzx:link, #footerArea .wsjyBzzx:visited, #footerArea .wsjyBzzx:hover {
+    background: url("../images/front/spritesbg.png") no-repeat scroll 0 -494px transparent;
+    display: inline-block;
+    height: 42px;
+    width: 96px;
+}
+#footerArea .vanclMsg:link, #footerArea .vanclMsg:visited, #footerArea .vanclMsg:hover {
+    background: url("../images/front/spritesbg.png") no-repeat scroll -97px -494px transparent;
+    display: inline-block;
+    height: 42px;
+    width: 101px;
+}
+#footerArea .footIcon {
+    background: none repeat scroll 0 0 #F8F8F8;
+    border: 1px solid #F6F6F6;
+    height: 48px;
+    margin: 0 auto;
+    width: 960px;
+}
+#footerArea .returnGoods {
+    background: url("../images/front/spritesbg.png") no-repeat scroll 0 -556px transparent;
+    display: inline-block;
+    height: 28px;
+    margin: 10px 0 0 65px;
+    width: 160px;
+}
+#footerArea .freeShip {
+    background: url("../images/front/spritesbg.png") no-repeat scroll -204px -556px transparent;
+    display: inline-block;
+    height: 28px;
+    margin: 10px 0 0 38px;
+    width: 196px;
+}
+#footerArea .cashOn {
+    background: url("../images/front/spritesbg.png") no-repeat scroll 0 -588px transparent;
+    display: inline-block;
+    height: 28px;
+    margin: 10px 0 0 36px;
+    width: 194px;
+}
+#footerArea .cusService {
+    background: url("../images/front/spritesbg.png") no-repeat scroll -204px -588px transparent;
+    display: inline-block;
+    height: 28px;
+    margin: 10px 0 0 37px;
+    width: 163px;
+}
+.ac_results {
+    background-color: white;
+    border: 1px solid black;
+    overflow: hidden;
+    padding: 0;
+    z-index: 100;
+}
+.ac_results ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.ac_results li {
+    cursor: default;
+    display: block;
+    font: menu;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0;
+    overflow: hidden;
+    padding: 2px 5px;
+}
+.ac_results .item {
+    float: left;
+    text-align: left;
+}
+.ac_results .num {
+    color: Green;
+    float: right;
+    text-align: right;
+}
+.ac_loading {
+    background: url("http://images.vancl.com/others/2011/6/9/indicator.gif") no-repeat scroll right center white;
+}
+.ac_over {
+    background-color: #3399FF;
+    color: white;
+}
+.ks-suggest-key {
+    float: left;
+    padding-left: 5px;
+    text-align: left;
+}
+.ks-suggest-result {
+    color: green;
+    float: right;
+    padding-right: 5px;
+    text-align: right;
+}
+.searchWordsAllbody2 {
+    background-color: #FFFFFF;
+    border: 1px solid #CECECE;
+    position: static;
+    right: 0;
+    top: 27px;
+    width: 398px;
+}
+.spig {
+    display: block;
+    height: 190px;
+    left: 160px;
+    position: absolute;
+    top: -200px;
+    width: 150px;
+    z-index: 9999;
+}
+#message {
+    background: none repeat scroll 0 0 #DDDDDD;
+    border: 1px solid #EEEEEE;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 15px #EEEEEE;
+    color: #191919;
+    min-height: 1em;
+    outline: medium none;
+    padding: 5px;
+    position: absolute;
+    text-align: center;
+    top: -30px;
+    width: auto !important;
+    z-index: 10000;
+}
+.mumu {
+    background: url("../images/front/spig.png") no-repeat scroll 0 0 transparent;
+    cursor: move;
+    height: 190px;
+    width: 150px;
+}

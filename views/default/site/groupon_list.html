@@ -1,0 +1,142 @@
+{set:$seo_data=array(); $site_config=new Config('site_config');$site_config=$site_config->getInfo();}
+
+	{set:$seo_data['title']=isset($site_config['name'])?$site_config['name']:""}
+	{set:$tmp=$this->regiment_list;}
+	{if: count($tmp) == 1      }
+		{set:$tmp=end($tmp);$seo_data['title']=$tmp['title']."_".$seo_data['title'];}
+	{else:}
+		{set:$seo_data['title']="往期团购_".$seo_data['title'];}
+	{/if}
+	{set:seo::set($seo_data);}
+	{set:$iurl = IUrl::creatUrl();}
+<!-- 引入layouts/site.html style type="text/css">
+@import url("{skin:css/v_tuan.css}");
+</style-->
+<div id="bodydiv">
+	<div class="main_content">
+		<div class="entcon">
+			<div class="entbordiv">
+				<span class="blank15"></span>
+
+				<div class="infotop">
+					<ul>
+						<li>
+							<span>往期团购</span>
+							<div class="defaulIndex">
+							<a class="laylink03" title="返回团购首页" href="{url:/site/groupon}">返回团购首页</a>
+							</div>
+						</li>
+					</ul>
+					<div style="clear: both;">
+					</div>
+				</div>
+
+				<div class="marcontent">
+				{if:$this->query}
+					<ul id="pkgList">
+					{foreach:items=$this->list}
+						<li>
+							<div class="titlefont">
+								<a href="{url:/site/products/id/$item[goods_id]/}"
+									style="font-weight: bold" title="{$item['title']}"
+									target="_blank">{$item['title']}</a>
+							</div>
+							<div class="prodiv">
+								<a title="{$item['title']}" target="_blank" href="{url:/site/products/id/$item[goods_id]/}">
+									<img src="{webroot:}{$item['img']}"
+										original="{webroot:}{$item['img']}" alt="{$item['title']}" width="270px" height="270px"
+										style="display: inline;"> </a>
+							</div>
+							<span class="blank10"></span>
+							<div class="proinfo">
+								<div class="promon">
+									<div>
+										<del>
+											售价
+											<span>￥{$item['sell_price']}</span>
+										</del>
+										<br>
+										<label>
+											节省
+											<span>￥{echo:$item['sell_price']-$item['regiment_price'];}</span>
+										</label>
+									</div>
+								</div>
+								<div class="gmdiv">
+									<span>{$item['user_num']}</span>人已购买
+								</div>
+								<div class="money">
+									￥
+									<label>
+										{$item['regiment_price']}
+									</label>
+									<span>.00</span>
+								</div>
+								<div class="look">
+									<a  href="{url:/site/products/id/$item[goods_id]/}"
+										hidefocus="true" target="_blank"> 原价购买 </a>
+								</div>
+							</div>
+						</li>
+						{/foreach}
+					</ul>
+					{/if}
+					<span class="blank8"></span>
+					<div style="text-align: center; display: none;" id="ajaxLoader">
+						<img
+							src="http://i.vanclimg.com/Tuan/Scripts/Window/ajax-loader.gif">
+					</div>
+					<span class="blank8"></span>
+				</div>
+				<div class="moreimg">
+					<img border="0" src="http://i.vanclimg.com/Tuan/nd/moreimg.jpg">
+				</div>
+				<div class="moreimg1">
+					<ul>
+						<li>
+							<a target="_blank"
+								href="http://catalog.vancl.com/children/tzyrf1210.html"> <img
+									border="0"
+									src="http://i.vanclimg.com/tuan/AD/201212111743573038815.jpg"
+									alt="童装 底部广告">
+							</a>
+						</li>
+						<li>
+							<a target="_blank"
+								href="http://mkt.vancl.com/activity/2012shoppingcard.html">
+								<img border="0"
+									src="http://i.vanclimg.com/tuan/AD/201207261825445040847.jpg"
+									alt="购物卡尾部广告">
+							</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://mkt.vancl.com/Vipclub2/Point">
+								<img border="0"
+									src="http://i.vanclimg.com/tuan/AD/201207261826172201987.jpg"
+									alt="积分商城尾部广告">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<span class="blank0"></span>
+		</div>
+	</div>
+	<style type="text/css">
+.footer .about {
+	height: 30px;
+	line-height: 30px;
+	color: #999;
+}
+
+.bZp3 {
+	color: #999;
+	margin-bottom: 20px;
+}
+
+.bZp2 img {
+	margin: 0 10px;
+}
+</style>
+	
+</div>

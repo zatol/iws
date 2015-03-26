@@ -1,0 +1,511 @@
+{set:$user = $this->user} {set:$myCartObj = new Cart(); $myCartInfo =
+$myCartObj->getMyCart();$siteConfig=new Config("site_config");}
+{set:$siteConfigObj = new Config("site_config");$site_config =
+$siteConfigObj->getInfo();}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+		<title>{echo:$siteConfig->name}</title>
+		<link rel="shortcut icon"
+			href="http://i.vanclimg.com/common/favicon/favicon.ico"
+			type="image/x-icon" />
+		<meta name="keywords"
+			content="{echo:$site_config['index_seo_keywords']}" />
+		<meta name="description"
+			content="{echo:$site_config['index_seo_description']}" />
+			<link rel="stylesheet" href="{skin:css/v_help.css}" />
+		<link href="{skin:}css/v_globle.css" type="text/css" rel="stylesheet"
+			charset="utf-8" />
+		<link href="{skin:}css/v_autocommit.css" type="text/css"
+			rel="stylesheet" charset="utf-8" />
+		<link href="{skin:}css/v_ad.css" type="text/css" rel="stylesheet"
+			charset="utf-8" />
+			<link href="{skin:}css/v_tuan.css" type="text/css" rel="stylesheet"
+			charset="utf-8" />
+			
+
+		<script type="text/javascript"
+			src="{theme:javascript/v_jquery-1.7.1.min.js}"></script>
+		<script type="text/javascript" src="{theme:javascript/v_public.js}"></script>
+		<script type='text/javascript' src='{theme:javascript/common.js}'></script>
+		<script type='text/javascript' src='{theme:javascript/site.js}'></script>
+		<script type="text/javascript" src="{theme:javascript/v_productpop.js}"></script>
+		<script type="text/javascript">
+		var webroot = "{webroot:}";
+		var domain = document.location.host+webroot;
+		var mycartLateCall = new lateCall(200,function(){showCart('{url:/simple/showCart}')});
+		var isindex=true;var visitor="亲!";
+		</script>
+		{js:dialog}
+		<script type="text/javascript"
+			src="{theme:javascript/v_jquery.autocomplete.js}"></script>
+		<script src="{theme:javascript/v_girls.js}" type="text/javascript"></script>
+	</head>
+	<body>
+		<div id="Head">
+			<!--S 头顶1 -->
+			<div id="headerTopArea">
+				<div class="headerTop">
+					<div class="headerTopLeft">
+						<!--S 登录前-->
+						<div class="loginArea" id="welcome">
+							{if:(isset($user['user_id']) &&
+							$user['user_id']!='')}您好,{$user['username']}!欢迎回来!
+							<span>[<a href="{url:/simple/logout}" class="reg">安全退出</a>]{else:}您好,欢迎光临{echo:$siteConfig->name}!<a
+								class="track" name="hp-hp-head-signin-n"
+								href="{url:/simple/login}">[&nbsp;登录&nbsp;</a>{set:$callback =
+								IReq::get('callback')} {if:$callback==""}|<a class="track"
+								name="hp-hp-head-register-n" href="{url:/simple/reg}">&nbsp;免费注册&nbsp;]</a>{else:}
+								{set:$callback=urlencode($callback);}<a class="track"
+								name="hp-hp-head-register-n"
+								href="{url:/simple/reg/?callback=$callback}">&nbsp;免费注册&nbsp;]</a>{/if}{/if}</span>
+						</div>
+						<!--E 登录前-->
+						<!--S 登录后 <div class="loginArea">你好！<span>凡客诚品凡客诚品</span></div>E 登录后-->
+						<div class="recommendArea">
+							<a class="track" name="hp-hp-head-recommend-n" href="#"
+								rel="nofollow">为您推荐</a><a class="track"
+								name="hp-hp-head-order-n" href="{url:/ucenter/order}"
+								rel="nofollow">我的订单</a>
+						</div>
+					</div>
+					<div class="headerTopRight">
+						<div id="shoppingCarNone" class="active">
+							<p>
+								<a class="shopborder track" name="hp-hp-head-cart-n"
+									href="{url:/simple/cart}" rel="nofollow" id="shoppingcar_link">
+									购物车<span car_product_total="shoppingCar_product_totalcount"
+									id="v_shoppingcar_product_totalcount" name="mycart_count">{$myCartInfo['count']}</span>件</a>
+							</p>
+							<div class="shopDropList">
+								<span class="blank10"></span>
+								<div class="havepru" id="minishoppingcar_have_product"></div>
+								<span class="blank0"></span>
+								<div class="shopnopru" id="minishoppingcar_no_product">
+									<div class="SCtotalpage" id="div_mycart">
+										您的购物车中没有任何商品
+									</div>
+									<div class="noPruSeeCar">
+										<div>
+											<a class="track" name="head-minicart-shopping_n"
+												href="{url:/simple/cart}" rel="nofollow"></a>
+										</div>
+									</div>
+								</div>
+								<span class="blank8"></span>
+							</div>
+						</div>
+						<div id="myVancl" class="active">
+							<a id="DropTitle" class="track" name="hp-hp-head-myvancl-n"
+								href="{url:/ucenter/index}" rel="nofollow"> 我的凡客</a>
+							<!--S我的凡客隐藏菜单-->
+							<ul class="myVanclDropList">
+								<li>
+									<a class="track" name="hp-hp-head-myvancl_order-n"
+										href="{url:/ucenter/order}" rel="nofollow">我的订单</a>
+								</li>
+								<li>
+									<a class="track" name="hp-hp-head-myvancl_favor-n"
+										href="{url:/ucenter/favorite}" rel="nofollow"> 我的收藏</a>
+								</li>
+								<li>
+									<a class="track" name="hp-hp-head-myvancl_points-n" href="#"
+										rel="nofollow">积分查询</a>
+								</li>
+							</ul>
+							<!--E 我的凡客隐藏菜单 -->
+						</div>
+						<div id="vanclMap" class="active">
+							<a class="mapDropTitle track" name="hp-hp-head-map-n" href="#"
+								target="_blank">网站导航</a>
+							<!-- S 网站导航隐藏菜单 -->
+							<ul class="mapDropList">
+								<li>
+									<a class="track" name="hp-hp-head-map_bbs-n" href="#"
+										target="_blank"> 凡客论坛</a>
+								</li>
+								<li>
+									<a class="track" name="hp-hp-head-map_weibo-n" href="#"
+										target="_blank"> 凡客微博</a>
+								</li>
+								<li>
+									<a class="track" name="hp-hp-head-map_membership-n" href="#"
+										target="_blank"> 会员独享</a>
+								</li>
+								<li>
+									<a class="track" name="hp-hp-head-map_complaints-n" href="#"
+										target="_blank">投诉建议</a>
+								</li>
+								<li>
+									<a class="track" name="hp-hp-head-map_service-n" href="#"
+										target="_blank">客服问答</a>
+								</li>
+								<li>
+									<a class="track" name="hp-hp-head-map_cooperate-n" href="#"
+										target="_blank">合作专区</a>
+								</li>
+								<li>
+									<a class="track" name="hp-hp-head-map_giftcard-n" href="#"
+										target="_blank">礼品卡</a>
+								</li>
+								<li>
+									<a class="track" name="hp-hp-head-map_information-n" href="#"
+										target="_blank">资讯中心</a>
+								</li>
+							</ul>
+							<!-- S 网站导航隐藏菜单 -->
+						</div>
+						<div class="hotLine">
+							<span><a href="javascript:void(0);"> 收藏本站</a> </span><em></em><strong>400-400-0000</strong>
+						</div>
+					</div>
+					<span class="blank0"></span>
+				</div>
+			</div>
+			<!-- E 头顶 -->
+			<!-- S logo 搜索 子站 -->
+			<div class="logoSearchSubnavArea" id="logoArea">
+				<div class="logoArea ">
+					<h1 class="logo">
+						<a title="{echo:$siteConfig->name}"
+							href="{url:}">
+							<img  alt="{echo:$siteConfig->name}" src="{webroot:image/logo.gif}">
+							</a>
+					</h1>
+				</div>
+				<div class="searchAreaBlock">
+					<span class="blank15"></span>
+					<div class="search">
+					{set:$word = IReq::get('word');}
+						<input id="skey" value="{echo:$word ? $word : '输入关键字...'}"
+							defaultkey="{echo:$word ? $word : '输入关键字...'}" maxlength="50"
+							type="text" class="searchText ac_input"
+							name="hp-hp-head-swords-n" />
+						<input type="button" class="searchBtn" />
+					</div>
+					<span class="blank0"></span>
+					<div class="searchWordsBox">
+						<div class="searchWords" id="searchWords">
+							<span>热词：</span>{query:name=keyword where=hot eq 1 limit=5
+							order=`order` asc} {set:$tmpWord = urlencode($item['word']);}
+							<a href="{url:/site/search_list/word/$tmpWord}">{$item['word']}</a>
+							{/query}
+						</div>
+						<div id="searchWordsMore" class="active">
+							<div class="SearchHover">
+								<a class="track" name="hp-hp-head-swords_m-n" href="{url:/site/tags}">更多</a>
+							</div>
+							<span class="blank0"></span>
+						</div>
+					</div>
+				</div>
+				<div class="subNavArea">
+					<ul class="subComputer">
+						<li class="en">
+							<a class="track" name="hp-hp-head-englishsite-n" href="#">
+								English</a>
+						</li>
+						<li>
+							<a class="track" name="hp-hp-head-union-n" href="#">网站联盟</a>
+						</li>
+						<li>
+							<a class="track" name="hp-hp-head-help-n" href="#">帮助中心</a>
+						</li>
+						<li>
+							<a class="track" name="hp-hp-head-tuan-n" href="#">团购秒杀</a>
+						</li>
+					</ul>
+					<span class="blank0"></span>
+					<ul class="trademark">
+						<li class="trademarkMikko">
+							<a class="track" name="hp-hp-head-q-n" href="#" target="_blank"></a>
+						</li>
+						<li class="trademarkVjia">
+							<a class="track" name="hp-hp-head-vjia-n" href="#"
+								target="_blank"></a>
+						</li>
+						<li class="trademarkPhone">
+							<a class="track" name="hp-hp-head-mobile-n" href="#"
+								target="_blank"></a>
+						</li>
+					</ul>
+					<span class="blank0"></span>
+				</div>
+				<span class="blank0"></span>
+			</div>
+			<!-- E logo 搜索 子站 -->
+			<!-- S 主导航 -->
+			<div id="mainNav"
+				style="background-color: #a10000; position: relative;">
+				<ul>
+					<li>
+						<a class="track" name="hp-hp-head-nav_1-n" href="{url:}">首页</a>
+					</li>
+					{set:$i=0;} {query:name=guide}
+					{set:$i++;$item['link']=IUrl::creatUrl($item['link']);}
+					<li class="track" name="hp-hp-head-nav_2-n"
+						{if:$i==count($items)}style="background:none;"{/if}>
+						<a href="{$item['link']}">{$item['name']}<span> </span> </a>
+					</li>
+					{/query}
+				</ul>
+				<div class="newProductNum">
+					<p>
+						<a class="track" name="hp-hp-head-nav_18-n" href="#">最新到货</a>
+					</p>
+				</div>
+				<span class="blank0"></span>
+			</div>
+			<!-- E 主导航 -->
+			<!-- S 子导航 -->
+			<div class="site-nav" id="subNav">
+				<div id="floor_nav">
+					<ul class="floors">
+						<!--分类-S-->
+						{set:$this->goodsCategory = block::goods_category();}
+						{foreach:items = $this->goodsCategory item = $first}
+						<li class="MenuItem">
+							<a class="track" name="hp-hp-head-floor_1-n"
+								href="{url:/site/pro_list/cat/$first[id]}"> {$first['name']}</a>
+						</li>
+						{/foreach}
+						<!--分类-E-->
+					</ul>
+					<span class="blank0"></span>
+				</div>
+				<div id="sub_floor_menus" class="sub-floor-menus">
+					<!-- S 菜单1 -->
+					{set:$this->goodsCategory = block::goods_category();}
+					{foreach:items = $this->goodsCategory item = $first}
+
+					<div class="menu">
+						<div class="dht">
+							<div class="Lfloatdiv">
+								<div class="navchild"
+									style="background: url(&amp;quot;http://i.vanclimg.com/header/20110117/navchild_03.gif&amp;quot;) repeat-y scroll right top transparent; width: 620px; overflow: hidden;">
+									<div class="childleft">
+										{if:isset($first['second'])} {foreach:items = $first['second']
+										item = $second}
+										<div class="childli">
+											<div class="childclass">
+												<span><a class="track" name="hp-hp-head-subfloor_1_2_1-n"
+													href="{url:/site/pro_list/cat/$second[id]}">{$second['name']}</a></span>
+											</div>
+											<div class="childdetail">
+												{if:isset($second['more'])} {foreach:items = $second['more']
+												item = $third}
+												<a class="track" name="hp-hp-head-subfloor_1_2_1-n"
+													href="{url:/site/pro_list/cat/$third[id]}">{$third['name']}</a><span>|</span>
+												{/foreach} {/if}
+											</div>
+										</div>
+										<div class="LFkinddot"></div>
+										{/foreach} {/if}
+									</div>
+									<div class="childright">
+										<ul>
+											<li>
+												<a class="track" name="hp-hp-head-subfloor_1_r_1-n"
+													href="http://men.vancl.com/#menmap01">新品推荐</a>
+											</li>
+											<li>
+												<a class="track" name="hp-hp-head-subfloor_1_r_2-n"
+													href="http://men.vancl.com/#menmap02">时尚休闲</a>
+											</li>
+											<li>
+												<a class="track" name="hp-hp-head-subfloor_1_r_3-n"
+													href="http://men.vancl.com/#menmap03">运动户外</a>
+											</li>
+											<li>
+												<a class="track" name="hp-hp-head-subfloor_1_r_4-n"
+													href="http://men.vancl.com/#menmap04">商务精选</a>
+											</li>
+											<li>
+												<a class="track" name="hp-hp-head-subfloor_1_r_5-n"
+													href="http://men.vancl.com/#menmap05">优惠折扣</a>
+											</li>
+											<li>
+												<a class="track" name="hp-hp-head-subfloor_1_r_6-n"
+													href="http://nvren.vancl.com/">女人新品</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					{/foreach}
+					<!-- E 菜单1 -->
+				</div>
+			</div>
+			<!--/S 子导航 -->
+		</div>
+		<span class="blank10"></span>
+		<div class="commonBox">
+			<!--广告1S-->
+			<div style="width: 980px; margin: 0 auto;" id="topadImage">
+				<a target="_blank" class="track" name="hp-hp-bannerad-0-n"
+					href="//catalog.vancl.com/nvren/tmz_20130504.html"><img
+						src="//i2.vanclimg.com/users/26/20130503/stripebanner_980_130504.png"
+						title="" /> </a>
+			</div>
+			<div style="height: 10px; clear: both; overflow: hidden"></div>
+			<!--广告1E-->
+			<!--焦点区域-->
+
+			{viewcontent}
+
+
+
+		<div id="vjiaAD">
+			<span class="blank10"></span>
+			<!--S底部AD-->
+
+			<!--E底部AD-->
+			<span class="blank0"></span>
+		</div>
+		<div class="blank0"></div>
+		</div>
+		<div style="width: 980px; margin: 0 auto;">
+			<textarea class="vancl-datalazyload"
+				style="visibility: hidden; height: 302px; margin: 0px; padding: 0px; border: 0px;">
+    <!--footer-->
+				<span class="blank15"></span>
+				<div id="footerArea">
+					<div class="footer">
+						<span class="blank10"></span>
+<!--S帮助-->
+{set:$cat_list=array();$helpIndex = 1;}
+			{query:name=help_category AS cat where=position_foot eq 1 order=sort ASC,id desc limit=5}
+			{set:$cat_list[$item['id']]=$item;}
+			{/query}
+			{foreach:items=$cat_list key=$cat_id item=$cat}
+	<div class="helpCol_0{echo:$helpIndex}">
+	<h3> {$cat['name']}</h3>
+							<span class="blank5"></span>
+	<ul>
+	{query:name=help where=cat_id eq $cat_id order=sort ASC,id desc}
+	<li>
+									<a class="track" name="h-footer-introducition_n"
+										href="{url:/site/help/id/$item[id]}" target="_blank"
+										rel="hp-hp-footer-about_1-n">{$item['name']}</a>
+								</li>
+	{/query}
+	</ul>
+	</div>
+	{set:$helpIndex++;}
+	{/foreach}
+	<div class="helpCol_07">
+							<h5>
+								<strong>订购热线</strong>(仅收市话费)</h5>
+							<h4>
+								<strong>400-600-6888</strong>
+							</h4>
+							<h5>
+								<strong>客户服务热线</strong>(仅收市话费)</h5>
+							<h4>
+								<strong>400-650-7099</strong>
+							</h4>
+						</div>
+						<span class="blank12"></span>
+	<!--E帮助-->
+	<!--0223-->
+						<div class="footIcon">
+							<a target="_blank"
+								href="http://help.vancl.com/Category/43-1.html"
+								class="returnGoods" rel="nofollow"></a><a target="_blank"
+								href="http://help.vancl.com/category/transfer" class="freeShip"
+								rel="nofollow"></a><a target="_blank"
+								href="http://help.vancl.com/Category/24-1.html" class="cashOn"
+								rel="nofollow"></a><a target="_blank"
+								href="http://help.vancl.com/Content/61.html" class="cusService"
+								rel="nofollow"></a>
+						</div>
+						<span class="blank10"></span>
+						<!--0223-->
+					</div>
+					<span class="blank15"></span>
+					
+					<div class="copyRight"> {echo:$siteConfig->site_footer_code}</div>
+					<span class="blank20"></span>
+					<div class="subFooter">
+						<a target="_blank" class="redLogo"
+							href="https://search.szfw.org/cert/l/CX20111229001302001330"
+							rel="nofollow"></a><span class="costumeOrg"></span><a
+							target="_blank" class="wsjyBzzx"
+							href="http://www.315online.com.cn/member/315090053.html"
+							rel="nofollow"></a><a target="_blank" class="vanclMsg"
+							href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202010081900017"
+							rel="nofollow"></a>
+					</div>
+				</div>
+				<!--/footer-->
+	</textarea>
+		</div>
+		<div class="spig" id="spig">
+			<div id="message"></div>
+			<div class="mumu" id="mumu"></div>
+		</div>
+		<div id="floatad-winpop"
+			style="z-index: 9; right: 0; bottom: 0; overflow: hidden; position: fixed; _position: absolute; _margin-top: expression(document .   documentElement .   clientHeight-this .   style .   pixelHeight +   document .   documentElement .   scrollTop);">
+			<span class="floatad-close" title="关闭"></span>
+
+			<div class="floatad-windowBox">
+				<strong class="floatad-blank43"><a class="track"
+					name="h-vjia_n" href="#" target="_blank"></a><span><a
+						class="track" name="h-vjia-fc-ad_n" href="#" target="_blank">#</a>
+				</span> </strong>
+				<div id="vjiaPopUp_tab" class="p0">
+					<ul>
+						<li>
+							<span>TODAY</span>
+						</li>
+						<li>
+							<span>MALE</span>
+						</li>
+						<li>
+							<span>FAMALE</span>
+						</li>
+						<li>
+							<span>LIFE</span>
+						</li>
+					</ul>
+				</div>
+				<div id="vjiaPopUp_content">
+					<ul>
+						<li class="pt3">
+							<a class="track" name="h-vjia-fc-ad-1_n"
+								href="//s.vjia.com/?k=%e8%89%be%e4%b9%90%e5%b0%9a&source=vanclfc1-a"
+								target="_blank" title=""><img
+									original1="http://i3.vanclimg.com/users/18/20121203/vanclfc1_121204.jpg"
+									alt="" title="" width="292px" height="143px" /> </a>
+						</li>
+						<li class="pt3">
+							<a class="track" name="h-vjia-fc-ad-2_n"
+								href="//mall.vjia.com/giordano?source=vanclfc2" target="_blank"
+								title=""><img
+									original1="http://i4.vanclimg.com/users/18/20121204/vanclfc2_121204.jpg"
+									alt="" title="" width="292px" height="143px" /> </a>
+						</li>
+						<li class="pt3">
+							<a class="track" name="h-vjia-fc-ad-3_n"
+								href="//mall.vjia.com/inman?source=vanclfc3" target="_blank"
+								title=""><img
+									original1="http://i5.vanclimg.com/users/18/20121203/vanclfc3_121204.jpg"
+									alt="" title="" width="292px" height="143px" /> </a>
+						</li>
+						<li class="pt3">
+							<a class="track" name="h-vjia-fc-ad-4_n"
+								href="//mall.vjia.com/redkids?source=vanclfc4" target="_blank"
+								title=""><img
+									original1="http://i1.vanclimg.com/users/18/20121203/vanclfc4_121204.jpg"
+									alt="" title="" width="292px" height="143px" /> </a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

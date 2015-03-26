@@ -1,0 +1,140 @@
+
+@charset "utf-8";
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+em {
+    font-style: normal;
+    font-weight: normal;
+}
+ul, ol, li {
+    list-style: none outside none;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+img {
+    border: 0 none;
+}
+button, input, select, textarea {
+    font-size: 100%;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.clear {
+    clear: both;
+}
+#slideshow {
+    border: 0 none !important;
+    text-align: center;
+}
+#focus {
+	margin: 0 auto;
+    height: 770px;
+    overflow: hidden;
+    position: relative;
+    width: 1024px;
+}
+#focus ul {
+    position: absolute;
+}
+#focus ul li {
+    float: left;
+    overflow: hidden;
+    position: relative;
+    width: 1024px;
+}
+#focus ul li div {
+    overflow: hidden;
+    position: absolute;
+}
+#focus .btnBg {
+    background: none repeat scroll 0 0 #000000;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 1024px;
+}
+#focus .btn {
+	background: none repeat scroll 0 0 #000000;
+    bottom: 0;
+    height: 65px;
+    padding: 5px 10px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    width: 1024px;
+}
+#focus .btn span {
+    background: none repeat scroll 0 0 #A10000;
+    cursor: pointer;
+    display: inline-block;
+    height: 10px;
+    margin-left: 5px;
+    width: 25px;
+}
+#focus .btn span.on {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+#focus .preNext {
+    background: url("../images/front/sprite.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    width: 45px;
+}
+#focus .pre {
+    left: 0;
+}
+#focus .next {
+    background-position: right top;
+    right: 0;
+}
+#focus ul li .slideother {
+    display: inline-block;
+    height: 80px;
+    left: 15px;
+    position: absolute;
+    bottom: 50px;
+    width: 720px;
+}
+#focus ul li .slideother .h12 {
+    font-size: 24px;
+    left: 55px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    position: absolute;
+    top: 0;
+}
+#focus ul li .slideother .h12 a {
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 10px;
+    text-decoration: none;
+}
+#focus ul li .slideother .h12 a:hover {
+    text-decoration: underline;
+}
+#focus ul li .slideother p {
+    left: 55px;
+    padding-left: 10px;
+    position: absolute;
+    top: 38px;
+}
+#focus ul li .slideother p a {
+    color: #8B8B8B;
+    text-decoration: none;
+}
+#focus ul li .slideother a:hover {
+    color: #A10000;
+}
+#focus ul li .slideother p a:hover {
+    text-decoration: none;
+}

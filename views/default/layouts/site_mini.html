@@ -1,0 +1,187 @@
+{set:$user = $this->user} {set:$myCartObj = new Cart(); $myCartInfo =
+$myCartObj->getMyCart();$siteConfig=new Config("site_config");}
+{set:$siteConfigObj = new Config("site_config");$site_config =
+$siteConfigObj->getInfo();}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+		<title>{echo:$siteConfig->name}</title>
+		<link rel="shortcut icon"
+			href="http://i.vanclimg.com/common/favicon/favicon.ico"
+			type="image/x-icon" />
+		<meta name="keywords"
+			content="{echo:$site_config['index_seo_keywords']}" />
+		<meta name="description"
+			content="{echo:$site_config['index_seo_description']}" />
+		<link href="{skin:}css/v_globle.css" type="text/css" rel="stylesheet"
+			charset="utf-8" />
+		<link href="{skin:}css/v_autocommit.css" type="text/css"
+			rel="stylesheet" charset="utf-8" />
+		{set:$loginrequrl = strpos($_SERVER['REQUEST_URI'],'login') || strpos($_SERVER['REQUEST_URI'],'bind')}
+		{if:$loginrequrl}
+		<link rel="stylesheet" href="{skin:css/v_login.css}" />
+		{else:}
+		<link rel="stylesheet" href="{skin:css/v_reg.css}" />
+		{/if}
+		
+		<link rel="stylesheet" href="{skin:css/v_frpassword.css}" />
+		<link rel="stylesheet" href="{skin:css/v_cart.css}" />
+		<script type="text/javascript"
+			src="{theme:javascript/v_jquery-1.7.1.min.js}"></script>
+		<script type="text/javascript" src="{theme:javascript/v_public.js}"></script>
+		<script type='text/javascript' src='{theme:javascript/common.js}'></script>
+		<script type='text/javascript' src='{theme:javascript/site.js}'></script>
+				
+		<script type="text/javascript">
+		var webroot = "{webroot:}";
+		var skin = "{skin:}";
+		var domain = document.location.host+webroot;
+		var mycartLateCall = new lateCall(200,function(){showCart('{url:/simple/showCart}')});
+		</script>
+		<script type="text/javascript"
+			src="{theme:javascript/v_jquery.autocomplete.js}"></script>
+	</head>
+	<body>
+		<div id="Head">
+			<!--S 头顶1 -->
+			<div id="headerTopArea">
+				<div class="headerTop">
+					<div class="headerTopLeft">
+						<!--S 登录前-->
+						<div class="loginArea" id="welcome">
+							{if:(isset($user['user_id']) &&
+							$user['user_id']!='')}{$user['username']}您好，欢迎光临{echo:$siteConfig->name}！
+							<span>[<a href="{url:/simple/logout}" class="reg">安全退出</a>]{else:}<a
+								class="track" name="hp-hp-head-signin-n"
+								href="{url:/simple/login}">[&nbsp;登录&nbsp;</a>{set:$callback =
+								IReq::get('callback')} {if:$callback==""}|<a class="track"
+								name="hp-hp-head-register-n" href="{url:/simple/reg}">&nbsp;免费注册&nbsp;]</a>{else:}
+								{set:$callback=urlencode($callback);}<a class="track"
+								name="hp-hp-head-register-n"
+								href="{url:/simple/reg/?callback=$callback}">&nbsp;免费注册&nbsp;]</a>{/if}{/if}</span>
+						</div>
+						<!--E 登录前-->
+						<!--S 登录后 <div class="loginArea">你好！<span>凡客诚品凡客诚品</span></div>E 登录后-->
+					</div>
+					<div class="headerTopRight">
+						
+						<div class="hotLine">
+							<span><a href="javascript:void(0);"> 收藏本站</a> </span><em></em><strong>400-400-0000</strong>
+						</div>
+					</div>
+					<span class="blank0"></span>
+				</div>
+			</div>
+			<!-- E 头顶 -->
+			<!-- S logo 搜索 子站 -->
+			<div class="logoSearchSubnavArea" id="logoArea">
+				<div class="logoArea ">
+					<h1 class="logo">
+						<a title="{echo:$siteConfig->name}"
+							href="{url:}">
+							<img  alt="{echo:$siteConfig->name}" src="{webroot:image/logo.gif}">
+							</a>
+					</h1>
+				</div>
+
+			</div>
+			<div class="clear"></div>
+			
+
+			<div id="vjiaAD">
+				<span class="blank10"></span>
+				<!--S底部AD-->
+
+				<!--E底部AD-->
+				<span class="blank0"></span>
+			</div>
+			
+		</div>
+		{viewcontent}
+		<div style="width: 980px; margin: 0 auto;">
+			<textarea class="vancl-datalazyload"
+				style="visibility: hidden; height: 302px; margin: 0px; padding: 0px; border: 0px;">
+    <!--footer-->
+				<span class="blank15"></span>
+				<div id="footerArea">
+					<span class="blank15"></span>
+					<div class="copyRight"> {echo:$siteConfig->site_footer_code}</div>
+					<span class="blank20"></span>
+					<div class="subFooter">
+						<!--<a target="_blank" class="redLogo"
+							href="https://search.szfw.org/cert/l/CX20111229001302001330"
+							rel="nofollow"></a><span class="costumeOrg"></span><a
+							target="_blank" class="wsjyBzzx"
+							href="http://www.315online.com.cn/member/315090053.html"
+							rel="nofollow"></a><a target="_blank" class="vanclMsg"
+							href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202010081900017"
+							rel="nofollow"></a>-->
+					</div>
+				</div>
+				<!--/footer-->
+	</textarea>
+		</div>
+
+		<div id="floatad-winpop"
+			style="z-index: 9; right: 0; bottom: 0; overflow: hidden; position: fixed; _position: absolute; _margin-top: expression(document .     documentElement .     clientHeight-this .     style .     pixelHeight +     document .     documentElement .     scrollTop);">
+			<span class="floatad-close" title="关闭"></span>
+
+			<div class="floatad-windowBox">
+				<strong class="floatad-blank43"><a class="track"
+					name="h-vjia_n" href="#" target="_blank"></a><span><a
+						class="track" name="h-vjia-fc-ad_n" href="#" target="_blank">#</a>
+				</span> </strong>
+				<div id="vjiaPopUp_tab" class="p0">
+					<ul>
+						<li>
+							<span>TODAY</span>
+						</li>
+						<li>
+							<span>MALE</span>
+						</li>
+						<li>
+							<span>FAMALE</span>
+						</li>
+						<li>
+							<span>LIFE</span>
+						</li>
+					</ul>
+				</div>
+				<div id="vjiaPopUp_content">
+					<ul>
+						<li class="pt3">
+							<a class="track" name="h-vjia-fc-ad-1_n"
+								href="//s.vjia.com/?k=%e8%89%be%e4%b9%90%e5%b0%9a&source=vanclfc1-a"
+								target="_blank" title=""><img
+									original1="http://i3.vanclimg.com/users/18/20121203/vanclfc1_121204.jpg"
+									alt="" title="" width="292px" height="143px" /> </a>
+						</li>
+						<li class="pt3">
+							<a class="track" name="h-vjia-fc-ad-2_n"
+								href="//mall.vjia.com/giordano?source=vanclfc2" target="_blank"
+								title=""><img
+									original1="http://i4.vanclimg.com/users/18/20121204/vanclfc2_121204.jpg"
+									alt="" title="" width="292px" height="143px" /> </a>
+						</li>
+						<li class="pt3">
+							<a class="track" name="h-vjia-fc-ad-3_n"
+								href="//mall.vjia.com/inman?source=vanclfc3" target="_blank"
+								title=""><img
+									original1="http://i5.vanclimg.com/users/18/20121203/vanclfc3_121204.jpg"
+									alt="" title="" width="292px" height="143px" /> </a>
+						</li>
+						<li class="pt3">
+							<a class="track" name="h-vjia-fc-ad-4_n"
+								href="//mall.vjia.com/redkids?source=vanclfc4" target="_blank"
+								title=""><img
+									original1="http://i1.vanclimg.com/users/18/20121203/vanclfc4_121204.jpg"
+									alt="" title="" width="292px" height="143px" /> </a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

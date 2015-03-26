@@ -1,0 +1,56 @@
+<style type="text/css">
+@import url("{skin:css/v_picshow.css}");
+</style>
+<script type='text/javascript' src='{theme:javascript/v_slides.js}'></script>
+{set:$id=intval(IReq::get('id'));}
+<div class="column wrapfix" style="text-align:center;clear:both">
+	<!--幻灯片开始-->
+	<div class="h350">
+		<div class="block" id="slideshow">
+			<div id="focus">
+			{query:name=goods where=id eq $id limit=1}
+				{set:$name=$item['name'];}
+				{set:$c=count($item['id']);}
+				 {/query} 
+			{if:!empty($c)} 
+				<ul style="left: -710px; width: 3550px;">
+				{query:name=goods_photo_relation
+				AS a join=left join goods_photo AS b ON a.photo_id eq b.id
+				where=a.goods_id eq $id order=a.id DESC fields=a.*,b.img }
+					<li>
+						<h2>
+							<a target="_blank" href="{url:/site/products/id/$id/}"> <img
+									alt="{echo:$name}"
+									src="{webroot:}{$item['img']}">
+							</a>
+						</h2>
+						<!--  div class="slideother">
+							<div class="h12">
+								<a target="_blank" href="http://www.lanrenzhijia.com/">iTunes11官方下载</a>
+							</div>
+							<p>
+								<a target="_blank" href="http://www.lanrenzhijia.com/">itunes11.0.1.12官方下载的此次更新，主要是针对全新iTunes的稳定性和性能进行了改进。同时解决了在开启
+									iT...</a>
+							</p>
+						</div-->
+					</li>
+				{/query}
+				</ul>
+			{else:}
+				<ul style="left: -710px; width: 3550px;">
+					<li>
+						<h2>
+							<a target="_blank" href="{url:}"> <img
+									alt=""
+									src="{skin:}images/front/nopic_435_435.gif">
+							</a>
+						</h2>
+					</li>
+				</ul>
+			{/if}
+				
+			</div>
+		</div>
+	</div>
+	<!--幻灯片结束-->
+</div>
